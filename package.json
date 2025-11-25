@@ -1,0 +1,36 @@
+{
+    "name": "gate-compass",
+    "version": "1.0.0",
+    "description": "GATE CSIT exam preparation platform with intelligent mock test generation",
+    "private": true,
+    "workspaces": [
+        "frontend",
+        "backend"
+    ],
+    "scripts": {
+        "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+        "dev:backend": "npm run dev --workspace=backend",
+        "dev:frontend": "npm run dev --workspace=frontend",
+        "build": "npm run build --workspaces",
+        "test": "npm run test --workspaces",
+        "lint": "npm run lint --workspaces",
+        "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,md}\"",
+        "docker:build": "docker-compose -f docker-compose.prod.yml build",
+        "docker:up": "docker-compose -f docker-compose.prod.yml up -d",
+        "docker:down": "docker-compose -f docker-compose.prod.yml down",
+        "docker:logs": "docker-compose -f docker-compose.prod.yml logs -f",
+        "docker:ps": "docker-compose -f docker-compose.prod.yml ps",
+        "migrate:up": "docker-compose -f docker-compose.prod.yml exec backend npm run migrate:up",
+        "migrate:down": "docker-compose -f docker-compose.prod.yml exec backend npm run migrate:down",
+        "backup:db": "bash scripts/backup-database.sh",
+        "restore:db": "bash scripts/restore-database.sh"
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2",
+        "prettier": "^3.1.0"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+        "npm": ">=9.0.0"
+    }
+}
