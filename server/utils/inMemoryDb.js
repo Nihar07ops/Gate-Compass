@@ -131,10 +131,20 @@ export const inMemoryDb = {
   generateGATEFormatTest: () => {
     const allQuestions = Array.from(questions.values());
     
-    // Get questions by section
-    const gaQuestions = allQuestions.filter(q => q.section === 'General Aptitude');
-    const emQuestions = allQuestions.filter(q => q.section === 'Engineering Mathematics');
-    const csQuestions = allQuestions.filter(q => q.section === 'Core Computer Science');
+    // Shuffle helper function
+    const shuffleArray = (array) => {
+      const shuffled = [...array];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      }
+      return shuffled;
+    };
+    
+    // Get questions by section and shuffle them
+    const gaQuestions = shuffleArray(allQuestions.filter(q => q.section === 'General Aptitude'));
+    const emQuestions = shuffleArray(allQuestions.filter(q => q.section === 'Engineering Mathematics'));
+    const csQuestions = shuffleArray(allQuestions.filter(q => q.section === 'Core Computer Science'));
     
     // Select questions (or use all if less than required)
     const selectedGA = gaQuestions.slice(0, Math.min(10, gaQuestions.length));

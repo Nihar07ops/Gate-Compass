@@ -121,7 +121,7 @@ function App() {
               <Route path="analytics" element={<Analytics />} />
               <Route path="resources" element={<Resources />} />
             </Route>
-            <Route path="*" element={<Navigate to="/" replace />} />
+            <Route path="*" element={<Navigate to="/dashboard" replace />} />
           </Routes>
         </Router>
       </AuthProvider>

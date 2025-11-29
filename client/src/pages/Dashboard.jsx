@@ -75,10 +75,10 @@ const Dashboard = () => {
   ];
 
   const quickActions = [
-    { label: 'Start Mock Test', icon: <Quiz />, path: '/mock-test', color: '#667eea' },
-    { label: 'View Analytics', icon: <AutoGraph />, path: '/analytics', color: '#f5576c' },
-    { label: 'Topic Predictions', icon: <Psychology />, path: '/predictions', color: '#00f2fe' },
-    { label: 'Study Trends', icon: <School />, path: '/trends', color: '#38f9d7' },
+    { label: 'Start Mock Test', icon: <Quiz />, path: '/dashboard/mock-test', color: '#667eea' },
+    { label: 'View Analytics', icon: <AutoGraph />, path: '/dashboard/analytics', color: '#f5576c' },
+    { label: 'Topic Predictions', icon: <Psychology />, path: '/dashboard/predictions', color: '#00f2fe' },
+    { label: 'Study Trends', icon: <School />, path: '/dashboard/trends', color: '#38f9d7' },
   ];
 
   if (loading) {

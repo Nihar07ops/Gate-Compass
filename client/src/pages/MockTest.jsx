@@ -629,7 +629,7 @@ const MockTest = () => {
       <Dialog 
         open={showResults} 
         onClose={() => setShowResults(false)}
-        maxWidth="md"
+        maxWidth="lg"
         fullWidth
       >
         <DialogTitle>
@@ -639,16 +639,17 @@ const MockTest = () => {
           </Box>
         </DialogTitle>
         <DialogContent>
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={4}>
+          {/* Score Summary */}
+          <Grid container spacing={3} mb={4}>
+            <Grid item xs={12} md={3}>
               <Paper elevation={2} sx={{ p: 3, textAlign: 'center', background: 'linear-gradient(135deg, #667eea10 0%, #764ba210 100%)' }}>
                 <Typography variant="h3" fontWeight={700} color="primary">
-                  {results?.score}%
+                  {results?.score?.toFixed(2)}%
                 </Typography>
                 <Typography variant="body2" color="text.secondary">Final Score</Typography>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={3}>
               <Paper elevation={2} sx={{ p: 3, textAlign: 'center' }}>
                 <Typography variant="h3" fontWeight={700} color="success.main">
                   {results?.correct}
@@ -656,15 +657,74 @@ const MockTest = () => {
                 <Typography variant="body2" color="text.secondary">Correct</Typography>
               </Paper>
             </Grid>
-            <Grid item xs={12} md={4}>
+            <Grid item xs={12} md={3}>
               <Paper elevation={2} sx={{ p: 3, textAlign: 'center' }}>
                 <Typography variant="h3" fontWeight={700} color="error.main">
-                  {results?.total - results?.correct}
+                  {results?.incorrect || (results?.total - results?.correct)}
                 </Typography>
                 <Typography variant="body2" color="text.secondary">Incorrect</Typography>
               </Paper>
             </Grid>
+            <Grid item xs={12} md={3}>
+              <Paper elevation={2} sx={{ p: 3, textAlign: 'center' }}>
+                <Typography variant="h3" fontWeight={700} color="text.secondary">
+                  {results?.unanswered || 0}
+                </Typography>
+                <Typography variant="body2" color="text.secondary">Unanswered</Typography>
+              </Paper>
+            </Grid>
           </Grid>
+
+          {/* Detailed Results */}
+          {results?.details && (
+            <Box>
+              <Typography variant="h6" fontWeight={600} gutterBottom>
+                Question-wise Analysis
+              </Typography>
+              <Box sx={{ maxHeight: 400, overflowY: 'auto', mt: 2 }}>
+                {results.details.map((detail, index) => (
+                  <Paper 
+                    key={index} 
+                    elevation={1} 
+                    sx={{ 
+                      p: 2, 
+                      mb: 2,
+                      borderLeft: `4px solid ${detail.isCorrect ? '#4caf50' : '#f44336'}`,
+                    }}
+                  >
+                    <Box display="flex" justifyContent="space-between" alignItems="start" mb={1}>
+                      <Typography variant="body1" fontWeight={600}>
+                        Question {index + 1}
+                      </Typography>
+                      <Chip 
+                        label={detail.isCorrect ? 'Correct' : 'Incorrect'} 
+                        color={detail.isCorrect ? 'success' : 'error'}
+                        size="small"
+                      />
+                    </Box>
+                    <Typography variant="body2" color="text.secondary" mb={1}>
+                      {detail.question}
+                    </Typography>
+                    <Box display="flex" gap={2} flexWrap="wrap">
+                      <Chip 
+                        label={`Your Answer: ${detail.userAnswer || 'Not Answered'}`}
+                        size="small"
+                        color={detail.isCorrect ? 'success' : 'default'}
+                      />
+                      {!detail.isCorrect && (
+                        <Chip 
+                          label={`Correct Answer: ${detail.correctAnswer}`}
+                          size="small"
+                          color="success"
+                          variant="outlined"
+                        />
+                      )}
+                    </Box>
+                  </Paper>
+                ))}
+              </Box>
+            </Box>
+          )}
         </DialogContent>
         <DialogActions>
           <Button onClick={() => { setShowResults(false); setTest(null); setMode(null); setFormat(null); }}>

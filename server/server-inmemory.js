@@ -163,15 +163,18 @@ app.get('/api/predict', authMiddleware, async (req, res) => {
 app.post('/api/generate-test', authMiddleware, async (req, res) => {
   try {
     const { difficulty, topicCount = 10, topics = [], format = 'custom' } = req.body;
+    console.log('🎯 Generating test:', { format, difficulty, topicCount });
     
     let questions;
     let metadata = {};
     
     if (format === 'gate') {
-      // Generate full GATE format test (65 questions)
+      // Generate full GATE format test (65 questions) - ALWAYS RANDOMIZED
       const gateTest = inMemoryDb.generateGATEFormatTest();
       questions = gateTest.questions;
       metadata = gateTest.metadata;
+      console.log(`✅ Generated GATE test with ${questions.length} questions`);
+      console.log(`📊 First 3 question IDs: ${questions.slice(0, 3).map(q => q._id).join(', ')}`);
     } else {
       // Custom test generation
       const filters = {};
@@ -184,6 +187,7 @@ app.post('/api/generate-test', authMiddleware, async (req, res) => {
         totalMarks: questions.reduce((sum, q) => sum + (q.marks || 1), 0),
         format: 'Custom'
       };
+      console.log(`✅ Generated custom test with ${questions.length} questions`);
     }
     
     if (questions.length === 0) {
@@ -204,6 +208,7 @@ app.post('/api/generate-test', authMiddleware, async (req, res) => {
     
     res.json({ ...test, questions, metadata });
   } catch (error) {
+    console.error('❌ Error generating test:', error);
     res.status(500).json({ message: 'Error generating test', error: error.message });
   }
 });
@@ -212,25 +217,79 @@ app.post('/api/generate-test', authMiddleware, async (req, res) => {
 app.post('/api/submit-test', authMiddleware, async (req, res) => {
   try {
     const { testId, answers } = req.body;
+    console.log('📝 Submitting test:', testId);
+    console.log('📋 Answers received:', Object.keys(answers).length);
+    
     const test = inMemoryDb.getTest(testId);
-    const questions = inMemoryDb.getQuestions();
+    if (!test) {
+      return res.status(404).json({ message: 'Test not found' });
+    }
+    
+    const allQuestions = Array.from(inMemoryDb.questions.values());
+    
     let correct = 0;
-    Object.keys(answers).forEach(qId => {
-      const question = questions.find(q => q._id === qId);
-      if (question && answers[qId] === question.correctAnswer) correct++;
+    let incorrect = 0;
+    let unanswered = 0;
+    const details = [];
+    
+    // Analyze each question
+    test.questions.forEach(qId => {
+      const question = allQuestions.find(q => q._id === qId);
+      if (!question) {
+        console.warn('⚠️  Question not found:', qId);
+        return;
+      }
+      
+      const userAnswer = answers[qId];
+      const isCorrect = userAnswer && userAnswer === question.correctAnswer;
+      
+      if (!userAnswer) {
+        unanswered++;
+      } else if (isCorrect) {
+        correct++;
+      } else {
+        incorrect++;
+      }
+      
+      details.push({
+        questionId: qId,
+        question: question.text,
+        userAnswer: userAnswer || null,
+        correctAnswer: question.correctAnswer,
+        isCorrect: isCorrect,
+        topic: question.topic,
+        subject: question.subject
+      });
     });
-    const score = (correct / test.totalQuestions) * 100;
+    
+    const total = test.totalQuestions;
+    const score = total > 0 ? (correct / total) * 100 : 0;
+    
+    console.log(`✅ Test results: ${correct}/${total} correct (${score.toFixed(2)}%)`);
+    
     test.correctAnswers = correct;
     test.score = score;
     test.completed = true;
+    
     const user = inMemoryDb.findUser({ _id: req.userId });
-    inMemoryDb.updateUser(req.userId, {
-      testsCompleted: user.testsCompleted + 1,
-      totalScore: user.totalScore + score
+    if (user) {
+      inMemoryDb.updateUser(req.userId, {
+        testsCompleted: (user.testsCompleted || 0) + 1,
+        totalScore: (user.totalScore || 0) + score
+      });
+    }
+    
+    res.json({ 
+      score, 
+      correct, 
+      incorrect,
+      unanswered,
+      total,
+      details 
     });
-    res.json({ score, correct, total: test.totalQuestions });
   } catch (error) {
-    res.status(500).json({ message: 'Error submitting test' });
+    console.error('❌ Error submitting test:', error);
+    res.status(500).json({ message: 'Error submitting test', error: error.message });
   }
 });
 
