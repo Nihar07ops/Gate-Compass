@@ -80,61 +80,32 @@ const HistoricalTrends = () => {
     );
   }
 
-  // Topic Frequency Bar Chart with gradient
+  // Simplified Topic Frequency Bar Chart
   const topicFrequencyData = {
     labels: trendsData?.topicFrequency?.map(t => t.topic) || [],
     datasets: [{
-      label: 'Question Frequency',
+      label: 'Questions Asked',
       data: trendsData?.topicFrequency?.map(t => t.count) || [],
-      backgroundColor: trendsData?.topicFrequency?.map((_, i) => {
-        const colors = [
-          'rgba(102, 126, 234, 0.8)',
-          'rgba(118, 75, 162, 0.8)',
-          'rgba(240, 147, 251, 0.8)',
-          'rgba(245, 87, 108, 0.8)',
-          'rgba(79, 172, 254, 0.8)',
-        ];
-        return colors[i % colors.length];
-      }),
-      borderColor: trendsData?.topicFrequency?.map((_, i) => {
-        const colors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe'];
-        return colors[i % colors.length];
-      }),
+      backgroundColor: 'rgba(102, 126, 234, 0.7)',
+      borderColor: '#667eea',
       borderWidth: 2,
-      borderRadius: 10,
-      barThickness: 50,
+      borderRadius: 8,
     }]
   };
 
   const barOptions = {
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          font: {
-            size: 14,
-            weight: '600',
-          },
-          padding: 20,
-          usePointStyle: true,
-        }
+        display: false,
       },
       tooltip: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        padding: 15,
-        titleFont: {
-          size: 15,
-          weight: 'bold',
-        },
-        bodyFont: {
-          size: 14,
-        },
-        borderColor: '#667eea',
-        borderWidth: 2,
-        displayColors: true,
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        padding: 12,
+        titleFont: { size: 14 },
+        bodyFont: { size: 13 },
+        cornerRadius: 8,
       }
     },
     scales: {
@@ -142,13 +113,10 @@ const HistoricalTrends = () => {
         beginAtZero: true,
         grid: {
           color: 'rgba(102, 126, 234, 0.1)',
-          lineWidth: 1,
         },
         ticks: {
-          font: {
-            size: 12,
-            weight: '600',
-          }
+          font: { size: 12 },
+          padding: 8,
         }
       },
       x: {
@@ -156,56 +124,42 @@ const HistoricalTrends = () => {
           display: false,
         },
         ticks: {
-          font: {
-            size: 12,
-            weight: '600',
-          }
+          font: { size: 12 },
+          padding: 8,
         }
       }
     },
   };
 
-  // Difficulty Trend Line Chart with area fill
+  // Simplified Difficulty Trend Line Chart
   const difficultyTrendData = {
     labels: trendsData?.years || [],
     datasets: [{
-      label: 'Average Difficulty',
+      label: 'Difficulty Level',
       data: trendsData?.difficultyTrend || [],
-      borderColor: '#667eea',
-      backgroundColor: 'rgba(102, 126, 234, 0.1)',
+      borderColor: '#764ba2',
+      backgroundColor: 'rgba(118, 75, 162, 0.1)',
       borderWidth: 3,
-      tension: 0.4,
+      tension: 0.3,
       fill: true,
-      pointRadius: 6,
-      pointHoverRadius: 8,
-      pointBackgroundColor: '#667eea',
+      pointRadius: 5,
+      pointHoverRadius: 7,
+      pointBackgroundColor: '#764ba2',
       pointBorderColor: '#fff',
       pointBorderWidth: 2,
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: '#667eea',
-      pointHoverBorderWidth: 3,
     }]
   };
 
   const lineOptions = {
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          font: {
-            size: 14,
-            weight: '600',
-          },
-          padding: 20,
-          usePointStyle: true,
-        }
+        display: false,
       },
       tooltip: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        padding: 15,
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        padding: 12,
         titleFont: {
           size: 15,
           weight: 'bold',

@@ -84,96 +84,65 @@ const PredictiveAnalysis = () => {
   const barData = {
     labels: predictions?.topicImportance?.map(t => t.topic) || [],
     datasets: [{
-      label: 'Importance Score',
+      label: 'Importance (%)',
       data: predictions?.topicImportance?.map(t => t.score) || [],
-      backgroundColor: predictions?.topicImportance?.map((_, i) => {
-        const colors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe'];
-        return colors[i % colors.length];
-      }),
+      backgroundColor: 'rgba(118, 75, 162, 0.7)',
+      borderColor: '#764ba2',
+      borderWidth: 2,
       borderRadius: 8,
     }]
   };
 
   const radarOptions = {
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     scales: {
       r: {
         beginAtZero: true,
         max: 100,
         ticks: {
-          stepSize: 20,
+          stepSize: 25,
           backdropColor: 'transparent',
-          font: {
-            size: 12,
-            weight: '600',
-          }
+          font: { size: 11 }
         },
         grid: {
-          color: 'rgba(102, 126, 234, 0.2)',
-          lineWidth: 2,
+          color: 'rgba(102, 126, 234, 0.15)',
         },
         angleLines: {
-          color: 'rgba(102, 126, 234, 0.2)',
-          lineWidth: 2,
+          color: 'rgba(102, 126, 234, 0.15)',
         },
         pointLabels: {
-          font: {
-            size: 13,
-            weight: '700',
-          },
-          color: '#667eea',
+          font: { size: 12 },
         },
       },
     },
-    plugins: {
-      legend: {
-        display: true,
-        position: 'top',
-        labels: {
-          font: {
-            size: 14,
-            weight: '600',
-          },
-          padding: 20,
-          usePointStyle: true,
-        }
-      },
-      tooltip: {
-        backgroundColor: 'rgba(0, 0, 0, 0.9)',
-        padding: 15,
-        titleFont: {
-          size: 15,
-          weight: 'bold',
-        },
-        bodyFont: {
-          size: 14,
-        },
-        borderColor: '#667eea',
-        borderWidth: 2,
-      }
-    },
-  };
-
-  const barOptions = {
-    responsive: true,
-    maintainAspectRatio: true,
     plugins: {
       legend: {
         display: false,
       },
       tooltip: {
         backgroundColor: 'rgba(0, 0, 0, 0.9)',
-        padding: 15,
-        titleFont: {
-          size: 15,
-          weight: 'bold',
-        },
-        bodyFont: {
-          size: 14,
-        },
-        borderColor: '#667eea',
-        borderWidth: 2,
+        padding: 10,
+        titleFont: { size: 13 },
+        bodyFont: { size: 12 },
+        cornerRadius: 8,
+      }
+    },
+  };
+
+  const barOptions = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        padding: 10,
+        titleFont: { size: 13 },
+        bodyFont: { size: 12 },
+        cornerRadius: 8,
       }
     },
     scales: {

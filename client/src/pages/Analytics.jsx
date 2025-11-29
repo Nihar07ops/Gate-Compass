@@ -92,27 +92,28 @@ const Analytics = () => {
     );
   }
 
-  // Chart configurations with stunning gradients
+  // Enhanced Chart configurations
   const performanceData = {
     labels: analytics?.topicPerformance?.map(t => t.topic) || [],
     datasets: [{
-      label: 'Performance Score',
+      label: 'Your Performance',
       data: analytics?.topicPerformance?.map(t => t.score) || [],
-      backgroundColor: 'rgba(102, 126, 234, 0.2)',
+      backgroundColor: 'rgba(102, 126, 234, 0.25)',
       borderColor: '#667eea',
       borderWidth: 3,
       pointBackgroundColor: '#667eea',
       pointBorderColor: '#fff',
+      pointBorderWidth: 3,
       pointHoverBackgroundColor: '#fff',
       pointHoverBorderColor: '#667eea',
-      pointRadius: 5,
-      pointHoverRadius: 7,
+      pointRadius: 6,
+      pointHoverRadius: 8,
     }]
   };
 
   const radarOptions = {
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     scales: {
       r: {
         beginAtZero: true,
@@ -120,21 +121,21 @@ const Analytics = () => {
         ticks: {
           stepSize: 20,
           backdropColor: 'transparent',
-          font: {
-            size: 12,
-            weight: 'bold',
-          }
+          font: { size: 13, weight: '500' },
+          color: '#666',
         },
         grid: {
-          color: 'rgba(102, 126, 234, 0.1)',
-          lineWidth: 2,
+          color: 'rgba(102, 126, 234, 0.2)',
+          lineWidth: 1.5,
+        },
+        angleLines: {
+          color: 'rgba(102, 126, 234, 0.2)',
+          lineWidth: 1.5,
         },
         pointLabels: {
-          font: {
-            size: 13,
-            weight: '600',
-          },
+          font: { size: 14, weight: '600' },
           color: '#667eea',
+          padding: 15,
         },
       },
     },
@@ -143,25 +144,23 @@ const Analytics = () => {
         display: true,
         position: 'top',
         labels: {
-          font: {
-            size: 14,
-            weight: '600',
-          },
+          font: { size: 14, weight: '600' },
           padding: 20,
+          usePointStyle: true,
         }
       },
       tooltip: {
-        backgroundColor: 'rgba(0, 0, 0, 0.8)',
-        padding: 12,
-        titleFont: {
-          size: 14,
-          weight: 'bold',
-        },
-        bodyFont: {
-          size: 13,
-        },
-        borderColor: '#667eea',
-        borderWidth: 2,
+        backgroundColor: 'rgba(0, 0, 0, 0.9)',
+        padding: 15,
+        titleFont: { size: 15, weight: 'bold' },
+        bodyFont: { size: 14 },
+        cornerRadius: 8,
+        displayColors: true,
+        callbacks: {
+          label: function(context) {
+            return `Score: ${context.parsed.r}%`;
+          }
+        }
       }
     },
   };
@@ -187,17 +186,14 @@ const Analytics = () => {
 
   const doughnutOptions = {
     responsive: true,
-    maintainAspectRatio: true,
-    cutout: '70%',
+    maintainAspectRatio: false,
+    cutout: '65%',
     plugins: {
       legend: {
         position: 'bottom',
         labels: {
-          padding: 20,
-          font: {
-            size: 13,
-            weight: '600',
-          },
+          padding: 15,
+          font: { size: 12 },
           usePointStyle: true,
           pointStyle: 'circle',
         }
@@ -413,23 +409,35 @@ const Analytics = () => {
 
       {/* Charts */}
       <Grid container spacing={3}>
-        {/* Radar Chart */}
-        <Grid item xs={12} lg={6}>
+        {/* Radar Chart - Full Width */}
+        <Grid item xs={12}>
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <Card elevation={4} sx={{ height: '100%' }}>
-              <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <Assessment sx={{ mr: 1, color: '#667eea', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    Topic-wise Performance
-                  </Typography>
+            <Card elevation={4}>
+              <CardContent sx={{ p: 4 }}>
+                <Box display="flex" alignItems="center" justifyContent="space-between" mb={3}>
+                  <Box display="flex" alignItems="center">
+                    <Assessment sx={{ mr: 1.5, color: '#667eea', fontSize: 32 }} />
+                    <Box>
+                      <Typography variant="h4" fontWeight={700}>
+                        Topic-wise Performance
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary" mt={0.5}>
+                        Your performance across different topics
+                      </Typography>
+                    </Box>
+                  </Box>
+                  <Chip 
+                    label={`${analytics?.topicPerformance?.length || 0} Topics`}
+                    color="primary"
+                    sx={{ fontWeight: 600 }}
+                  />
                 </Box>
-                <Divider sx={{ mb: 3 }} />
-                <Box sx={{ height: 400, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                <Divider sx={{ mb: 4 }} />
+                <Box sx={{ height: 500, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Radar data={performanceData} options={radarOptions} />
                 </Box>
               </CardContent>
