@@ -22,6 +22,7 @@ import {
   Psychology,
   Quiz,
   Analytics,
+  MenuBook,
   Brightness4,
   Brightness7,
   AccountCircle,
@@ -37,6 +38,7 @@ const menuItems = [
   { text: 'Predictions', icon: <Psychology />, path: '/predictions' },
   { text: 'Mock Tests', icon: <Quiz />, path: '/mock-test' },
   { text: 'Analytics', icon: <Analytics />, path: '/analytics' },
+  { text: 'Resources', icon: <MenuBook />, path: '/resources' },
 ];
 
 const Layout = ({ darkMode, toggleDarkMode }) => {

@@ -86,12 +86,33 @@ app.get('/api/dashboard', authMiddleware, async (req, res) => {
   try {
     const user = inMemoryDb.findUser({ _id: req.userId });
     const averageScore = user.testsCompleted > 0 ? user.totalScore / user.testsCompleted : 0;
+    const topics = inMemoryDb.getAllTopics();
+    
+    // Generate topic performance
+    const topicScores = topics.map(topic => ({
+      topic,
+      score: Math.floor(Math.random() * 40) + 50
+    }));
+    
+    const strongTopics = topicScores
+      .filter(t => t.score >= 75)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 3)
+      .map(t => t.topic);
+    
+    const weakTopics = topicScores
+      .filter(t => t.score < 65)
+      .sort((a, b) => a.score - b.score)
+      .slice(0, 3)
+      .map(t => t.topic);
+    
     res.json({
       testsCompleted: user.testsCompleted,
       averageScore: Math.round(averageScore),
-      strongTopics: [],
-      weakTopics: [],
-      streak: user.streak
+      strongTopics,
+      weakTopics,
+      streak: user.streak,
+      totalQuestions: inMemoryDb.getQuestions(1000).length
     });
   } catch (error) {
     res.status(500).json({ message: 'Error fetching dashboard' });
@@ -100,16 +121,27 @@ app.get('/api/dashboard', authMiddleware, async (req, res) => {
 
 // Trends
 app.get('/api/trends', authMiddleware, async (req, res) => {
+  const allQuestions = inMemoryDb.getQuestions(1000);
+  const topicCount = {};
+  const yearCount = {};
+  
+  allQuestions.forEach(q => {
+    topicCount[q.topic] = (topicCount[q.topic] || 0) + 1;
+    yearCount[q.year] = (yearCount[q.year] || 0) + 1;
+  });
+  
+  const topicFrequency = Object.entries(topicCount)
+    .map(([topic, count]) => ({ topic, count }))
+    .sort((a, b) => b.count - a.count);
+  
+  const years = Object.keys(yearCount).sort();
+  const difficultyTrend = years.map(() => Math.random() * 2 + 2.5);
+  
   res.json({
-    topicFrequency: [
-      { topic: 'Algorithms', count: 15 },
-      { topic: 'Data Structures', count: 12 },
-      { topic: 'Operating Systems', count: 10 },
-      { topic: 'DBMS', count: 8 },
-      { topic: 'Networks', count: 7 }
-    ],
-    years: [2019, 2020, 2021, 2022, 2023],
-    difficultyTrend: [3.2, 3.5, 3.3, 3.7, 3.6]
+    topicFrequency,
+    years,
+    difficultyTrend,
+    totalQuestions: allQuestions.length
   });
 });
 
@@ -130,17 +162,49 @@ app.get('/api/predict', authMiddleware, async (req, res) => {
 // Generate test
 app.post('/api/generate-test', authMiddleware, async (req, res) => {
   try {
-    const questions = inMemoryDb.getQuestions(10);
+    const { difficulty, topicCount = 10, topics = [], format = 'custom' } = req.body;
+    
+    let questions;
+    let metadata = {};
+    
+    if (format === 'gate') {
+      // Generate full GATE format test (65 questions)
+      const gateTest = inMemoryDb.generateGATEFormatTest();
+      questions = gateTest.questions;
+      metadata = gateTest.metadata;
+    } else {
+      // Custom test generation
+      const filters = {};
+      if (difficulty) filters.difficulty = difficulty;
+      if (topics.length > 0) filters.topic = topics[0];
+      
+      questions = inMemoryDb.getQuestions(topicCount, filters);
+      metadata = {
+        totalQuestions: questions.length,
+        totalMarks: questions.reduce((sum, q) => sum + (q.marks || 1), 0),
+        format: 'Custom'
+      };
+    }
+    
+    if (questions.length === 0) {
+      return res.status(404).json({ message: 'No questions found matching criteria' });
+    }
+    
     const test = inMemoryDb.saveTest({
       userId: req.userId,
       questions: questions.map(q => q._id),
       totalQuestions: questions.length,
       completed: false,
-      createdAt: new Date()
+      createdAt: new Date(),
+      difficulty,
+      topics,
+      format,
+      metadata
     });
-    res.json({ ...test, questions });
+    
+    res.json({ ...test, questions, metadata });
   } catch (error) {
-    res.status(500).json({ message: 'Error generating test' });
+    res.status(500).json({ message: 'Error generating test', error: error.message });
   }
 });
 
@@ -172,18 +236,26 @@ app.post('/api/submit-test', authMiddleware, async (req, res) => {
 
 // Analytics
 app.get('/api/analytics', authMiddleware, async (req, res) => {
+  const user = inMemoryDb.findUser({ _id: req.userId });
+  const topics = inMemoryDb.getAllTopics();
+  
+  const topicPerformance = topics.map(topic => ({
+    topic,
+    score: Math.floor(Math.random() * 30) + 60 // 60-90 range
+  }));
+  
+  const totalAttempted = user.testsCompleted * 10;
+  const correct = Math.floor(totalAttempted * (user.averageScore || 75) / 100);
+  const incorrect = totalAttempted - correct;
+  
   res.json({
-    topicPerformance: [
-      { topic: 'Algorithms', score: 85 },
-      { topic: 'Data Structures', score: 78 },
-      { topic: 'OS', score: 72 },
-      { topic: 'DBMS', score: 80 },
-      { topic: 'Networks', score: 75 }
-    ],
-    correct: 45,
-    incorrect: 15,
-    unattempted: 5,
-    averageScore: 75
+    topicPerformance,
+    correct,
+    incorrect,
+    unattempted: Math.floor(Math.random() * 10),
+    averageScore: user.averageScore || 75,
+    totalTests: user.testsCompleted,
+    totalQuestions: totalAttempted
   });
 });
 
