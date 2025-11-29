@@ -1,206 +1,132 @@
-# GATE COMPASS
+# GATE CSE Preparation Platform
 
-Intelligent GATE CSIT exam preparation platform with mock test generation based on trend analysis.
+A comprehensive MERN stack application with ML-powered predictions for GATE Computer Science exam preparation.
 
-## Project Structure
+## Features
 
-This is a monorepo containing:
-- `frontend/` - React + TypeScript frontend application
-- `backend/` - Node.js + Express + TypeScript backend API
+- **Historical Trend Analysis**: Interactive visualizations of past GATE paper patterns
+- **Predictive Topic Importance**: ML-based forecasting of important topics
+- **Balanced Mock Tests**: Auto-generated tests with calibrated difficulty
+- **Performance Analytics**: Detailed feedback with radar charts and heatmaps
+- **Continuous Learning**: Automated updates and retraining
+- **PWA Support**: Offline mock tests capability
+- **Dark Mode**: Eye-friendly interface
 
-## Prerequisites
+## Tech Stack
 
-- Node.js >= 18.0.0
-- npm >= 9.0.0
-- Docker and Docker Compose (for local development)
+### Frontend
+- React.js with Vite
+- Material-UI & Tailwind CSS
+- Chart.js & Recharts for visualizations
+- Framer Motion for animations
+- React Router for navigation
 
-## Getting Started
+### Backend
+- Node.js & Express.js
+- MongoDB Atlas
+- JWT Authentication
+- Node-cron for scheduled tasks
+- AWS S3 integration
 
-### 1. Install Dependencies
+### ML Service
+- Python Flask/FastAPI
+- scikit-learn & TensorFlow
+- spaCy/NLTK for NLP
+- Pandas for data analysis
 
+## Setup Instructions
+
+### Prerequisites
+- Node.js (v18+)
+- Python (v3.9+)
+- MongoDB Atlas account
+- AWS account (for S3)
+
+### Installation
+
+1. Install all dependencies:
 ```bash
-npm install
+npm run install-all
 ```
 
-This will install dependencies for both frontend and backend workspaces.
-
-### 2. Start Docker Services
-
-Start PostgreSQL and Redis containers:
-
+2. Set up Python ML service:
 ```bash
-docker-compose up -d
+cd ml_service
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variables
+3. Configure environment variables:
+   - Copy `.env.example` to `.env` in both `server` and `client` folders
+   - Add your MongoDB URI, JWT secret, AWS credentials, etc.
 
-#### Backend
-Copy the example environment file:
+4. Start development servers:
 ```bash
-cp backend/.env.example backend/.env.development
-```
+# Terminal 1: Start ML service
+cd ml_service
+python app.py
 
-Update the following variables in `backend/.env.development`:
-- `GOOGLE_CLIENT_ID` - Your Google OAuth client ID
-- `GOOGLE_CLIENT_SECRET` - Your Google OAuth client secret
-- `JWT_SECRET` - A secure random string for JWT signing
-
-#### Frontend
-Copy the example environment file:
-```bash
-cp frontend/.env.example frontend/.env.development
-```
-
-Update `VITE_GOOGLE_CLIENT_ID` with your Google OAuth client ID.
-
-### 4. Run Development Servers
-
-Start both frontend and backend in development mode:
-
-```bash
+# Terminal 2: Start backend and frontend
 npm run dev
 ```
 
-Or run them separately:
+### Deployment
 
+**Frontend (Vercel):**
 ```bash
-# Backend only
-npm run dev:backend
-
-# Frontend only
-npm run dev:frontend
+cd client
+vercel deploy
 ```
 
-The application will be available at:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
-
-## Available Scripts
-
-### Root Level
-- `npm run dev` - Start both frontend and backend in development mode
-- `npm run build` - Build both applications for production
-- `npm run test` - Run tests for both applications
-- `npm run lint` - Lint both applications
-- `npm run format` - Format code with Prettier
-
-### Backend
-- `npm run dev --workspace=backend` - Start backend in development mode
-- `npm run build --workspace=backend` - Build backend for production
-- `npm run test --workspace=backend` - Run backend tests
-- `npm run lint --workspace=backend` - Lint backend code
-
-### Frontend
-- `npm run dev --workspace=frontend` - Start frontend in development mode
-- `npm run build --workspace=frontend` - Build frontend for production
-- `npm run test --workspace=frontend` - Run frontend tests
-- `npm run lint --workspace=frontend` - Lint frontend code
-
-## Docker Services
-
-The project uses Docker Compose to run PostgreSQL and Redis:
-
-- **PostgreSQL**: Port 5432
-  - Database: `gatecompass_db`
-  - User: `gatecompass`
-  - Password: `gatecompass_dev`
-
-- **Redis**: Port 6379
-
-To stop the services:
+**Backend (AWS EC2 or Railway):**
 ```bash
-docker-compose down
+cd server
+# Follow platform-specific deployment instructions
 ```
 
-To stop and remove volumes:
+**ML Service (AWS Lambda or EC2):**
 ```bash
-docker-compose down -v
+cd ml_service
+# Package and deploy using Serverless framework or Docker
 ```
 
-## Technology Stack
+## Project Structure
 
-### Frontend
-- React 18
-- TypeScript
-- Material-UI (MUI)
-- React Router
-- Chart.js
-- Vite
-- Vitest
-
-### Backend
-- Node.js
-- Express
-- TypeScript
-- PostgreSQL
-- Redis
-- Passport.js (Google OAuth)
-- JWT
-- Jest
-
-## Project Features
-
-- Google OAuth authentication
-- Trend analysis of GATE questions
-- Intelligent mock test generation
-- 3-hour timed tests with per-question tracking
-- Comprehensive results and analytics
-- Personalized feedback and recommendations
-- Admin panel for question management
-
-## Deployment
-
-For production deployment, see the comprehensive deployment documentation:
-
-- **[Quick Start Deployment](./QUICKSTART_DEPLOYMENT.md)** - 5-minute deployment guide
-- **[Deployment Guide](./DEPLOYMENT.md)** - Comprehensive deployment documentation
-- **[Deployment Checklist](./DEPLOYMENT_CHECKLIST.md)** - Step-by-step checklist
-- **[Deployment Summary](./deployment/DEPLOYMENT_SUMMARY.md)** - Overview of all deployment files
-
-### Quick Production Deployment
-
-```bash
-# 1. Configure environment
-cp backend/.env.example .env.production
-# Edit .env.production with production values
-
-# 2. Build and deploy
-npm run docker:build
-npm run docker:up
-
-# 3. Run migrations
-npm run migrate:up
-
-# 4. Verify deployment
-npm run docker:ps
+```
+gate-cse-prep-platform/
+├── client/                 # React frontend
+│   ├── src/
+│   │   ├── components/    # React components
+│   │   ├── pages/         # Page components
+│   │   ├── services/      # API services
+│   │   └── utils/         # Utility functions
+├── server/                # Node.js backend
+│   ├── routes/           # API routes
+│   ├── models/           # MongoDB models
+│   ├── middleware/       # Auth & validation
+│   └── utils/            # Helper functions
+├── ml_service/           # Python ML microservice
+│   ├── models/           # ML models
+│   ├── data/             # Training data
+│   └── utils/            # NLP & analysis tools
+└── docs/                 # Documentation
 ```
 
-### Deployment Features
+## API Endpoints
 
-- **Docker-based deployment** with multi-stage builds
-- **CI/CD pipeline** with GitHub Actions
-- **Automated database backups** with configurable retention
-- **Monitoring and alerting** with Prometheus and Grafana
-- **SSL/TLS support** with Nginx reverse proxy
-- **Health checks** and graceful shutdown
-- **Security hardening** with rate limiting and security headers
+- `POST /api/auth/register` - User registration
+- `POST /api/auth/login` - User login
+- `GET /api/trends` - Historical trend data
+- `GET /api/predict` - Topic predictions
+- `POST /api/generate-test` - Generate mock test
+- `GET /api/analytics/:userId` - User performance analytics
+- `POST /api/submit-test` - Submit test answers
 
-## Monitoring
+## Contributing
 
-Optional monitoring stack with Prometheus, Grafana, and Alertmanager:
-
-```bash
-cd monitoring
-docker-compose -f docker-compose.monitoring.yml up -d
-```
-
-Access dashboards:
-- Grafana: http://localhost:3001 (admin/admin)
-- Prometheus: http://localhost:9090
-- Alertmanager: http://localhost:9093
-
-See [monitoring/README.md](./monitoring/README.md) for details.
+Contributions are welcome! Please read the contributing guidelines before submitting PRs.
 
 ## License
 
-Private - All rights reserved
+MIT
