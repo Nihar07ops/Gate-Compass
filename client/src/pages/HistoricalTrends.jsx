@@ -4,8 +4,7 @@ import {
   Typography, 
   Card, 
   CardContent, 
-  Grid, 
-  CircularProgress,
+  Grid,
   Paper,
   Chip,
   Divider,
@@ -215,10 +214,13 @@ const HistoricalTrends = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <Box mb={4}>
-          <Typography variant="h3" fontWeight={700} gutterBottom>
-            Historical Trends 📈
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Box display="flex" alignItems="center" gap={1.5}>
+            <Typography variant="h3" fontWeight={700}>
+              Historical Trends
+            </Typography>
+            <TrendingUp sx={{ fontSize: 48, color: '#667eea' }} />
+          </Box>
+          <Typography variant="h6" color="text.secondary" mt={1}>
             GATE CSE exam patterns and trends over the years
           </Typography>
         </Box>

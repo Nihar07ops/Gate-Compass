@@ -3,7 +3,7 @@ import { Grid, Card, CardContent, Typography, Box, LinearProgress, Button, Chip 
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
   TrendingUp, Psychology, Quiz, EmojiEvents, 
-  AutoGraph, School, Timer, Star 
+  AutoGraph, School, Timer, Star, WavingHand 
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import api from '../utils/api';
@@ -102,10 +102,18 @@ const Dashboard = () => {
         transition={{ duration: 0.5 }}
       >
         <Box mb={4}>
-          <Typography variant="h3" fontWeight={700} gutterBottom>
-            {greeting}! 👋
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Box display="flex" alignItems="center" gap={1}>
+            <Typography variant="h3" fontWeight={700}>
+              {greeting}!
+            </Typography>
+            <motion.div
+              animate={{ rotate: [0, 15, -15, 15, 0] }}
+              transition={{ duration: 1.5, repeat: Infinity, repeatDelay: 3 }}
+            >
+              <WavingHand sx={{ fontSize: 48, color: '#FFD700' }} />
+            </motion.div>
+          </Box>
+          <Typography variant="h6" color="text.secondary" mt={1}>
             Ready to ace your GATE CSE preparation today?
           </Typography>
         </Box>

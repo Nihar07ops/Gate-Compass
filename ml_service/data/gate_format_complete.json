@@ -1615,11 +1615,961 @@
       "difficulty": "medium",
       "year": 2022,
       "marks": 1
+    },
+    {
+      "id": "GATE_PYQ_200",
+      "text": "What is the time complexity of finding the median of two sorted arrays of size n each?",
+      "options": [
+        "O(n)",
+        "O(log n)",
+        "O(n log n)",
+        "O(1)"
+      ],
+      "correctAnswer": "O(log n)",
+      "explanation": "Using binary search approach, we can find median in O(log n) time.",
+      "topic": "Divide and Conquer",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "hard",
+      "year": 2023,
+      "marks": 2,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_201",
+      "text": "Which algorithm is used to find strongly connected components in a directed graph?",
+      "options": [
+        "Prim's Algorithm",
+        "Kruskal's Algorithm",
+        "Kosaraju's Algorithm",
+        "Bellman-Ford Algorithm"
+      ],
+      "correctAnswer": "Kosaraju's Algorithm",
+      "explanation": "Kosaraju's algorithm uses two DFS passes to find SCCs.",
+      "topic": "Graph Algorithms",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_202",
+      "text": "What is the worst-case time complexity of QuickSort?",
+      "options": [
+        "O(n log n)",
+        "O(n²)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "correctAnswer": "O(n²)",
+      "explanation": "QuickSort has O(n²) worst case when pivot is always smallest or largest element.",
+      "topic": "Sorting",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2021,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_203",
+      "text": "Which data structure is used in Dijkstra's algorithm for efficient implementation?",
+      "options": [
+        "Stack",
+        "Queue",
+        "Min Heap",
+        "Hash Table"
+      ],
+      "correctAnswer": "Min Heap",
+      "explanation": "Min heap (priority queue) gives O((V+E) log V) complexity.",
+      "topic": "Graph Algorithms",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_204",
+      "text": "What is the optimal time complexity for matrix chain multiplication using dynamic programming?",
+      "options": [
+        "O(n)",
+        "O(n²)",
+        "O(n³)",
+        "O(2ⁿ)"
+      ],
+      "correctAnswer": "O(n³)",
+      "explanation": "DP solution requires three nested loops, giving O(n³) complexity.",
+      "topic": "Dynamic Programming",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "hard",
+      "year": 2022,
+      "marks": 2,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_205",
+      "text": "What is the minimum number of queues needed to implement a stack?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "explanation": "Two queues are needed to implement stack operations efficiently.",
+      "topic": "Stack and Queue",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_206",
+      "text": "In a binary heap with n elements, what is the time complexity to build the heap?",
+      "options": [
+        "O(n log n)",
+        "O(n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "correctAnswer": "O(n)",
+      "explanation": "Bottom-up heap construction takes O(n) time.",
+      "topic": "Heaps",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_207",
+      "text": "What is the maximum number of edges in a simple undirected graph with n vertices?",
+      "options": [
+        "n",
+        "n(n-1)",
+        "n(n-1)/2",
+        "n²"
+      ],
+      "correctAnswer": "n(n-1)/2",
+      "explanation": "Complete graph has n(n-1)/2 edges.",
+      "topic": "Graph Theory",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2021,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_208",
+      "text": "Which traversal of a binary tree gives nodes in non-decreasing order for a BST?",
+      "options": [
+        "Preorder",
+        "Inorder",
+        "Postorder",
+        "Level order"
+      ],
+      "correctAnswer": "Inorder",
+      "explanation": "Inorder traversal of BST gives sorted sequence.",
+      "topic": "Trees",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_209",
+      "text": "What is the time complexity of searching in a balanced AVL tree with n nodes?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctAnswer": "O(log n)",
+      "explanation": "AVL tree maintains O(log n) height, giving O(log n) search.",
+      "topic": "Balanced Trees",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_210",
+      "text": "Which page replacement algorithm suffers from Belady's anomaly?",
+      "options": [
+        "LRU",
+        "Optimal",
+        "FIFO",
+        "LFU"
+      ],
+      "correctAnswer": "FIFO",
+      "explanation": "FIFO can have more page faults with more frames.",
+      "topic": "Memory Management",
+      "subject": "Operating Systems",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_211",
+      "text": "What is the purpose of semaphores in operating systems?",
+      "options": [
+        "Memory allocation",
+        "Process synchronization",
+        "CPU scheduling",
+        "File management"
+      ],
+      "correctAnswer": "Process synchronization",
+      "explanation": "Semaphores are used for process synchronization and mutual exclusion.",
+      "topic": "Process Synchronization",
+      "subject": "Operating Systems",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_212",
+      "text": "In a system with 4 processes and 3 resource types, what is the maximum size of the allocation matrix?",
+      "options": [
+        "4×3",
+        "3×4",
+        "4×4",
+        "3×3"
+      ],
+      "correctAnswer": "4×3",
+      "explanation": "Allocation matrix has rows for processes and columns for resources.",
+      "topic": "Deadlock",
+      "subject": "Operating Systems",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2021,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_213",
+      "text": "Which scheduling algorithm gives minimum average waiting time?",
+      "options": [
+        "FCFS",
+        "SJF",
+        "Round Robin",
+        "Priority"
+      ],
+      "correctAnswer": "SJF",
+      "explanation": "Shortest Job First minimizes average waiting time.",
+      "topic": "CPU Scheduling",
+      "subject": "Operating Systems",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_214",
+      "text": "What is thrashing in an operating system?",
+      "options": [
+        "High CPU utilization",
+        "Excessive paging",
+        "Deadlock",
+        "Starvation"
+      ],
+      "correctAnswer": "Excessive paging",
+      "explanation": "Thrashing occurs when system spends more time paging than executing.",
+      "topic": "Virtual Memory",
+      "subject": "Operating Systems",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_215",
+      "text": "Which normal form eliminates transitive dependencies?",
+      "options": [
+        "1NF",
+        "2NF",
+        "3NF",
+        "BCNF"
+      ],
+      "correctAnswer": "3NF",
+      "explanation": "Third Normal Form removes transitive dependencies.",
+      "topic": "Normalization",
+      "subject": "DBMS",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_216",
+      "text": "What is the maximum number of superkeys possible for a relation with n attributes?",
+      "options": [
+        "n",
+        "2ⁿ",
+        "2ⁿ-1",
+        "n!"
+      ],
+      "correctAnswer": "2ⁿ-1",
+      "explanation": "Any subset containing a candidate key is a superkey.",
+      "topic": "Keys",
+      "subject": "DBMS",
+      "section": "Core Computer Science",
+      "difficulty": "hard",
+      "year": 2022,
+      "marks": 2,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_217",
+      "text": "Which isolation level prevents dirty reads?",
+      "options": [
+        "Read Uncommitted",
+        "Read Committed",
+        "Repeatable Read",
+        "Serializable"
+      ],
+      "correctAnswer": "Read Committed",
+      "explanation": "Read Committed prevents reading uncommitted data.",
+      "topic": "Transactions",
+      "subject": "DBMS",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2021,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_218",
+      "text": "What is the purpose of indexing in databases?",
+      "options": [
+        "Data security",
+        "Faster retrieval",
+        "Data backup",
+        "Normalization"
+      ],
+      "correctAnswer": "Faster retrieval",
+      "explanation": "Indexes speed up data retrieval operations.",
+      "topic": "Indexing",
+      "subject": "DBMS",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_219",
+      "text": "Which join returns all rows from both tables?",
+      "options": [
+        "Inner Join",
+        "Left Join",
+        "Right Join",
+        "Full Outer Join"
+      ],
+      "correctAnswer": "Full Outer Join",
+      "explanation": "Full Outer Join returns all rows with NULLs for non-matching.",
+      "topic": "SQL",
+      "subject": "DBMS",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_220",
+      "text": "Which layer of OSI model handles end-to-end communication?",
+      "options": [
+        "Network",
+        "Transport",
+        "Session",
+        "Application"
+      ],
+      "correctAnswer": "Transport",
+      "explanation": "Transport layer provides end-to-end communication services.",
+      "topic": "OSI Model",
+      "subject": "Computer Networks",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_221",
+      "text": "What is the maximum size of TCP window in bytes?",
+      "options": [
+        "16 KB",
+        "32 KB",
+        "64 KB",
+        "128 KB"
+      ],
+      "correctAnswer": "64 KB",
+      "explanation": "TCP window size field is 16 bits, max = 2¹⁶ = 64 KB.",
+      "topic": "TCP/IP",
+      "subject": "Computer Networks",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_222",
+      "text": "Which protocol is used for dynamic IP address assignment?",
+      "options": [
+        "DNS",
+        "DHCP",
+        "ARP",
+        "ICMP"
+      ],
+      "correctAnswer": "DHCP",
+      "explanation": "DHCP (Dynamic Host Configuration Protocol) assigns IP addresses.",
+      "topic": "Network Layer",
+      "subject": "Computer Networks",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2021,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_223",
+      "text": "What is the purpose of ARP?",
+      "options": [
+        "IP to MAC resolution",
+        "MAC to IP resolution",
+        "Domain resolution",
+        "Port assignment"
+      ],
+      "correctAnswer": "IP to MAC resolution",
+      "explanation": "ARP maps IP addresses to MAC addresses.",
+      "topic": "Data Link Layer",
+      "subject": "Computer Networks",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "GATE_PYQ_224",
+      "text": "Which routing algorithm is used by OSPF?",
+      "options": [
+        "Distance Vector",
+        "Link State",
+        "Path Vector",
+        "Hybrid"
+      ],
+      "correctAnswer": "Link State",
+      "explanation": "OSPF uses Link State routing algorithm.",
+      "topic": "Routing",
+      "subject": "Computer Networks",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "source": "GATE PYQ Pattern"
+    },
+    {
+      "id": "ALG_300",
+      "text": "What is the number of comparisons required to sort 8 elements using merge sort?",
+      "options": [
+        "17",
+        "18",
+        "19",
+        "20"
+      ],
+      "correctAnswer": "18",
+      "explanation": "Merge sort requires n*log(n) - n + 1 comparisons = 8*3 - 8 + 1 = 18",
+      "topic": "Sorting",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_301",
+      "text": "Which sorting algorithm is stable and has O(n log n) worst-case complexity?",
+      "options": [
+        "Quick Sort",
+        "Heap Sort",
+        "Merge Sort",
+        "Selection Sort"
+      ],
+      "correctAnswer": "Merge Sort",
+      "explanation": "Merge Sort is stable and has O(n log n) worst case.",
+      "topic": "Sorting",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2022,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_302",
+      "text": "What is the best case time complexity of Bubble Sort?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctAnswer": "O(n)",
+      "explanation": "Best case occurs when array is already sorted.",
+      "topic": "Sorting",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2021,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_303",
+      "text": "What is the time complexity of Bellman-Ford algorithm?",
+      "options": [
+        "O(V²)",
+        "O(VE)",
+        "O(E log V)",
+        "O(V³)"
+      ],
+      "correctAnswer": "O(VE)",
+      "explanation": "Bellman-Ford relaxes all edges V-1 times.",
+      "topic": "Graph Algorithms",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_304",
+      "text": "Which algorithm finds minimum spanning tree in O(E log E)?",
+      "options": [
+        "Prim's",
+        "Kruskal's",
+        "Dijkstra's",
+        "Floyd-Warshall"
+      ],
+      "correctAnswer": "Kruskal's",
+      "explanation": "Kruskal's sorts edges and uses union-find.",
+      "topic": "Graph Algorithms",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2024,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_305",
+      "text": "What is the maximum number of edges in a DAG with n vertices?",
+      "options": [
+        "n",
+        "n(n-1)",
+        "n(n-1)/2",
+        "n²"
+      ],
+      "correctAnswer": "n(n-1)/2",
+      "explanation": "DAG can have at most complete graph edges.",
+      "topic": "Graph Algorithms",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2021,
+      "marks": 2,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_306",
+      "text": "What is the time complexity of 0/1 Knapsack using DP?",
+      "options": [
+        "O(n)",
+        "O(nW)",
+        "O(n²)",
+        "O(2ⁿ)"
+      ],
+      "correctAnswer": "O(nW)",
+      "explanation": "DP table size is n×W where W is capacity.",
+      "topic": "Dynamic Programming",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2021,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_307",
+      "text": "Which problem exhibits optimal substructure?",
+      "options": [
+        "Longest Common Subsequence",
+        "Traveling Salesman",
+        "Both",
+        "Neither"
+      ],
+      "correctAnswer": "Both",
+      "explanation": "Both have optimal substructure property.",
+      "topic": "Dynamic Programming",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "hard",
+      "year": 2023,
+      "marks": 2,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_308",
+      "text": "Which problem cannot be solved optimally using greedy approach?",
+      "options": [
+        "Activity Selection",
+        "Fractional Knapsack",
+        "0/1 Knapsack",
+        "Huffman Coding"
+      ],
+      "correctAnswer": "0/1 Knapsack",
+      "explanation": "0/1 Knapsack requires DP, not greedy.",
+      "topic": "Greedy Algorithms",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_309",
+      "text": "What is the time complexity of Huffman coding?",
+      "options": [
+        "O(n)",
+        "O(n log n)",
+        "O(n²)",
+        "O(log n)"
+      ],
+      "correctAnswer": "O(n log n)",
+      "explanation": "Building heap and extracting min takes O(n log n).",
+      "topic": "Greedy Algorithms",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2024,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_310",
+      "text": "What is the recurrence for binary search?",
+      "options": [
+        "T(n) = T(n/2) + O(1)",
+        "T(n) = 2T(n/2) + O(n)",
+        "T(n) = T(n-1) + O(1)",
+        "T(n) = 2T(n/2) + O(1)"
+      ],
+      "correctAnswer": "T(n) = T(n/2) + O(1)",
+      "explanation": "Binary search divides problem in half with constant work.",
+      "topic": "Divide and Conquer",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2021,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "ALG_311",
+      "text": "Using Master theorem, what is complexity of T(n) = 4T(n/2) + n²?",
+      "options": [
+        "O(n²)",
+        "O(n² log n)",
+        "O(n³)",
+        "O(n log n)"
+      ],
+      "correctAnswer": "O(n² log n)",
+      "explanation": "Case 2 of Master theorem applies.",
+      "topic": "Divide and Conquer",
+      "subject": "Algorithms",
+      "section": "Core Computer Science",
+      "difficulty": "hard",
+      "year": 2022,
+      "marks": 2,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_400",
+      "text": "What is the time complexity to insert at the beginning of a singly linked list?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "correctAnswer": "O(1)",
+      "explanation": "Insertion at head is constant time.",
+      "topic": "Arrays and Linked Lists",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2021,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_401",
+      "text": "What is the space complexity of storing a sparse matrix using linked list?",
+      "options": [
+        "O(m×n)",
+        "O(m+n)",
+        "O(k)",
+        "O(1)"
+      ],
+      "correctAnswer": "O(k)",
+      "explanation": "Only non-zero elements (k) are stored.",
+      "topic": "Arrays and Linked Lists",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2021,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_402",
+      "text": "What is the minimum number of stacks needed to implement a queue?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": "2",
+      "explanation": "Two stacks can simulate queue operations.",
+      "topic": "Stacks and Queues",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2021,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_403",
+      "text": "What is the time complexity of enqueue operation in a circular queue?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(n²)"
+      ],
+      "correctAnswer": "O(1)",
+      "explanation": "Enqueue is constant time with proper implementation.",
+      "topic": "Stacks and Queues",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_404",
+      "text": "What is the maximum height of an AVL tree with 7 nodes?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": "3",
+      "explanation": "AVL tree with 7 nodes has max height 3.",
+      "topic": "Trees",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2021,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_405",
+      "text": "How many structurally different BSTs are possible with 3 nodes?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": "5",
+      "explanation": "Catalan number C(3) = 5.",
+      "topic": "Trees",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "hard",
+      "year": 2024,
+      "marks": 2,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_406",
+      "text": "What is the time complexity of finding kth smallest element in BST?",
+      "options": [
+        "O(k)",
+        "O(h+k)",
+        "O(n)",
+        "O(log n)"
+      ],
+      "correctAnswer": "O(h+k)",
+      "explanation": "Inorder traversal until kth element.",
+      "topic": "Trees",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2024,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_407",
+      "text": "What is the time complexity to delete an arbitrary element from a binary heap?",
+      "options": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)"
+      ],
+      "correctAnswer": "O(n)",
+      "explanation": "Finding element takes O(n), then O(log n) to delete.",
+      "topic": "Heaps",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_408",
+      "text": "What is the minimum number of comparisons to build a heap of n elements?",
+      "options": [
+        "n",
+        "n log n",
+        "2n",
+        "n-1"
+      ],
+      "correctAnswer": "2n",
+      "explanation": "Bottom-up heap construction uses at most 2n comparisons.",
+      "topic": "Heaps",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "hard",
+      "year": 2021,
+      "marks": 2,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_409",
+      "text": "What is the space complexity of adjacency matrix for a graph with V vertices?",
+      "options": [
+        "O(V)",
+        "O(V²)",
+        "O(E)",
+        "O(V+E)"
+      ],
+      "correctAnswer": "O(V²)",
+      "explanation": "Matrix requires V×V space.",
+      "topic": "Graphs",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2024,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_410",
+      "text": "What is the time complexity of DFS on a graph with V vertices and E edges?",
+      "options": [
+        "O(V)",
+        "O(E)",
+        "O(V+E)",
+        "O(VE)"
+      ],
+      "correctAnswer": "O(V+E)",
+      "explanation": "DFS visits all vertices and edges once.",
+      "topic": "Graphs",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_411",
+      "text": "What is the expected time complexity of search in a hash table with chaining?",
+      "options": [
+        "O(1)",
+        "O(n)",
+        "O(log n)",
+        "O(1+α)"
+      ],
+      "correctAnswer": "O(1+α)",
+      "explanation": "α is the load factor (n/m).",
+      "topic": "Hashing",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 1,
+      "questionType": "MCQ"
+    },
+    {
+      "id": "DS_412",
+      "text": "Which collision resolution technique has best cache performance?",
+      "options": [
+        "Chaining",
+        "Linear Probing",
+        "Quadratic Probing",
+        "Double Hashing"
+      ],
+      "correctAnswer": "Linear Probing",
+      "explanation": "Linear probing has better cache locality.",
+      "topic": "Hashing",
+      "subject": "Data Structures",
+      "section": "Core Computer Science",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 1,
+      "questionType": "MCQ"
     }
   ],
   "metadata": {
-    "totalQuestions": 97,
-    "totalMarks": 140,
+    "totalQuestions": 147,
+    "totalMarks": 198,
     "sections": {
       "General Aptitude": {
         "questions": 10,
@@ -1630,18 +2580,24 @@
         "marks": 13
       },
       "Core Computer Science": {
-        "questions": 74,
-        "marks": 112
+        "questions": 124,
+        "marks": 170
       }
     },
     "subjects": {
       "Computer Science": 65,
-      "Data Structures": 8,
-      "Algorithms": 7,
-      "Operating Systems": 7,
-      "DBMS": 5,
-      "Computer Networks": 5
+      "Data Structures": 26,
+      "Algorithms": 24,
+      "Operating Systems": 12,
+      "DBMS": 10,
+      "Computer Networks": 10
     },
-    "lastUpdated": "2025-11-29T18:01:28.965912"
+    "lastUpdated": "2025-11-29T18:54:50.859119",
+    "sources": [
+      "GATE Official Papers (2005-2025)",
+      "GATE Overflow",
+      "Official GATE Syllabus",
+      "Comprehensive Question Generator"
+    ]
   }
 }

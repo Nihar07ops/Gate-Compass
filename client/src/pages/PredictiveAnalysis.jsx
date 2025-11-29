@@ -274,10 +274,13 @@ const PredictiveAnalysis = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <Box mb={4}>
-          <Typography variant="h3" fontWeight={700} gutterBottom>
-            AI-Powered Predictions 🤖
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Box display="flex" alignItems="center" gap={1.5}>
+            <Typography variant="h3" fontWeight={700}>
+              AI-Powered Predictions
+            </Typography>
+            <Psychology sx={{ fontSize: 48, color: '#667eea' }} />
+          </Box>
+          <Typography variant="h6" color="text.secondary" mt={1}>
             Machine learning analysis of GATE CSE exam patterns
           </Typography>
         </Box>
@@ -477,10 +480,10 @@ const PredictiveAnalysis = () => {
                           />
                           <Typography variant="caption" color="text.secondary" mt={1} display="block">
                             {topic.score >= 85 
-                              ? '🔥 Critical Priority - Focus heavily on this topic'
+                              ? 'Critical Priority - Focus heavily on this topic'
                               : topic.score >= 70
-                              ? '⚡ High Priority - Important for exam'
-                              : '✅ Moderate Priority - Good to know'}
+                              ? 'High Priority - Important for exam'
+                              : 'Moderate Priority - Good to know'}
                           </Typography>
                         </Paper>
                       </motion.div>
@@ -500,9 +503,12 @@ const PredictiveAnalysis = () => {
           >
             <Card sx={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
               <CardContent>
-                <Typography variant="h6" fontWeight={600} gutterBottom>
-                  🎯 Recommended Study Plan
-                </Typography>
+                <Box display="flex" alignItems="center" gap={1} mb={1}>
+                  <Lightbulb sx={{ fontSize: 28 }} />
+                  <Typography variant="h6" fontWeight={600}>
+                    Recommended Study Plan
+                  </Typography>
+                </Box>
                 <Box display="flex" flexWrap="wrap" gap={1} mt={2}>
                   {predictions?.highPriorityTopics?.map((topic, index) => (
                     <motion.div

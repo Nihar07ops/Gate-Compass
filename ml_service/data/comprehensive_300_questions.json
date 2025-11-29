@@ -1,0 +1,5778 @@
+[
+  {
+    "id": "Q0001",
+    "text": "What is the purpose of TLB?",
+    "options": [
+      "Cache memory",
+      "Speed up address translation",
+      "Store page tables",
+      "Manage processes"
+    ],
+    "correctAnswer": "Speed up address translation",
+    "explanation": "TLB caches virtual-to-physical translations",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0002",
+    "text": "Which page replacement is optimal?",
+    "options": [
+      "FIFO",
+      "LRU",
+      "Optimal",
+      "LFU"
+    ],
+    "correctAnswer": "Optimal",
+    "explanation": "Optimal replaces page not used for longest time in future",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0003",
+    "text": "Max processes in deadlock with 3 resources?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "Unlimited"
+    ],
+    "correctAnswer": "3",
+    "explanation": "Max processes = number of resources",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0004",
+    "text": "Which scheduling causes starvation?",
+    "options": [
+      "FCFS",
+      "Round Robin",
+      "Priority",
+      "SJF"
+    ],
+    "correctAnswer": "Priority",
+    "explanation": "Low priority may never execute",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0005",
+    "text": "Critical section ensures?",
+    "options": [
+      "Deadlock",
+      "Race condition",
+      "Mutual exclusion",
+      "Starvation"
+    ],
+    "correctAnswer": "Mutual exclusion",
+    "explanation": "Critical section ensures mutual exclusion",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0006",
+    "text": "Fastest IPC mechanism?",
+    "options": [
+      "Pipes",
+      "Message Queue",
+      "Shared Memory",
+      "Sockets"
+    ],
+    "correctAnswer": "Shared Memory",
+    "explanation": "Shared memory avoids kernel copying",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0007",
+    "text": "Banker algorithm for?",
+    "options": [
+      "Scheduling",
+      "Deadlock avoidance",
+      "Memory allocation",
+      "File management"
+    ],
+    "correctAnswer": "Deadlock avoidance",
+    "explanation": "Prevents deadlock",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0008",
+    "text": "Round Robin uses?",
+    "options": [
+      "Fixed time slice",
+      "Variable time",
+      "Priority based",
+      "Random"
+    ],
+    "correctAnswer": "Fixed time slice",
+    "explanation": "RR uses fixed quantum",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0009",
+    "text": "External fragmentation in?",
+    "options": [
+      "Paging",
+      "Segmentation",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Segmentation",
+    "explanation": "Segmentation causes external fragmentation",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0010",
+    "text": "Working set is?",
+    "options": [
+      "Pages in memory",
+      "Processes",
+      "Resources",
+      "Threads"
+    ],
+    "correctAnswer": "Pages in memory",
+    "explanation": "Pages referenced in time window",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0011",
+    "text": "Fair disk scheduling?",
+    "options": [
+      "FCFS",
+      "SSTF",
+      "SCAN",
+      "LOOK"
+    ],
+    "correctAnswer": "FCFS",
+    "explanation": "FCFS treats all equally",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0012",
+    "text": "fork() creates?",
+    "options": [
+      "Thread",
+      "Process",
+      "Program",
+      "Terminate"
+    ],
+    "correctAnswer": "Process",
+    "explanation": "fork() creates child process",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0013",
+    "text": "Zombie process is?",
+    "options": [
+      "Dead",
+      "Waiting for parent",
+      "Orphan",
+      "Sleeping"
+    ],
+    "correctAnswer": "Waiting for parent",
+    "explanation": "Terminated but parent hasn't read exit",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0014",
+    "text": "Thrashing is?",
+    "options": [
+      "High CPU",
+      "Excessive paging",
+      "Memory leak",
+      "Disk failure"
+    ],
+    "correctAnswer": "Excessive paging",
+    "explanation": "System spends more time paging",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0015",
+    "text": "SJF minimizes?",
+    "options": [
+      "Turnaround",
+      "Waiting time",
+      "Response",
+      "All"
+    ],
+    "correctAnswer": "Waiting time",
+    "explanation": "SJF minimizes average waiting time",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0016",
+    "text": "Semaphore is?",
+    "options": [
+      "Lock",
+      "Counter",
+      "Sync primitive",
+      "All"
+    ],
+    "correctAnswer": "All",
+    "explanation": "Semaphore is sync primitive with counter",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0017",
+    "text": "Convoy effect in?",
+    "options": [
+      "FCFS",
+      "SJF",
+      "Round Robin",
+      "Priority"
+    ],
+    "correctAnswer": "FCFS",
+    "explanation": "Short processes wait for long",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0018",
+    "text": "Demand paging loads?",
+    "options": [
+      "All pages",
+      "On demand",
+      "Preload",
+      "Cache"
+    ],
+    "correctAnswer": "On demand",
+    "explanation": "Loads pages only when needed",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0019",
+    "text": "exec() does?",
+    "options": [
+      "Create process",
+      "Replace image",
+      "Terminate",
+      "Suspend"
+    ],
+    "correctAnswer": "Replace image",
+    "explanation": "Replaces current process with new program",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0020",
+    "text": "Mutex vs semaphore?",
+    "options": [
+      "Binary vs counting",
+      "Lock vs signal",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Binary vs counting",
+    "explanation": "Mutex is binary, semaphore counting",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0021",
+    "text": "Page fault is?",
+    "options": [
+      "Memory error",
+      "Page not in memory",
+      "Disk error",
+      "CPU error"
+    ],
+    "correctAnswer": "Page not in memory",
+    "explanation": "Referenced page not in memory",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0022",
+    "text": "Aging prevents?",
+    "options": [
+      "Starvation",
+      "Deadlock",
+      "Thrashing",
+      "Fragmentation"
+    ],
+    "correctAnswer": "Starvation",
+    "explanation": "Gradually increases priority",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0023",
+    "text": "Monitor is?",
+    "options": [
+      "Hardware",
+      "Sync construct",
+      "Display",
+      "Process"
+    ],
+    "correctAnswer": "Sync construct",
+    "explanation": "High-level synchronization",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0024",
+    "text": "Preemptive scheduling?",
+    "options": [
+      "CPU can be taken",
+      "Priority based",
+      "Time based",
+      "Resource based"
+    ],
+    "correctAnswer": "CPU can be taken",
+    "explanation": "CPU taken from running process",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0025",
+    "text": "wait() for?",
+    "options": [
+      "Child",
+      "Resource",
+      "Signal",
+      "Time"
+    ],
+    "correctAnswer": "Child",
+    "explanation": "Parent waits for child termination",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0026",
+    "text": "Context switch overhead?",
+    "options": [
+      "High",
+      "Low",
+      "Zero",
+      "Variable"
+    ],
+    "correctAnswer": "High",
+    "explanation": "Saving and restoring state is expensive",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0027",
+    "text": "Belady anomaly in?",
+    "options": [
+      "FIFO",
+      "LRU",
+      "Optimal",
+      "All"
+    ],
+    "correctAnswer": "FIFO",
+    "explanation": "More frames can cause more faults",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0028",
+    "text": "Spinlock uses?",
+    "options": [
+      "Busy waiting",
+      "Sleep",
+      "Block",
+      "Yield"
+    ],
+    "correctAnswer": "Busy waiting",
+    "explanation": "Continuously checks lock",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0029",
+    "text": "Copy-on-write in?",
+    "options": [
+      "fork()",
+      "exec()",
+      "wait()",
+      "exit()"
+    ],
+    "correctAnswer": "fork()",
+    "explanation": "Delays copying until write",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0030",
+    "text": "Multilevel queue has?",
+    "options": [
+      "Multiple queues",
+      "Single queue",
+      "Priority",
+      "FCFS"
+    ],
+    "correctAnswer": "Multiple queues",
+    "explanation": "Separate queues for different priorities",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0031",
+    "text": "Primary key is?",
+    "options": [
+      "Unique identifier",
+      "Foreign key",
+      "Index",
+      "Constraint"
+    ],
+    "correctAnswer": "Unique identifier",
+    "explanation": "Uniquely identifies each record",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0032",
+    "text": "Normalization reduces?",
+    "options": [
+      "Redundancy",
+      "Speed",
+      "Size",
+      "Complexity"
+    ],
+    "correctAnswer": "Redundancy",
+    "explanation": "Reduces redundancy and dependency",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0033",
+    "text": "3NF eliminates?",
+    "options": [
+      "Partial dependency",
+      "Transitive dependency",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Transitive dependency",
+    "explanation": "3NF removes transitive dependencies",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0034",
+    "text": "ACID stands for?",
+    "options": [
+      "Atomicity Consistency Isolation Durability",
+      "All Correct In Database",
+      "Atomic Consistent Isolated Durable",
+      "None"
+    ],
+    "correctAnswer": "Atomicity Consistency Isolation Durability",
+    "explanation": "Transaction properties",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0035",
+    "text": "Foreign key references?",
+    "options": [
+      "Primary key",
+      "Unique key",
+      "Candidate key",
+      "Super key"
+    ],
+    "correctAnswer": "Primary key",
+    "explanation": "References primary key of another table",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0036",
+    "text": "Full outer join returns?",
+    "options": [
+      "All rows from both",
+      "Matching rows",
+      "Left table rows",
+      "Right table rows"
+    ],
+    "correctAnswer": "All rows from both",
+    "explanation": "Returns all rows from both tables",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0037",
+    "text": "Indexing improves?",
+    "options": [
+      "Query speed",
+      "Storage",
+      "Backup",
+      "Security"
+    ],
+    "correctAnswer": "Query speed",
+    "explanation": "Speeds up queries",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0038",
+    "text": "View is?",
+    "options": [
+      "Virtual table",
+      "Physical table",
+      "Index",
+      "Constraint"
+    ],
+    "correctAnswer": "Virtual table",
+    "explanation": "Based on query result",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0039",
+    "text": "Read committed prevents?",
+    "options": [
+      "Dirty reads",
+      "Non-repeatable reads",
+      "Phantom reads",
+      "All"
+    ],
+    "correctAnswer": "Dirty reads",
+    "explanation": "Prevents reading uncommitted data",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0040",
+    "text": "Denormalization adds?",
+    "options": [
+      "Redundancy",
+      "Constraints",
+      "Indexes",
+      "Views"
+    ],
+    "correctAnswer": "Redundancy",
+    "explanation": "Adds redundancy for performance",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0041",
+    "text": "Candidate key is?",
+    "options": [
+      "Minimal super key",
+      "Primary key",
+      "Foreign key",
+      "Unique key"
+    ],
+    "correctAnswer": "Minimal super key",
+    "explanation": "Minimal set that uniquely identifies",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0042",
+    "text": "CREATE is?",
+    "options": [
+      "DDL",
+      "DML",
+      "DCL",
+      "TCL"
+    ],
+    "correctAnswer": "DDL",
+    "explanation": "Data Definition Language",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0043",
+    "text": "Trigger executes?",
+    "options": [
+      "Automatically",
+      "Manually",
+      "On demand",
+      "Never"
+    ],
+    "correctAnswer": "Automatically",
+    "explanation": "Executes on events",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0044",
+    "text": "GROUP BY does?",
+    "options": [
+      "Groups rows",
+      "Sorts rows",
+      "Filters rows",
+      "Joins rows"
+    ],
+    "correctAnswer": "Groups rows",
+    "explanation": "Groups rows with same values",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0045",
+    "text": "DELETE vs TRUNCATE?",
+    "options": [
+      "DML vs DDL",
+      "Same",
+      "DELETE faster",
+      "TRUNCATE slower"
+    ],
+    "correctAnswer": "DML vs DDL",
+    "explanation": "DELETE can rollback, TRUNCATE cannot",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0046",
+    "text": "Composite key uses?",
+    "options": [
+      "Multiple columns",
+      "Single column",
+      "Foreign key",
+      "Index"
+    ],
+    "correctAnswer": "Multiple columns",
+    "explanation": "Multiple columns as key",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0047",
+    "text": "2NF eliminates?",
+    "options": [
+      "Partial dependency",
+      "Transitive dependency",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Partial dependency",
+    "explanation": "Removes partial dependencies",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0048",
+    "text": "Deadlock in DBMS?",
+    "options": [
+      "Circular wait",
+      "Starvation",
+      "Timeout",
+      "Error"
+    ],
+    "correctAnswer": "Circular wait",
+    "explanation": "Transactions wait for each other",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0049",
+    "text": "HAVING filters?",
+    "options": [
+      "Groups",
+      "Rows",
+      "Tables",
+      "Columns"
+    ],
+    "correctAnswer": "Groups",
+    "explanation": "Filters groups after GROUP BY",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0050",
+    "text": "Referential integrity?",
+    "options": [
+      "Foreign key constraint",
+      "Primary key constraint",
+      "Unique constraint",
+      "Check constraint"
+    ],
+    "correctAnswer": "Foreign key constraint",
+    "explanation": "Ensures valid foreign key references",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0051",
+    "text": "Clustered index?",
+    "options": [
+      "Sorts data physically",
+      "Logical pointer",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Sorts data physically",
+    "explanation": "Data sorted by index key",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0052",
+    "text": "Schema defines?",
+    "options": [
+      "Database structure",
+      "Query",
+      "Table",
+      "Index"
+    ],
+    "correctAnswer": "Database structure",
+    "explanation": "Defines structure",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0053",
+    "text": "COMMIT does?",
+    "options": [
+      "Saves transaction",
+      "Rollback",
+      "Start",
+      "End"
+    ],
+    "correctAnswer": "Saves transaction",
+    "explanation": "Permanently saves changes",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0054",
+    "text": "Subquery is?",
+    "options": [
+      "Query within query",
+      "Join",
+      "View",
+      "Procedure"
+    ],
+    "correctAnswer": "Query within query",
+    "explanation": "Nested query",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0055",
+    "text": "UNION removes?",
+    "options": [
+      "Duplicates",
+      "Nothing",
+      "All rows",
+      "Nulls"
+    ],
+    "correctAnswer": "Duplicates",
+    "explanation": "UNION removes duplicates",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0056",
+    "text": "Stored procedure is?",
+    "options": [
+      "Precompiled SQL",
+      "Query",
+      "Table",
+      "Index"
+    ],
+    "correctAnswer": "Precompiled SQL",
+    "explanation": "Precompiled code",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0057",
+    "text": "Serializable prevents?",
+    "options": [
+      "All anomalies",
+      "Dirty reads",
+      "Phantom reads",
+      "None"
+    ],
+    "correctAnswer": "All anomalies",
+    "explanation": "Highest isolation level",
+    "topic": "DBMS",
+    "subject": "Database Management Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0058",
+    "text": "OSI has how many layers?",
+    "options": [
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "correctAnswer": "7",
+    "explanation": "OSI model has 7 layers",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0059",
+    "text": "Network layer handles?",
+    "options": [
+      "Routing",
+      "Error detection",
+      "Flow control",
+      "Encryption"
+    ],
+    "correctAnswer": "Routing",
+    "explanation": "Network layer routes packets",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0060",
+    "text": "ARP resolves?",
+    "options": [
+      "IP to MAC",
+      "MAC to IP",
+      "IP to port",
+      "Port to IP"
+    ],
+    "correctAnswer": "IP to MAC",
+    "explanation": "Address Resolution Protocol",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0061",
+    "text": "TCP is?",
+    "options": [
+      "Connection-oriented",
+      "Connectionless",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Connection-oriented",
+    "explanation": "TCP establishes connection",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0062",
+    "text": "Class C subnet mask?",
+    "options": [
+      "255.0.0.0",
+      "255.255.0.0",
+      "255.255.255.0",
+      "255.255.255.255"
+    ],
+    "correctAnswer": "255.255.255.0",
+    "explanation": "Class C default mask",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0063",
+    "text": "DNS does?",
+    "options": [
+      "Name resolution",
+      "Routing",
+      "Error detection",
+      "Flow control"
+    ],
+    "correctAnswer": "Name resolution",
+    "explanation": "Resolves domain names to IP",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0064",
+    "text": "HTTP uses port?",
+    "options": [
+      "80",
+      "443",
+      "21",
+      "25"
+    ],
+    "correctAnswer": "80",
+    "explanation": "HTTP default port",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0065",
+    "text": "TCP header max size?",
+    "options": [
+      "20 bytes",
+      "40 bytes",
+      "60 bytes",
+      "80 bytes"
+    ],
+    "correctAnswer": "60 bytes",
+    "explanation": "With options up to 60 bytes",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0066",
+    "text": "CSMA/CD detects?",
+    "options": [
+      "Collisions",
+      "Errors",
+      "Flow",
+      "Routes"
+    ],
+    "correctAnswer": "Collisions",
+    "explanation": "Collision detection in Ethernet",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0067",
+    "text": "Transport layer provides?",
+    "options": [
+      "End-to-end communication",
+      "Routing",
+      "Physical transmission",
+      "Presentation"
+    ],
+    "correctAnswer": "End-to-end communication",
+    "explanation": "Transport layer function",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0068",
+    "text": "NAT translates?",
+    "options": [
+      "IP addresses",
+      "Port numbers",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Both",
+    "explanation": "Network Address Translation",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0069",
+    "text": "Hub vs Switch?",
+    "options": [
+      "Broadcast vs unicast",
+      "Same",
+      "Hub faster",
+      "Switch slower"
+    ],
+    "correctAnswer": "Broadcast vs unicast",
+    "explanation": "Hub broadcasts, switch unicasts",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0070",
+    "text": "ICMP for?",
+    "options": [
+      "Error reporting",
+      "Data transfer",
+      "Routing",
+      "Name resolution"
+    ],
+    "correctAnswer": "Error reporting",
+    "explanation": "Internet Control Message Protocol",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0071",
+    "text": "SMTP for?",
+    "options": [
+      "Email",
+      "Web",
+      "File transfer",
+      "Name resolution"
+    ],
+    "correctAnswer": "Email",
+    "explanation": "Simple Mail Transfer Protocol",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0072",
+    "text": "Sliding window provides?",
+    "options": [
+      "Flow control",
+      "Error control",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Both",
+    "explanation": "Flow and error control",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0073",
+    "text": "TCP vs UDP?",
+    "options": [
+      "Reliable vs unreliable",
+      "Same",
+      "TCP faster",
+      "UDP reliable"
+    ],
+    "correctAnswer": "Reliable vs unreliable",
+    "explanation": "TCP reliable, UDP not",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0074",
+    "text": "Checksum for?",
+    "options": [
+      "Error detection",
+      "Error correction",
+      "Flow control",
+      "Routing"
+    ],
+    "correctAnswer": "Error detection",
+    "explanation": "Detects errors",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0075",
+    "text": "RIP uses?",
+    "options": [
+      "Distance vector",
+      "Link state",
+      "Path vector",
+      "Hybrid"
+    ],
+    "correctAnswer": "Distance vector",
+    "explanation": "Routing Information Protocol",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0076",
+    "text": "DHCP assigns?",
+    "options": [
+      "IP addresses",
+      "Names",
+      "Routes",
+      "Errors"
+    ],
+    "correctAnswer": "IP addresses",
+    "explanation": "Dynamic Host Configuration Protocol",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0077",
+    "text": "MSS is?",
+    "options": [
+      "MTU minus headers",
+      "MTU",
+      "1500 bytes",
+      "65535 bytes"
+    ],
+    "correctAnswer": "MTU minus headers",
+    "explanation": "Maximum Segment Size",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0078",
+    "text": "Three-way handshake?",
+    "options": [
+      "Establishes connection",
+      "Closes connection",
+      "Transfers data",
+      "Detects errors"
+    ],
+    "correctAnswer": "Establishes connection",
+    "explanation": "TCP connection establishment",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0079",
+    "text": "Presentation layer?",
+    "options": [
+      "Encryption",
+      "Routing",
+      "Physical transmission",
+      "Error detection"
+    ],
+    "correctAnswer": "Encryption",
+    "explanation": "Handles encryption and formatting",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0080",
+    "text": "TTL prevents?",
+    "options": [
+      "Routing loops",
+      "Errors",
+      "Flow issues",
+      "Collisions"
+    ],
+    "correctAnswer": "Routing loops",
+    "explanation": "Time To Live",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0081",
+    "text": "Router vs Gateway?",
+    "options": [
+      "Layer 3 vs Layer 7",
+      "Same",
+      "Router faster",
+      "Gateway faster"
+    ],
+    "correctAnswer": "Layer 3 vs Layer 7",
+    "explanation": "Different OSI layers",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0082",
+    "text": "MAC address is?",
+    "options": [
+      "Physical address",
+      "Logical address",
+      "Port address",
+      "Domain address"
+    ],
+    "correctAnswer": "Physical address",
+    "explanation": "Hardware address",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0083",
+    "text": "Congestion control?",
+    "options": [
+      "Prevents overload",
+      "Detects errors",
+      "Controls flow",
+      "Routes packets"
+    ],
+    "correctAnswer": "Prevents overload",
+    "explanation": "Prevents network congestion",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0084",
+    "text": "Socket is?",
+    "options": [
+      "Communication endpoint",
+      "Protocol",
+      "Address",
+      "Port"
+    ],
+    "correctAnswer": "Communication endpoint",
+    "explanation": "Endpoint for communication",
+    "topic": "Computer Networks",
+    "subject": "Computer Networks",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0085",
+    "text": "Binary search complexity?",
+    "options": [
+      "O(n)",
+      "O(log n)",
+      "O(n log n)",
+      "O(1)"
+    ],
+    "correctAnswer": "O(log n)",
+    "explanation": "Logarithmic complexity",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0086",
+    "text": "Stack uses?",
+    "options": [
+      "LIFO",
+      "FIFO",
+      "Random",
+      "Priority"
+    ],
+    "correctAnswer": "LIFO",
+    "explanation": "Last In First Out",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0087",
+    "text": "Quicksort worst case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n^2)",
+    "explanation": "Worst case quadratic",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0088",
+    "text": "Preorder visits?",
+    "options": [
+      "Root first",
+      "Root last",
+      "Root middle",
+      "Level order"
+    ],
+    "correctAnswer": "Root first",
+    "explanation": "Root before children",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0089",
+    "text": "Merge sort space?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(n)",
+    "explanation": "Requires extra space",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0090",
+    "text": "BFS uses?",
+    "options": [
+      "Queue",
+      "Stack",
+      "Tree",
+      "Heap"
+    ],
+    "correctAnswer": "Queue",
+    "explanation": "Breadth-first search",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0091",
+    "text": "Heap sort complexity?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n log n)",
+    "explanation": "Always n log n",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0092",
+    "text": "Dijkstra finds?",
+    "options": [
+      "Shortest path",
+      "MST",
+      "Cycle",
+      "Topological order"
+    ],
+    "correctAnswer": "Shortest path",
+    "explanation": "Shortest path algorithm",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0093",
+    "text": "Complete binary tree height?",
+    "options": [
+      "log n",
+      "n",
+      "n log n",
+      "sqrt(n)"
+    ],
+    "correctAnswer": "log n",
+    "explanation": "Logarithmic height",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0094",
+    "text": "Stable sorting?",
+    "options": [
+      "Merge sort",
+      "Quick sort",
+      "Heap sort",
+      "Selection sort"
+    ],
+    "correctAnswer": "Merge sort",
+    "explanation": "Maintains relative order",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0095",
+    "text": "Hash table insertion?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(1)",
+    "explanation": "Average case constant",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0096",
+    "text": "DFS uses?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Heap"
+    ],
+    "correctAnswer": "Stack",
+    "explanation": "Depth-first search",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0097",
+    "text": "Dynamic programming uses?",
+    "options": [
+      "Memoization",
+      "Divide and conquer",
+      "Greedy",
+      "Backtracking"
+    ],
+    "correctAnswer": "Memoization",
+    "explanation": "Stores subproblem solutions",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0098",
+    "text": "Min heap find min?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(1)",
+    "explanation": "Root is minimum",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0099",
+    "text": "Topological sort uses?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Both",
+    "explanation": "Both can do topological sort",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0100",
+    "text": "DFS space complexity?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n^2)"
+    ],
+    "correctAnswer": "O(n)",
+    "explanation": "Recursion stack",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0101",
+    "text": "Linked list O(1) operation?",
+    "options": [
+      "Insert at head",
+      "Search",
+      "Access middle",
+      "Sort"
+    ],
+    "correctAnswer": "Insert at head",
+    "explanation": "Constant time insertion",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0102",
+    "text": "Build heap complexity?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n)",
+    "explanation": "Linear time",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0103",
+    "text": "Kruskal finds?",
+    "options": [
+      "MST",
+      "Shortest path",
+      "Cycle",
+      "Topological order"
+    ],
+    "correctAnswer": "MST",
+    "explanation": "Minimum spanning tree",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0104",
+    "text": "Insertion sort worst case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n^2)",
+    "explanation": "Quadratic worst case",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0105",
+    "text": "Priority queue uses?",
+    "options": [
+      "Heap",
+      "Array",
+      "Linked list",
+      "Stack"
+    ],
+    "correctAnswer": "Heap",
+    "explanation": "Heap implementation",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0106",
+    "text": "Floyd-Warshall complexity?",
+    "options": [
+      "O(n^2)",
+      "O(n^3)",
+      "O(n log n)",
+      "O(n)"
+    ],
+    "correctAnswer": "O(n^3)",
+    "explanation": "Cubic complexity",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0107",
+    "text": "Quicksort average case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n log n)",
+    "explanation": "Average n log n",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0108",
+    "text": "AVL tree is?",
+    "options": [
+      "Balanced BST",
+      "Binary tree",
+      "Complete tree",
+      "Full tree"
+    ],
+    "correctAnswer": "Balanced BST",
+    "explanation": "Self-balancing",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0109",
+    "text": "BST deletion?",
+    "options": [
+      "O(log n)",
+      "O(1)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(log n)",
+    "explanation": "Average case logarithmic",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0110",
+    "text": "Cycle detection uses?",
+    "options": [
+      "DFS",
+      "BFS",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Both",
+    "explanation": "Both can detect cycles",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0111",
+    "text": "Quicksort space?",
+    "options": [
+      "O(1)",
+      "O(log n)",
+      "O(n)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(log n)",
+    "explanation": "Recursion stack",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0112",
+    "text": "Undo operation uses?",
+    "options": [
+      "Stack",
+      "Queue",
+      "Tree",
+      "Graph"
+    ],
+    "correctAnswer": "Stack",
+    "explanation": "Stack for undo",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0113",
+    "text": "Bellman-Ford complexity?",
+    "options": [
+      "O(V)",
+      "O(E)",
+      "O(VE)",
+      "O(V^2)"
+    ],
+    "correctAnswer": "O(VE)",
+    "explanation": "Vertices times edges",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0114",
+    "text": "BST inorder gives?",
+    "options": [
+      "Sorted order",
+      "Reverse order",
+      "Random order",
+      "Level order"
+    ],
+    "correctAnswer": "Sorted order",
+    "explanation": "Inorder traversal",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0115",
+    "text": "Graph with n vertices max edges?",
+    "options": [
+      "n",
+      "n(n-1)",
+      "n(n-1)/2",
+      "n^2"
+    ],
+    "correctAnswer": "n(n-1)/2",
+    "explanation": "Complete graph",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0116",
+    "text": "Prim's algorithm finds?",
+    "options": [
+      "MST",
+      "Shortest path",
+      "Cycle",
+      "Topological order"
+    ],
+    "correctAnswer": "MST",
+    "explanation": "Minimum spanning tree",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0117",
+    "text": "Bubble sort best case?",
+    "options": [
+      "O(n)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(log n)"
+    ],
+    "correctAnswer": "O(n)",
+    "explanation": "Already sorted",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0118",
+    "text": "Red-Black tree is?",
+    "options": [
+      "Balanced BST",
+      "Binary tree",
+      "Complete tree",
+      "Full tree"
+    ],
+    "correctAnswer": "Balanced BST",
+    "explanation": "Self-balancing",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0119",
+    "text": "Trie is used for?",
+    "options": [
+      "String operations",
+      "Sorting",
+      "Searching numbers",
+      "Graph traversal"
+    ],
+    "correctAnswer": "String operations",
+    "explanation": "Prefix tree",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0120",
+    "text": "Counting sort complexity?",
+    "options": [
+      "O(n+k)",
+      "O(n log n)",
+      "O(n^2)",
+      "O(n)"
+    ],
+    "correctAnswer": "O(n+k)",
+    "explanation": "Linear with range",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0121",
+    "text": "Segment tree query?",
+    "options": [
+      "O(log n)",
+      "O(n)",
+      "O(1)",
+      "O(n log n)"
+    ],
+    "correctAnswer": "O(log n)",
+    "explanation": "Logarithmic query",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0122",
+    "text": "Kadane's algorithm for?",
+    "options": [
+      "Maximum subarray sum",
+      "Sorting",
+      "Searching",
+      "Graph traversal"
+    ],
+    "correctAnswer": "Maximum subarray sum",
+    "explanation": "Dynamic programming",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0123",
+    "text": "Union-Find complexity?",
+    "options": [
+      "O(α(n))",
+      "O(log n)",
+      "O(n)",
+      "O(1)"
+    ],
+    "correctAnswer": "O(α(n))",
+    "explanation": "Inverse Ackermann",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2024,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0124",
+    "text": "Radix sort is?",
+    "options": [
+      "Non-comparison sort",
+      "Comparison sort",
+      "Unstable",
+      "In-place"
+    ],
+    "correctAnswer": "Non-comparison sort",
+    "explanation": "Sorts by digits",
+    "topic": "Data Structures & Algorithms",
+    "subject": "DSA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0125",
+    "text": "DFA accepts?",
+    "options": [
+      "Regular",
+      "Context-free",
+      "Context-sensitive",
+      "Recursive"
+    ],
+    "correctAnswer": "Regular",
+    "explanation": "DFA accepts regular languages",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0126",
+    "text": "Pumping lemma proves?",
+    "options": [
+      "Non-regularity",
+      "Regularity",
+      "Decidability",
+      "Undecidability"
+    ],
+    "correctAnswer": "Non-regularity",
+    "explanation": "Proves language not regular",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0127",
+    "text": "NFA vs DFA power?",
+    "options": [
+      "Equal",
+      "NFA more",
+      "DFA more",
+      "Depends"
+    ],
+    "correctAnswer": "Equal",
+    "explanation": "Equal computational power",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0128",
+    "text": "Regular languages closed under?",
+    "options": [
+      "Union",
+      "Intersection",
+      "Complement",
+      "All"
+    ],
+    "correctAnswer": "All",
+    "explanation": "Closed under all operations",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0129",
+    "text": "Halting problem is?",
+    "options": [
+      "Undecidable",
+      "Decidable",
+      "NP-complete",
+      "P"
+    ],
+    "correctAnswer": "Undecidable",
+    "explanation": "Cannot be decided",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0130",
+    "text": "CYK algorithm complexity?",
+    "options": [
+      "O(n)",
+      "O(n^2)",
+      "O(n^3)",
+      "O(2^n)"
+    ],
+    "correctAnswer": "O(n^3)",
+    "explanation": "Cubic complexity",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0131",
+    "text": "PDA accepts?",
+    "options": [
+      "Context-free",
+      "Regular",
+      "Context-sensitive",
+      "Recursive"
+    ],
+    "correctAnswer": "Context-free",
+    "explanation": "Pushdown automata",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0132",
+    "text": "CNF is?",
+    "options": [
+      "Grammar form",
+      "Automaton form",
+      "Language form",
+      "Expression form"
+    ],
+    "correctAnswer": "Grammar form",
+    "explanation": "Chomsky Normal Form",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0133",
+    "text": "Regular closed under complement?",
+    "options": [
+      "Yes",
+      "No",
+      "Sometimes",
+      "Never"
+    ],
+    "correctAnswer": "Yes",
+    "explanation": "Regular languages closed",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0134",
+    "text": "Pumping length equals?",
+    "options": [
+      "Number of states",
+      "String length",
+      "Alphabet size",
+      "Transitions"
+    ],
+    "correctAnswer": "Number of states",
+    "explanation": "DFA states",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0135",
+    "text": "CFL membership is?",
+    "options": [
+      "Decidable",
+      "Undecidable",
+      "NP-complete",
+      "P"
+    ],
+    "correctAnswer": "Decidable",
+    "explanation": "Can be decided",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0136",
+    "text": "Turing machine is?",
+    "options": [
+      "Abstract machine",
+      "Physical machine",
+      "Virtual machine",
+      "Real machine"
+    ],
+    "correctAnswer": "Abstract machine",
+    "explanation": "Computational model",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0137",
+    "text": "Type 3 grammar generates?",
+    "options": [
+      "Regular",
+      "Context-free",
+      "Context-sensitive",
+      "Unrestricted"
+    ],
+    "correctAnswer": "Regular",
+    "explanation": "Regular grammar",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0138",
+    "text": "DFA vs NFA determinism?",
+    "options": [
+      "DFA deterministic",
+      "NFA deterministic",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "DFA deterministic",
+    "explanation": "DFA is deterministic",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0139",
+    "text": "CFL not closed under?",
+    "options": [
+      "Intersection",
+      "Union",
+      "Concatenation",
+      "Kleene star"
+    ],
+    "correctAnswer": "Intersection",
+    "explanation": "Not closed under intersection",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0140",
+    "text": "Rice theorem about?",
+    "options": [
+      "Decidability",
+      "Complexity",
+      "Automata",
+      "Grammars"
+    ],
+    "correctAnswer": "Decidability",
+    "explanation": "Non-trivial properties undecidable",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0141",
+    "text": "Epsilon transition?",
+    "options": [
+      "Empty transition",
+      "Final transition",
+      "Initial transition",
+      "Loop"
+    ],
+    "correctAnswer": "Empty transition",
+    "explanation": "Moves without input",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0142",
+    "text": "Most powerful automaton?",
+    "options": [
+      "TM",
+      "PDA",
+      "NFA",
+      "DFA"
+    ],
+    "correctAnswer": "TM",
+    "explanation": "Turing machine",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0143",
+    "text": "Left recursion?",
+    "options": [
+      "A -> Aa",
+      "A -> aA",
+      "A -> AA",
+      "A -> a"
+    ],
+    "correctAnswer": "A -> Aa",
+    "explanation": "Non-terminal derives itself left",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0144",
+    "text": "PCP is?",
+    "options": [
+      "Undecidable",
+      "Decidable",
+      "NP-complete",
+      "P"
+    ],
+    "correctAnswer": "Undecidable",
+    "explanation": "Post Correspondence Problem",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0145",
+    "text": "Ambiguous grammar has?",
+    "options": [
+      "Multiple derivations",
+      "No derivation",
+      "Single derivation",
+      "Infinite derivations"
+    ],
+    "correctAnswer": "Multiple derivations",
+    "explanation": "Multiple parse trees",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0146",
+    "text": "Regular expression denotes?",
+    "options": [
+      "Regular language",
+      "Context-free language",
+      "Context-sensitive language",
+      "Recursive language"
+    ],
+    "correctAnswer": "Regular language",
+    "explanation": "Denotes regular language",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0147",
+    "text": "Context-free grammar has?",
+    "options": [
+      "Productions",
+      "States",
+      "Transitions",
+      "Tapes"
+    ],
+    "correctAnswer": "Productions",
+    "explanation": "Grammar productions",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0148",
+    "text": "Finite automaton has?",
+    "options": [
+      "Finite states",
+      "Infinite states",
+      "No states",
+      "Variable states"
+    ],
+    "correctAnswer": "Finite states",
+    "explanation": "Finite number of states",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0149",
+    "text": "Chomsky hierarchy has?",
+    "options": [
+      "4 types",
+      "3 types",
+      "5 types",
+      "2 types"
+    ],
+    "correctAnswer": "4 types",
+    "explanation": "Type 0, 1, 2, 3",
+    "topic": "Theory of Computation",
+    "subject": "Theory of Computation",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0150",
+    "text": "Cache speeds up?",
+    "options": [
+      "Memory access",
+      "CPU",
+      "Disk",
+      "Network"
+    ],
+    "correctAnswer": "Memory access",
+    "explanation": "Faster memory access",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0151",
+    "text": "Register addressing uses?",
+    "options": [
+      "Register",
+      "Memory",
+      "Immediate",
+      "Indirect"
+    ],
+    "correctAnswer": "Register",
+    "explanation": "Uses register operand",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0152",
+    "text": "Pipelining is?",
+    "options": [
+      "Overlapped execution",
+      "Sequential",
+      "Parallel",
+      "Random"
+    ],
+    "correctAnswer": "Overlapped execution",
+    "explanation": "Overlaps instruction stages",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0153",
+    "text": "ALU performs?",
+    "options": [
+      "Arithmetic and logic",
+      "Only arithmetic",
+      "Only logic",
+      "Memory operations"
+    ],
+    "correctAnswer": "Arithmetic and logic",
+    "explanation": "Arithmetic Logic Unit",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0154",
+    "text": "Fastest cache mapping?",
+    "options": [
+      "Associative",
+      "Direct",
+      "Set-associative",
+      "All same"
+    ],
+    "correctAnswer": "Associative",
+    "explanation": "Fully associative fastest",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0155",
+    "text": "Instruction cycle has?",
+    "options": [
+      "Fetch-Decode-Execute",
+      "Fetch-Execute",
+      "Decode-Execute",
+      "Fetch-Decode"
+    ],
+    "correctAnswer": "Fetch-Decode-Execute",
+    "explanation": "Three phases",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0156",
+    "text": "Program counter holds?",
+    "options": [
+      "Next instruction address",
+      "Data",
+      "Result",
+      "Operand"
+    ],
+    "correctAnswer": "Next instruction address",
+    "explanation": "PC holds next address",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0157",
+    "text": "SRAM vs DRAM?",
+    "options": [
+      "SRAM faster",
+      "DRAM faster",
+      "Same speed",
+      "Depends"
+    ],
+    "correctAnswer": "SRAM faster",
+    "explanation": "Static RAM faster",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0158",
+    "text": "Virtual memory extends?",
+    "options": [
+      "Physical memory",
+      "Cache",
+      "Registers",
+      "Disk"
+    ],
+    "correctAnswer": "Physical memory",
+    "explanation": "Uses disk as extension",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0159",
+    "text": "MAR holds?",
+    "options": [
+      "Memory address",
+      "Data",
+      "Instruction",
+      "Result"
+    ],
+    "correctAnswer": "Memory address",
+    "explanation": "Memory Address Register",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0160",
+    "text": "Pipeline hazards?",
+    "options": [
+      "Data, Control, Structural",
+      "Only data",
+      "Only control",
+      "Only structural"
+    ],
+    "correctAnswer": "Data, Control, Structural",
+    "explanation": "Three types of hazards",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0161",
+    "text": "RISC uses?",
+    "options": [
+      "Simple instructions",
+      "Complex instructions",
+      "Variable length",
+      "Microprogramming"
+    ],
+    "correctAnswer": "Simple instructions",
+    "explanation": "Reduced Instruction Set",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0162",
+    "text": "TLB caches?",
+    "options": [
+      "Page table entries",
+      "Data",
+      "Instructions",
+      "Registers"
+    ],
+    "correctAnswer": "Page table entries",
+    "explanation": "Translation Lookaside Buffer",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0163",
+    "text": "Data bus transfers?",
+    "options": [
+      "Data",
+      "Address",
+      "Control signals",
+      "All"
+    ],
+    "correctAnswer": "Data",
+    "explanation": "Transfers data",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0164",
+    "text": "DMA allows?",
+    "options": [
+      "Direct memory access",
+      "Dynamic allocation",
+      "Data access",
+      "Direct allocation"
+    ],
+    "correctAnswer": "Direct memory access",
+    "explanation": "Bypasses CPU",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0165",
+    "text": "Interrupt signals?",
+    "options": [
+      "CPU",
+      "Memory",
+      "Disk",
+      "Cache"
+    ],
+    "correctAnswer": "CPU",
+    "explanation": "Signals CPU for attention",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0166",
+    "text": "Volatile memory?",
+    "options": [
+      "RAM",
+      "ROM",
+      "Flash",
+      "Hard disk"
+    ],
+    "correctAnswer": "RAM",
+    "explanation": "Loses data on power off",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0167",
+    "text": "Instruction pipelining?",
+    "options": [
+      "Overlaps stages",
+      "Sequential",
+      "Parallel",
+      "Random"
+    ],
+    "correctAnswer": "Overlaps stages",
+    "explanation": "Overlaps execution",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0168",
+    "text": "Stack pointer points to?",
+    "options": [
+      "Top of stack",
+      "Bottom",
+      "Middle",
+      "Random"
+    ],
+    "correctAnswer": "Top of stack",
+    "explanation": "SP points to top",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0169",
+    "text": "Von Neumann uses?",
+    "options": [
+      "Unified memory",
+      "Separate memory",
+      "Cache only",
+      "Registers only"
+    ],
+    "correctAnswer": "Unified memory",
+    "explanation": "Single memory for instructions and data",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0170",
+    "text": "Cache coherence ensures?",
+    "options": [
+      "Consistency",
+      "Speed",
+      "Size",
+      "Mapping"
+    ],
+    "correctAnswer": "Consistency",
+    "explanation": "Consistency in multiprocessor",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0171",
+    "text": "Control unit?",
+    "options": [
+      "Controls operations",
+      "Stores data",
+      "Executes",
+      "Holds addresses"
+    ],
+    "correctAnswer": "Controls operations",
+    "explanation": "Manages execution",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0172",
+    "text": "Non-volatile memory?",
+    "options": [
+      "ROM",
+      "RAM",
+      "Cache",
+      "Register"
+    ],
+    "correctAnswer": "ROM",
+    "explanation": "Retains data",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0173",
+    "text": "Microprogramming implements?",
+    "options": [
+      "Control unit",
+      "ALU",
+      "Memory",
+      "Cache"
+    ],
+    "correctAnswer": "Control unit",
+    "explanation": "Control unit implementation",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0174",
+    "text": "Harvard architecture has?",
+    "options": [
+      "Separate memory",
+      "Unified memory",
+      "No memory",
+      "Cache only"
+    ],
+    "correctAnswer": "Separate memory",
+    "explanation": "Separate instruction and data memory",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0175",
+    "text": "Superscalar executes?",
+    "options": [
+      "Multiple instructions per cycle",
+      "One per cycle",
+      "Sequential",
+      "Random"
+    ],
+    "correctAnswer": "Multiple instructions per cycle",
+    "explanation": "Multiple issue",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0176",
+    "text": "Cache miss penalty?",
+    "options": [
+      "Memory access time",
+      "Cache access time",
+      "Zero",
+      "Infinite"
+    ],
+    "correctAnswer": "Memory access time",
+    "explanation": "Time to fetch from memory",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0177",
+    "text": "CISC has?",
+    "options": [
+      "Complex instructions",
+      "Simple instructions",
+      "Fixed length",
+      "No instructions"
+    ],
+    "correctAnswer": "Complex instructions",
+    "explanation": "Complex Instruction Set",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0178",
+    "text": "Write-through cache?",
+    "options": [
+      "Writes to memory immediately",
+      "Writes later",
+      "Never writes",
+      "Writes to cache only"
+    ],
+    "correctAnswer": "Writes to memory immediately",
+    "explanation": "Immediate write",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0179",
+    "text": "Booth's algorithm for?",
+    "options": [
+      "Multiplication",
+      "Division",
+      "Addition",
+      "Subtraction"
+    ],
+    "correctAnswer": "Multiplication",
+    "explanation": "Efficient multiplication",
+    "topic": "Computer Organization & Architecture",
+    "subject": "COA",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0180",
+    "text": "Lexical analysis does?",
+    "options": [
+      "Tokenization",
+      "Parsing",
+      "Code generation",
+      "Optimization"
+    ],
+    "correctAnswer": "Tokenization",
+    "explanation": "Converts to tokens",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0181",
+    "text": "Syntax errors detected by?",
+    "options": [
+      "Parser",
+      "Lexer",
+      "Semantic analyzer",
+      "Code generator"
+    ],
+    "correctAnswer": "Parser",
+    "explanation": "Syntax analysis",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0182",
+    "text": "Parse tree shows?",
+    "options": [
+      "Derivation",
+      "Tokens",
+      "Code",
+      "Errors"
+    ],
+    "correctAnswer": "Derivation",
+    "explanation": "Derivation tree",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0183",
+    "text": "LL parser is?",
+    "options": [
+      "Top-down",
+      "Bottom-up",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Top-down",
+    "explanation": "Left-to-right leftmost",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0184",
+    "text": "Semantic analysis checks?",
+    "options": [
+      "Types",
+      "Syntax",
+      "Tokens",
+      "Code"
+    ],
+    "correctAnswer": "Types",
+    "explanation": "Type checking",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0185",
+    "text": "Intermediate code is?",
+    "options": [
+      "Machine-independent",
+      "Machine code",
+      "Source code",
+      "Assembly"
+    ],
+    "correctAnswer": "Machine-independent",
+    "explanation": "Platform independent",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0186",
+    "text": "Register allocation in?",
+    "options": [
+      "Code generation",
+      "Parsing",
+      "Lexical analysis",
+      "Semantic analysis"
+    ],
+    "correctAnswer": "Code generation",
+    "explanation": "During code generation",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0187",
+    "text": "Symbol table stores?",
+    "options": [
+      "Identifiers",
+      "Tokens",
+      "Code",
+      "Errors"
+    ],
+    "correctAnswer": "Identifiers",
+    "explanation": "Identifier information",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0188",
+    "text": "Left factoring removes?",
+    "options": [
+      "Common prefix",
+      "Left recursion",
+      "Ambiguity",
+      "Errors"
+    ],
+    "correctAnswer": "Common prefix",
+    "explanation": "Removes common prefix",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0189",
+    "text": "Code generation produces?",
+    "options": [
+      "Target code",
+      "Tokens",
+      "Parse tree",
+      "Errors"
+    ],
+    "correctAnswer": "Target code",
+    "explanation": "Final code",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0190",
+    "text": "Handle in LR parsing?",
+    "options": [
+      "Substring matching production",
+      "Token",
+      "Non-terminal",
+      "Terminal"
+    ],
+    "correctAnswer": "Substring matching production",
+    "explanation": "Matches production",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0191",
+    "text": "Constant folding?",
+    "options": [
+      "Evaluates at compile time",
+      "Removes constants",
+      "Adds constants",
+      "Stores constants"
+    ],
+    "correctAnswer": "Evaluates at compile time",
+    "explanation": "Compile-time evaluation",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0192",
+    "text": "Ambiguous grammar has?",
+    "options": [
+      "Multiple parse trees",
+      "No parse tree",
+      "Single parse tree",
+      "Infinite trees"
+    ],
+    "correctAnswer": "Multiple parse trees",
+    "explanation": "Multiple derivations",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0193",
+    "text": "Three-address code?",
+    "options": [
+      "Intermediate representation",
+      "Machine code",
+      "Source code",
+      "Assembly"
+    ],
+    "correctAnswer": "Intermediate representation",
+    "explanation": "IR with three operands",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0194",
+    "text": "Lookahead predicts?",
+    "options": [
+      "Production",
+      "Token",
+      "Code",
+      "Error"
+    ],
+    "correctAnswer": "Production",
+    "explanation": "Predicts production",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0195",
+    "text": "Dead code elimination removes?",
+    "options": [
+      "Unreachable code",
+      "Comments",
+      "Variables",
+      "Functions"
+    ],
+    "correctAnswer": "Unreachable code",
+    "explanation": "Removes unused code",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0196",
+    "text": "LR vs LL?",
+    "options": [
+      "LR more powerful",
+      "LL more powerful",
+      "Equal",
+      "Depends"
+    ],
+    "correctAnswer": "LR more powerful",
+    "explanation": "LR handles more grammars",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0197",
+    "text": "Register allocation assigns?",
+    "options": [
+      "Variables to registers",
+      "Memory",
+      "Code",
+      "Tokens"
+    ],
+    "correctAnswer": "Variables to registers",
+    "explanation": "Assigns to registers",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0198",
+    "text": "Shift-reduce is?",
+    "options": [
+      "Bottom-up",
+      "Top-down",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Bottom-up",
+    "explanation": "Bottom-up parsing",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0199",
+    "text": "Loop optimization improves?",
+    "options": [
+      "Loop performance",
+      "Removes loops",
+      "Adds loops",
+      "Unrolls loops"
+    ],
+    "correctAnswer": "Loop performance",
+    "explanation": "Improves efficiency",
+    "topic": "Compiler Design",
+    "subject": "Compiler Design",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0200",
+    "text": "Universal gate?",
+    "options": [
+      "NAND",
+      "AND",
+      "OR",
+      "XOR"
+    ],
+    "correctAnswer": "NAND",
+    "explanation": "NAND is universal",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0201",
+    "text": "3-variable minterms?",
+    "options": [
+      "8",
+      "4",
+      "6",
+      "16"
+    ],
+    "correctAnswer": "8",
+    "explanation": "2^3 = 8 minterms",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0202",
+    "text": "Flip-flop is?",
+    "options": [
+      "Sequential",
+      "Combinational",
+      "Logic gate",
+      "Memory"
+    ],
+    "correctAnswer": "Sequential",
+    "explanation": "Sequential circuit",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0203",
+    "text": "D flip-flop has?",
+    "options": [
+      "No invalid state",
+      "Invalid state",
+      "Two states",
+      "Three states"
+    ],
+    "correctAnswer": "No invalid state",
+    "explanation": "No invalid state",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0204",
+    "text": "Multiplexer is?",
+    "options": [
+      "Data selector",
+      "Data distributor",
+      "Encoder",
+      "Decoder"
+    ],
+    "correctAnswer": "Data selector",
+    "explanation": "Selects input",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0205",
+    "text": "K-map simplifies?",
+    "options": [
+      "Boolean expressions",
+      "Circuits",
+      "Tests",
+      "Analysis"
+    ],
+    "correctAnswer": "Boolean expressions",
+    "explanation": "Simplification tool",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0206",
+    "text": "Decoder converts?",
+    "options": [
+      "n to 2^n",
+      "2^n to n",
+      "Data selector",
+      "Data distributor"
+    ],
+    "correctAnswer": "n to 2^n",
+    "explanation": "n inputs to 2^n outputs",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0207",
+    "text": "Latch vs flip-flop?",
+    "options": [
+      "Level vs edge",
+      "Speed",
+      "Cost",
+      "Size"
+    ],
+    "correctAnswer": "Level vs edge",
+    "explanation": "Triggering difference",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0208",
+    "text": "Half adder adds?",
+    "options": [
+      "Two bits",
+      "Three bits",
+      "Four bits",
+      "One bit"
+    ],
+    "correctAnswer": "Two bits",
+    "explanation": "Adds two bits",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0209",
+    "text": "Priority encoder encodes?",
+    "options": [
+      "Highest priority",
+      "All inputs",
+      "Decodes",
+      "Selects"
+    ],
+    "correctAnswer": "Highest priority",
+    "explanation": "Highest priority input",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0210",
+    "text": "Propagation delay is?",
+    "options": [
+      "Output change time",
+      "Input change time",
+      "Clock period",
+      "Setup time"
+    ],
+    "correctAnswer": "Output change time",
+    "explanation": "Time for output change",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0211",
+    "text": "Counter is?",
+    "options": [
+      "Sequential",
+      "Combinational",
+      "Logic gate",
+      "Memory"
+    ],
+    "correctAnswer": "Sequential",
+    "explanation": "Sequential circuit",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0212",
+    "text": "Shift register?",
+    "options": [
+      "Sequential",
+      "Combinational",
+      "Logic gate",
+      "Memory"
+    ],
+    "correctAnswer": "Sequential",
+    "explanation": "Shifts data",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0213",
+    "text": "Fan-out is?",
+    "options": [
+      "Gates driven",
+      "Inputs",
+      "Outputs",
+      "Levels"
+    ],
+    "correctAnswer": "Gates driven",
+    "explanation": "Number of gates driven",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0214",
+    "text": "Demultiplexer?",
+    "options": [
+      "Data distributor",
+      "Data selector",
+      "Encoder",
+      "Decoder"
+    ],
+    "correctAnswer": "Data distributor",
+    "explanation": "Distributes data",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0215",
+    "text": "Setup time?",
+    "options": [
+      "Before clock edge",
+      "After clock edge",
+      "Propagation delay",
+      "Clock period"
+    ],
+    "correctAnswer": "Before clock edge",
+    "explanation": "Input stable before clock",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0216",
+    "text": "Full adder adds?",
+    "options": [
+      "Three bits",
+      "Two bits",
+      "Four bits",
+      "One bit"
+    ],
+    "correctAnswer": "Three bits",
+    "explanation": "Adds three bits",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0217",
+    "text": "Race condition?",
+    "options": [
+      "Output depends on delay",
+      "Input",
+      "Clock",
+      "Power"
+    ],
+    "correctAnswer": "Output depends on delay",
+    "explanation": "Timing dependent",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0218",
+    "text": "Synchronous counter?",
+    "options": [
+      "All clocked together",
+      "Separate clocks",
+      "No clock",
+      "Multiple clocks"
+    ],
+    "correctAnswer": "All clocked together",
+    "explanation": "Common clock",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0219",
+    "text": "Hold time?",
+    "options": [
+      "After clock edge",
+      "Before clock edge",
+      "Propagation delay",
+      "Clock period"
+    ],
+    "correctAnswer": "After clock edge",
+    "explanation": "Input stable after clock",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0220",
+    "text": "JK flip-flop eliminates?",
+    "options": [
+      "Invalid state",
+      "Valid state",
+      "All states",
+      "No states"
+    ],
+    "correctAnswer": "Invalid state",
+    "explanation": "No invalid state",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0221",
+    "text": "Encoder converts?",
+    "options": [
+      "2^n to n",
+      "n to 2^n",
+      "Data selector",
+      "Data distributor"
+    ],
+    "correctAnswer": "2^n to n",
+    "explanation": "2^n inputs to n outputs",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0222",
+    "text": "T flip-flop toggles?",
+    "options": [
+      "On T=1",
+      "On T=0",
+      "Always",
+      "Never"
+    ],
+    "correctAnswer": "On T=1",
+    "explanation": "Toggles when T=1",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0223",
+    "text": "Asynchronous counter?",
+    "options": [
+      "Ripple carry",
+      "Synchronous",
+      "No carry",
+      "Parallel"
+    ],
+    "correctAnswer": "Ripple carry",
+    "explanation": "Ripple through",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0224",
+    "text": "Excitation table shows?",
+    "options": [
+      "Required inputs",
+      "Outputs",
+      "States",
+      "Transitions"
+    ],
+    "correctAnswer": "Required inputs",
+    "explanation": "Inputs for state change",
+    "topic": "Digital Logic",
+    "subject": "Digital Logic",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0225",
+    "text": "Derivative of sin(x)?",
+    "options": [
+      "cos(x)",
+      "-cos(x)",
+      "sin(x)",
+      "-sin(x)"
+    ],
+    "correctAnswer": "cos(x)",
+    "explanation": "d/dx[sin(x)] = cos(x)",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0226",
+    "text": "Integral of 1/x?",
+    "options": [
+      "ln(x)",
+      "x",
+      "1/x^2",
+      "e^x"
+    ],
+    "correctAnswer": "ln(x)",
+    "explanation": "∫(1/x)dx = ln|x| + C",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0227",
+    "text": "det(I) = ?",
+    "options": [
+      "1",
+      "0",
+      "-1",
+      "n"
+    ],
+    "correctAnswer": "1",
+    "explanation": "Identity matrix determinant",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0228",
+    "text": "Rank of zero matrix?",
+    "options": [
+      "0",
+      "1",
+      "n",
+      "Undefined"
+    ],
+    "correctAnswer": "0",
+    "explanation": "Zero matrix rank is 0",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0229",
+    "text": "Euler's formula?",
+    "options": [
+      "e^(ix) = cos(x) + i*sin(x)",
+      "e^x = cos(x)",
+      "e^(ix) = sin(x)",
+      "e^x = x"
+    ],
+    "correctAnswer": "e^(ix) = cos(x) + i*sin(x)",
+    "explanation": "Complex exponential",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0230",
+    "text": "Fair coin probability?",
+    "options": [
+      "0.5",
+      "0.25",
+      "0.75",
+      "1"
+    ],
+    "correctAnswer": "0.5",
+    "explanation": "Equal probability",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0231",
+    "text": "Mean of 1,2,3,4,5?",
+    "options": [
+      "3",
+      "2",
+      "4",
+      "5"
+    ],
+    "correctAnswer": "3",
+    "explanation": "Average = 3",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0232",
+    "text": "Laplace of 1?",
+    "options": [
+      "1/s",
+      "s",
+      "1",
+      "0"
+    ],
+    "correctAnswer": "1/s",
+    "explanation": "L{1} = 1/s",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0233",
+    "text": "Eigenvalue equation?",
+    "options": [
+      "Ax = λx",
+      "Ax = x",
+      "Ax = 0",
+      "Ax = I"
+    ],
+    "correctAnswer": "Ax = λx",
+    "explanation": "Eigenvalue definition",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0234",
+    "text": "Gradient is?",
+    "options": [
+      "Vector",
+      "Scalar",
+      "Matrix",
+      "Tensor"
+    ],
+    "correctAnswer": "Vector",
+    "explanation": "Vector of partial derivatives",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0235",
+    "text": "Divergence is?",
+    "options": [
+      "Scalar",
+      "Vector",
+      "Matrix",
+      "Tensor"
+    ],
+    "correctAnswer": "Scalar",
+    "explanation": "Scalar output",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0236",
+    "text": "Curl of gradient?",
+    "options": [
+      "Zero",
+      "One",
+      "Vector",
+      "Scalar"
+    ],
+    "correctAnswer": "Zero",
+    "explanation": "Always zero",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0237",
+    "text": "Fourier transform for?",
+    "options": [
+      "Frequency analysis",
+      "Time analysis",
+      "Spatial analysis",
+      "All"
+    ],
+    "correctAnswer": "Frequency analysis",
+    "explanation": "Time to frequency domain",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0238",
+    "text": "Linearly independent means?",
+    "options": [
+      "No linear combination",
+      "All equal",
+      "All zero",
+      "Orthogonal"
+    ],
+    "correctAnswer": "No linear combination",
+    "explanation": "Cannot express as combinations",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0239",
+    "text": "Binomial theorem?",
+    "options": [
+      "(a+b)^n expansion",
+      "(a-b)^n",
+      "a^n + b^n",
+      "a^n - b^n"
+    ],
+    "correctAnswer": "(a+b)^n expansion",
+    "explanation": "Expands (a+b)^n",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0240",
+    "text": "Conditional probability?",
+    "options": [
+      "P(A|B) = P(A∩B)/P(B)",
+      "P(A)*P(B)",
+      "P(A) + P(B)",
+      "P(A) - P(B)"
+    ],
+    "correctAnswer": "P(A|B) = P(A∩B)/P(B)",
+    "explanation": "Conditional formula",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0241",
+    "text": "Standard deviation?",
+    "options": [
+      "√variance",
+      "variance^2",
+      "Mean",
+      "Sum"
+    ],
+    "correctAnswer": "√variance",
+    "explanation": "Square root of variance",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0242",
+    "text": "Normal distribution?",
+    "options": [
+      "Bell curve",
+      "Uniform",
+      "Exponential",
+      "Poisson"
+    ],
+    "correctAnswer": "Bell curve",
+    "explanation": "Bell-shaped",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0243",
+    "text": "Chain rule?",
+    "options": [
+      "f'(g(x))*g'(x)",
+      "f'(x)*g'(x)",
+      "f(x)*g(x)",
+      "f'(x) + g'(x)"
+    ],
+    "correctAnswer": "f'(g(x))*g'(x)",
+    "explanation": "Composite function derivative",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0244",
+    "text": "Integration by parts?",
+    "options": [
+      "∫u dv = uv - ∫v du",
+      "uv + ∫v du",
+      "u + v",
+      "u - v"
+    ],
+    "correctAnswer": "∫u dv = uv - ∫v du",
+    "explanation": "Integration formula",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0245",
+    "text": "Dot product of perpendicular?",
+    "options": [
+      "0",
+      "1",
+      "-1",
+      "Undefined"
+    ],
+    "correctAnswer": "0",
+    "explanation": "Perpendicular vectors",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0246",
+    "text": "Cross product magnitude?",
+    "options": [
+      "|a||b|sin(θ)",
+      "|a||b|cos(θ)",
+      "|a||b|",
+      "|a|+|b|"
+    ],
+    "correctAnswer": "|a||b|sin(θ)",
+    "explanation": "Cross product formula",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0247",
+    "text": "Symmetric matrix?",
+    "options": [
+      "A = A^T",
+      "A = -A^T",
+      "A = A^(-1)",
+      "A = I"
+    ],
+    "correctAnswer": "A = A^T",
+    "explanation": "Equals transpose",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0248",
+    "text": "Basis is?",
+    "options": [
+      "Linearly independent spanning set",
+      "Any set",
+      "Orthogonal",
+      "Unit vectors"
+    ],
+    "correctAnswer": "Linearly independent spanning set",
+    "explanation": "Basis definition",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0249",
+    "text": "Cauchy-Schwarz?",
+    "options": [
+      "|<u,v>| ≤ ||u|| ||v||",
+      "|<u,v>| ≥ ||u|| ||v||",
+      "|<u,v>| = ||u|| ||v||",
+      "|<u,v>| = 0"
+    ],
+    "correctAnswer": "|<u,v>| ≤ ||u|| ||v||",
+    "explanation": "Inner product inequality",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "hard",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0250",
+    "text": "Markov chain is?",
+    "options": [
+      "Memoryless process",
+      "Deterministic",
+      "Random walk",
+      "Time series"
+    ],
+    "correctAnswer": "Memoryless process",
+    "explanation": "Memoryless property",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0251",
+    "text": "Determinant of transpose?",
+    "options": [
+      "Same as original",
+      "Negative",
+      "Zero",
+      "Inverse"
+    ],
+    "correctAnswer": "Same as original",
+    "explanation": "det(A^T) = det(A)",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0252",
+    "text": "Orthogonal vectors?",
+    "options": [
+      "Dot product zero",
+      "Parallel",
+      "Equal",
+      "Opposite"
+    ],
+    "correctAnswer": "Dot product zero",
+    "explanation": "Perpendicular",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0253",
+    "text": "Probability axioms?",
+    "options": [
+      "0 ≤ P(A) ≤ 1",
+      "P(A) < 0",
+      "P(A) > 1",
+      "P(A) = 2"
+    ],
+    "correctAnswer": "0 ≤ P(A) ≤ 1",
+    "explanation": "Probability range",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0254",
+    "text": "Bayes theorem?",
+    "options": [
+      "P(A|B) = P(B|A)P(A)/P(B)",
+      "P(A)*P(B)",
+      "P(A) + P(B)",
+      "P(A) - P(B)"
+    ],
+    "correctAnswer": "P(A|B) = P(B|A)P(A)/P(B)",
+    "explanation": "Bayes formula",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0255",
+    "text": "Variance formula?",
+    "options": [
+      "E[(X-μ)^2]",
+      "E[X]",
+      "E[X^2]",
+      "E[X] + E[X^2]"
+    ],
+    "correctAnswer": "E[(X-μ)^2]",
+    "explanation": "Variance definition",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0256",
+    "text": "Covariance measures?",
+    "options": [
+      "Linear relationship",
+      "Mean",
+      "Variance",
+      "Standard deviation"
+    ],
+    "correctAnswer": "Linear relationship",
+    "explanation": "Measures correlation",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0257",
+    "text": "Poisson distribution for?",
+    "options": [
+      "Rare events",
+      "Normal events",
+      "Uniform events",
+      "Exponential events"
+    ],
+    "correctAnswer": "Rare events",
+    "explanation": "Models rare events",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0258",
+    "text": "Exponential distribution?",
+    "options": [
+      "Memoryless",
+      "Has memory",
+      "Discrete",
+      "Uniform"
+    ],
+    "correctAnswer": "Memoryless",
+    "explanation": "Memoryless continuous",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0259",
+    "text": "Central limit theorem?",
+    "options": [
+      "Sum approaches normal",
+      "Sum approaches uniform",
+      "Sum approaches exponential",
+      "Sum approaches Poisson"
+    ],
+    "correctAnswer": "Sum approaches normal",
+    "explanation": "Approaches normal distribution",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "hard",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0260",
+    "text": "Rank-nullity theorem?",
+    "options": [
+      "rank + nullity = n",
+      "rank - nullity = n",
+      "rank * nullity = n",
+      "rank / nullity = n"
+    ],
+    "correctAnswer": "rank + nullity = n",
+    "explanation": "Dimension theorem",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0261",
+    "text": "Diagonalizable matrix has?",
+    "options": [
+      "n linearly independent eigenvectors",
+      "No eigenvectors",
+      "One eigenvector",
+      "Infinite eigenvectors"
+    ],
+    "correctAnswer": "n linearly independent eigenvectors",
+    "explanation": "Diagonalization condition",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "hard",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0262",
+    "text": "Gram-Schmidt for?",
+    "options": [
+      "Orthogonalization",
+      "Diagonalization",
+      "Inversion",
+      "Transposition"
+    ],
+    "correctAnswer": "Orthogonalization",
+    "explanation": "Creates orthogonal basis",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0263",
+    "text": "Singular matrix has?",
+    "options": [
+      "Zero determinant",
+      "Non-zero determinant",
+      "Positive determinant",
+      "Negative determinant"
+    ],
+    "correctAnswer": "Zero determinant",
+    "explanation": "Non-invertible",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0264",
+    "text": "Trace of matrix?",
+    "options": [
+      "Sum of diagonal",
+      "Sum of all elements",
+      "Determinant",
+      "Rank"
+    ],
+    "correctAnswer": "Sum of diagonal",
+    "explanation": "Diagonal sum",
+    "topic": "Engineering Mathematics",
+    "subject": "Mathematics",
+    "section": "Engineering Mathematics",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0265",
+    "text": "Pointer stores?",
+    "options": [
+      "Address",
+      "Value",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Address",
+    "explanation": "Stores memory address",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0266",
+    "text": "malloc returns?",
+    "options": [
+      "void*",
+      "int*",
+      "char*",
+      "NULL"
+    ],
+    "correctAnswer": "void*",
+    "explanation": "Returns void pointer",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0267",
+    "text": "sizeof operator returns?",
+    "options": [
+      "Size in bytes",
+      "Size in bits",
+      "Address",
+      "Value"
+    ],
+    "correctAnswer": "Size in bytes",
+    "explanation": "Returns byte size",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0268",
+    "text": "Static variable scope?",
+    "options": [
+      "File",
+      "Function",
+      "Block",
+      "Global"
+    ],
+    "correctAnswer": "File",
+    "explanation": "File scope",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0269",
+    "text": "Pass by reference uses?",
+    "options": [
+      "Pointers",
+      "Values",
+      "Constants",
+      "Macros"
+    ],
+    "correctAnswer": "Pointers",
+    "explanation": "Uses pointers",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0270",
+    "text": "Array name is?",
+    "options": [
+      "Pointer to first element",
+      "Value",
+      "Address",
+      "Index"
+    ],
+    "correctAnswer": "Pointer to first element",
+    "explanation": "Pointer constant",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0271",
+    "text": "Structure padding for?",
+    "options": [
+      "Alignment",
+      "Size",
+      "Speed",
+      "Memory"
+    ],
+    "correctAnswer": "Alignment",
+    "explanation": "Memory alignment",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0272",
+    "text": "Union stores?",
+    "options": [
+      "One member at a time",
+      "All members",
+      "No members",
+      "Two members"
+    ],
+    "correctAnswer": "One member at a time",
+    "explanation": "Shares memory",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0273",
+    "text": "Recursion uses?",
+    "options": [
+      "Stack",
+      "Heap",
+      "Queue",
+      "Array"
+    ],
+    "correctAnswer": "Stack",
+    "explanation": "Uses call stack",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0274",
+    "text": "Dangling pointer?",
+    "options": [
+      "Points to freed memory",
+      "NULL pointer",
+      "Valid pointer",
+      "Array pointer"
+    ],
+    "correctAnswer": "Points to freed memory",
+    "explanation": "Invalid reference",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0275",
+    "text": "Memory leak occurs?",
+    "options": [
+      "Not freeing allocated memory",
+      "Freeing memory",
+      "Using stack",
+      "Using static"
+    ],
+    "correctAnswer": "Not freeing allocated memory",
+    "explanation": "Memory not freed",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0276",
+    "text": "Inline function?",
+    "options": [
+      "Expanded at call site",
+      "Normal function",
+      "Recursive",
+      "Static"
+    ],
+    "correctAnswer": "Expanded at call site",
+    "explanation": "Code expansion",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0277",
+    "text": "Macro vs function?",
+    "options": [
+      "Preprocessor vs runtime",
+      "Same",
+      "Macro slower",
+      "Function slower"
+    ],
+    "correctAnswer": "Preprocessor vs runtime",
+    "explanation": "Preprocessing difference",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0278",
+    "text": "Volatile keyword?",
+    "options": [
+      "Prevents optimization",
+      "Constant",
+      "Static",
+      "Register"
+    ],
+    "correctAnswer": "Prevents optimization",
+    "explanation": "No optimization",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0279",
+    "text": "Const pointer?",
+    "options": [
+      "Cannot change address",
+      "Cannot change value",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Cannot change address",
+    "explanation": "Fixed address",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0280",
+    "text": "Function pointer stores?",
+    "options": [
+      "Function address",
+      "Function value",
+      "Function name",
+      "Function result"
+    ],
+    "correctAnswer": "Function address",
+    "explanation": "Stores address",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0281",
+    "text": "Typedef creates?",
+    "options": [
+      "Type alias",
+      "New type",
+      "Variable",
+      "Function"
+    ],
+    "correctAnswer": "Type alias",
+    "explanation": "Type synonym",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0282",
+    "text": "Enum assigns?",
+    "options": [
+      "Integer values",
+      "Float values",
+      "String values",
+      "Character values"
+    ],
+    "correctAnswer": "Integer values",
+    "explanation": "Integer constants",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0283",
+    "text": "Bitwise AND?",
+    "options": [
+      "&",
+      "&&",
+      "|",
+      "||"
+    ],
+    "correctAnswer": "&",
+    "explanation": "Bitwise operator",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0284",
+    "text": "Ternary operator?",
+    "options": [
+      "? :",
+      "?",
+      ":",
+      "??"
+    ],
+    "correctAnswer": "? :",
+    "explanation": "Conditional operator",
+    "topic": "Programming",
+    "subject": "Programming & C",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0285",
+    "text": "If A is taller than B, and B is taller than C, then?",
+    "options": [
+      "A is taller than C",
+      "C is taller than A",
+      "A equals C",
+      "Cannot determine"
+    ],
+    "correctAnswer": "A is taller than C",
+    "explanation": "Transitive property",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0286",
+    "text": "Complete: 2, 4, 8, 16, __",
+    "options": [
+      "32",
+      "24",
+      "20",
+      "18"
+    ],
+    "correctAnswer": "32",
+    "explanation": "Powers of 2",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0287",
+    "text": "Antonym of 'abundant'?",
+    "options": [
+      "Scarce",
+      "Plenty",
+      "Rich",
+      "Full"
+    ],
+    "correctAnswer": "Scarce",
+    "explanation": "Opposite meaning",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0288",
+    "text": "If 5 workers complete a task in 10 days, how many days for 10 workers?",
+    "options": [
+      "5",
+      "10",
+      "15",
+      "20"
+    ],
+    "correctAnswer": "5",
+    "explanation": "Inverse proportion",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0289",
+    "text": "Synonym of 'meticulous'?",
+    "options": [
+      "Careful",
+      "Careless",
+      "Fast",
+      "Slow"
+    ],
+    "correctAnswer": "Careful",
+    "explanation": "Similar meaning",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0290",
+    "text": "A train travels 60 km/h for 2 hours. Distance?",
+    "options": [
+      "120 km",
+      "60 km",
+      "30 km",
+      "240 km"
+    ],
+    "correctAnswer": "120 km",
+    "explanation": "Distance = speed × time",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0291",
+    "text": "If all roses are flowers, and some flowers are red, then?",
+    "options": [
+      "Some roses may be red",
+      "All roses are red",
+      "No roses are red",
+      "All flowers are roses"
+    ],
+    "correctAnswer": "Some roses may be red",
+    "explanation": "Logical deduction",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0292",
+    "text": "Complete: ACE, BDF, CEG, __",
+    "options": [
+      "DFH",
+      "EFG",
+      "DEF",
+      "FGH"
+    ],
+    "correctAnswer": "DFH",
+    "explanation": "Pattern recognition",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0293",
+    "text": "Percentage of 25 out of 200?",
+    "options": [
+      "12.5%",
+      "25%",
+      "50%",
+      "10%"
+    ],
+    "correctAnswer": "12.5%",
+    "explanation": "(25/200) × 100",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0294",
+    "text": "If A:B = 2:3 and B:C = 4:5, then A:C = ?",
+    "options": [
+      "8:15",
+      "2:5",
+      "3:5",
+      "4:15"
+    ],
+    "correctAnswer": "8:15",
+    "explanation": "Ratio calculation",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0295",
+    "text": "Opposite of 'expand'?",
+    "options": [
+      "Contract",
+      "Grow",
+      "Increase",
+      "Enlarge"
+    ],
+    "correctAnswer": "Contract",
+    "explanation": "Antonym",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0296",
+    "text": "Simple interest on 1000 at 5% for 2 years?",
+    "options": [
+      "100",
+      "50",
+      "150",
+      "200"
+    ],
+    "correctAnswer": "100",
+    "explanation": "SI = PRT/100",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0297",
+    "text": "If today is Monday, what day after 100 days?",
+    "options": [
+      "Tuesday",
+      "Monday",
+      "Wednesday",
+      "Thursday"
+    ],
+    "correctAnswer": "Tuesday",
+    "explanation": "100 mod 7 = 2",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0298",
+    "text": "Average of 10, 20, 30, 40?",
+    "options": [
+      "25",
+      "20",
+      "30",
+      "35"
+    ],
+    "correctAnswer": "25",
+    "explanation": "Sum/count = 100/4",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0299",
+    "text": "Compound interest formula?",
+    "options": [
+      "P(1+r)^t",
+      "Prt",
+      "P+rt",
+      "P(1+rt)"
+    ],
+    "correctAnswer": "P(1+r)^t",
+    "explanation": "CI formula",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0300",
+    "text": "If x% of 50 = 10, then x = ?",
+    "options": [
+      "20",
+      "10",
+      "5",
+      "25"
+    ],
+    "correctAnswer": "20",
+    "explanation": "(x/100) × 50 = 10",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0301",
+    "text": "Probability of getting 6 on a die?",
+    "options": [
+      "1/6",
+      "1/2",
+      "1/3",
+      "1/4"
+    ],
+    "correctAnswer": "1/6",
+    "explanation": "One outcome out of six",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0302",
+    "text": "Speed of 72 km/h in m/s?",
+    "options": [
+      "20",
+      "72",
+      "36",
+      "10"
+    ],
+    "correctAnswer": "20",
+    "explanation": "72 × 5/18 = 20",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "medium",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0303",
+    "text": "If A can do work in 6 days, B in 8 days, together?",
+    "options": [
+      "3.43 days",
+      "7 days",
+      "14 days",
+      "2 days"
+    ],
+    "correctAnswer": "3.43 days",
+    "explanation": "1/(1/6 + 1/8)",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "hard",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0304",
+    "text": "Profit percentage if CP=100, SP=120?",
+    "options": [
+      "20%",
+      "10%",
+      "25%",
+      "15%"
+    ],
+    "correctAnswer": "20%",
+    "explanation": "(20/100) × 100",
+    "topic": "General Aptitude",
+    "subject": "General Aptitude",
+    "section": "General Aptitude",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  }
+]

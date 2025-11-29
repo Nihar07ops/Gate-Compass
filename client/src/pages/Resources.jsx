@@ -20,6 +20,10 @@ import {
   School,
   Code,
   Quiz,
+  Lightbulb,
+  CalendarMonth,
+  Edit,
+  Refresh,
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 
@@ -188,10 +192,13 @@ const Resources = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <Box mb={4}>
-          <Typography variant="h3" fontWeight={700} gutterBottom>
-            Study Resources 📚
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Box display="flex" alignItems="center" gap={1.5}>
+            <Typography variant="h3" fontWeight={700}>
+              Study Resources
+            </Typography>
+            <MenuBook sx={{ fontSize: 48, color: '#667eea' }} />
+          </Box>
+          <Typography variant="h6" color="text.secondary" mt={1}>
             Curated materials to help you ace GATE CSE
           </Typography>
         </Box>
@@ -356,30 +363,42 @@ const Resources = () => {
           }}
         >
           <CardContent>
-            <Typography variant="h5" fontWeight={600} gutterBottom>
-              💡 Study Tips
-            </Typography>
+            <Box display="flex" alignItems="center" gap={1} mb={2}>
+              <Lightbulb sx={{ fontSize: 32 }} />
+              <Typography variant="h5" fontWeight={600}>
+                Study Tips
+              </Typography>
+            </Box>
             <Grid container spacing={2} mt={1}>
               <Grid item xs={12} md={4}>
-                <Typography variant="body1" fontWeight={600}>
-                  📅 Create a Schedule
-                </Typography>
+                <Box display="flex" alignItems="center" gap={1} mb={1}>
+                  <CalendarMonth sx={{ fontSize: 24 }} />
+                  <Typography variant="body1" fontWeight={600}>
+                    Create a Schedule
+                  </Typography>
+                </Box>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
                   Dedicate specific hours to each subject daily
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Typography variant="body1" fontWeight={600}>
-                  📝 Practice Regularly
-                </Typography>
+                <Box display="flex" alignItems="center" gap={1} mb={1}>
+                  <Edit sx={{ fontSize: 24 }} />
+                  <Typography variant="body1" fontWeight={600}>
+                    Practice Regularly
+                  </Typography>
+                </Box>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
                   Solve previous year papers and mock tests
                 </Typography>
               </Grid>
               <Grid item xs={12} md={4}>
-                <Typography variant="body1" fontWeight={600}>
-                  🔄 Revise Consistently
-                </Typography>
+                <Box display="flex" alignItems="center" gap={1} mb={1}>
+                  <Refresh sx={{ fontSize: 24 }} />
+                  <Typography variant="body1" fontWeight={600}>
+                    Revise Consistently
+                  </Typography>
+                </Box>
                 <Typography variant="body2" sx={{ opacity: 0.9 }}>
                   Regular revision is key to retention
                 </Typography>

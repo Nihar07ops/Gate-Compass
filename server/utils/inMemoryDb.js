@@ -11,44 +11,51 @@ const tests = new Map();
 const questions = new Map();
 const trends = new Map();
 
-// Load questions from JSON file - Try GATE format first
+// Load questions from JSON file - Try comprehensive 300+ questions first
 let sampleQuestions = [];
 try {
-  const gateFormatPath = path.join(__dirname, '../../ml_service/data/gate_format_complete.json');
-  const questionsData = JSON.parse(fs.readFileSync(gateFormatPath, 'utf8'));
-  sampleQuestions = questionsData.questions.map(q => ({
+  const comprehensivePath = path.join(__dirname, '../../ml_service/data/comprehensive_300_questions.json');
+  const questionsData = JSON.parse(fs.readFileSync(comprehensivePath, 'utf8'));
+  sampleQuestions = questionsData.map(q => ({
     _id: q.id,
     text: q.text,
     options: q.options,
     correctAnswer: q.correctAnswer,
     topic: q.topic,
-    subject: q.section,
+    subject: q.subject,
     section: q.section,
     difficulty: q.difficulty,
-    questionType: 'MCQ',
+    questionType: q.questionType,
     year: q.year,
     marks: q.marks
   }));
-  console.log(`✅ Loaded ${sampleQuestions.length} GATE format questions`);
-  console.log(`📊 Sections: GA(${questionsData.metadata.sections['General Aptitude'].questions}), EM(${questionsData.metadata.sections['Engineering Mathematics'].questions}), CS(${questionsData.metadata.sections['Core Computer Science'].questions})`);
+  console.log(`✅ Loaded ${sampleQuestions.length} comprehensive GATE questions`);
+  
+  // Count by section
+  const sections = {};
+  sampleQuestions.forEach(q => {
+    sections[q.section] = (sections[q.section] || 0) + 1;
+  });
+  console.log(`📊 Sections: ${Object.entries(sections).map(([s, c]) => `${s}(${c})`).join(', ')}`);
 } catch (error) {
-  // Fallback to enhanced questions
+  // Fallback to GATE format
   try {
-    const questionsPath = path.join(__dirname, '../../ml_service/data/gate_questions_complete.json');
-    const questionsData = JSON.parse(fs.readFileSync(questionsPath, 'utf8'));
+    const gateFormatPath = path.join(__dirname, '../../ml_service/data/gate_format_complete.json');
+    const questionsData = JSON.parse(fs.readFileSync(gateFormatPath, 'utf8'));
     sampleQuestions = questionsData.questions.map(q => ({
       _id: q.id,
       text: q.text,
       options: q.options,
       correctAnswer: q.correctAnswer,
       topic: q.topic,
-      subject: q.subject,
+      subject: q.section,
+      section: q.section,
       difficulty: q.difficulty,
       questionType: 'MCQ',
       year: q.year,
       marks: q.marks
     }));
-    console.log(`✅ Loaded ${sampleQuestions.length} questions from database`);
+    console.log(`✅ Loaded ${sampleQuestions.length} GATE format questions`);
   } catch (error2) {
     console.log('⚠️  Using fallback questions');
     sampleQuestions = [

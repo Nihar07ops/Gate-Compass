@@ -4,8 +4,7 @@ import {
   Typography, 
   Card, 
   CardContent, 
-  Grid, 
-  CircularProgress,
+  Grid,
   Paper,
   LinearProgress,
   Chip,
@@ -14,7 +13,6 @@ import {
 import { 
   Radar, 
   Doughnut, 
-  Line, 
   Bar 
 } from 'react-chartjs-2';
 import {
@@ -299,10 +297,13 @@ const Analytics = () => {
         animate={{ opacity: 1, y: 0 }}
       >
         <Box mb={4}>
-          <Typography variant="h3" fontWeight={700} gutterBottom>
-            Performance Analytics 📊
-          </Typography>
-          <Typography variant="h6" color="text.secondary">
+          <Box display="flex" alignItems="center" gap={1.5}>
+            <Typography variant="h3" fontWeight={700}>
+              Performance Analytics
+            </Typography>
+            <Assessment sx={{ fontSize: 48, color: '#667eea' }} />
+          </Box>
+          <Typography variant="h6" color="text.secondary" mt={1}>
             Detailed insights into your preparation journey
           </Typography>
         </Box>
