@@ -33,12 +33,12 @@ import { useAuth } from '../context/AuthContext';
 const drawerWidth = 240;
 
 const menuItems = [
-  { text: 'Dashboard', icon: <DashboardIcon />, path: '/' },
-  { text: 'Historical Trends', icon: <TrendingUp />, path: '/trends' },
-  { text: 'Predictions', icon: <Psychology />, path: '/predictions' },
-  { text: 'Mock Tests', icon: <Quiz />, path: '/mock-test' },
-  { text: 'Analytics', icon: <Analytics />, path: '/analytics' },
-  { text: 'Resources', icon: <MenuBook />, path: '/resources' },
+  { text: 'Dashboard', icon: <DashboardIcon />, path: '/dashboard' },
+  { text: 'Historical Trends', icon: <TrendingUp />, path: '/dashboard/trends' },
+  { text: 'Predictions', icon: <Psychology />, path: '/dashboard/predictions' },
+  { text: 'Mock Tests', icon: <Quiz />, path: '/dashboard/mock-test' },
+  { text: 'Analytics', icon: <Analytics />, path: '/dashboard/analytics' },
+  { text: 'Resources', icon: <MenuBook />, path: '/dashboard/resources' },
 ];
 
 const Layout = ({ darkMode, toggleDarkMode }) => {

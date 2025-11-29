@@ -33,6 +33,7 @@ export const AuthProvider = ({ children }) => {
     const { token, user } = response.data;
     localStorage.setItem('token', token);
     setUser(user);
+    window.location.href = '/dashboard';
     return user;
   };
 
@@ -41,12 +42,14 @@ export const AuthProvider = ({ children }) => {
     const { token, user } = response.data;
     localStorage.setItem('token', token);
     setUser(user);
+    window.location.href = '/dashboard';
     return user;
   };
 
   const logout = () => {
     localStorage.removeItem('token');
     setUser(null);
+    window.location.href = '/';
   };
 
   return (

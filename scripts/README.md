@@ -6,6 +6,7 @@ Automation scripts for the GATE CSE Prep Platform.
 
 ### Setup Scripts
 - **`setup-complete.bat`** - Complete automated setup (installs all dependencies)
+- **`setup-database.bat`** - Setup MongoDB database (Atlas or Local)
 - **`setup-ml-service.bat`** - Setup Python ML service only
 - **`setup-git.bat`** - Initialize Git repository
 

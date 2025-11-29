@@ -9,6 +9,7 @@ import PredictiveAnalysis from './pages/PredictiveAnalysis';
 import MockTest from './pages/MockTest';
 import Analytics from './pages/Analytics';
 import Resources from './pages/Resources';
+import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { AuthProvider } from './context/AuthContext';
@@ -102,10 +103,11 @@ function App() {
       <AuthProvider>
         <Router>
           <Routes>
+            <Route path="/" element={<Landing />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route
-              path="/"
+              path="/dashboard"
               element={
                 <ProtectedRoute>
                   <Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode} />

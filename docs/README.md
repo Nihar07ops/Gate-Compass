@@ -9,6 +9,7 @@ Welcome to the GATE CSE Prep Platform documentation!
 - **[Production Ready](PRODUCTION_READY.md)** - Complete feature list and production setup
 
 ### Setup & Configuration
+- **[Database Setup](DATABASE_SETUP.md)** - MongoDB configuration guide (Atlas & Local)
 - **[Authentication Guide](AUTHENTICATION_GUIDE.md)** - Login/register troubleshooting
 - **[Git Setup Guide](GIT_SETUP_GUIDE.md)** - Version control setup instructions
 

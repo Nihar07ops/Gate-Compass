@@ -110,9 +110,11 @@ Or create your own account!
 
 ## 📖 Documentation
 
+- [Quick Start](QUICK_START.md) - Get started in 2 minutes ⚡
 - [Folder Structure](FOLDER_STRUCTURE.md) - Complete project structure overview
+- [Database Setup](docs/DATABASE_SETUP.md) - MongoDB configuration guide
 - [Production Ready Guide](docs/PRODUCTION_READY.md) - Complete feature list and setup
-- [How to Run](docs/HOW_TO_RUN.md) - Quick start guide
+- [How to Run](docs/HOW_TO_RUN.md) - Detailed setup guide
 - [Deployment Checklist](docs/DEPLOYMENT_CHECKLIST.md) - Production deployment steps
 - [Authentication Guide](docs/AUTHENTICATION_GUIDE.md) - Login/register troubleshooting
 - [Git Setup Guide](docs/GIT_SETUP_GUIDE.md) - Version control setup
