@@ -38,6 +38,18 @@ const Landing = () => {
     ];
     return quotes[Math.floor(Math.random() * quotes.length)];
   });
+  const [buttonText] = useState(() => {
+    const texts = [
+      "Step into the GATE",
+      "Begin the GATE challenge",
+      "Unlock the GATE opportunity",
+      "Embrace the GATE path",
+      "Start your GATE quest",
+      "Open the door to GATE success",
+      "Launch your GATE journey",
+    ];
+    return texts[Math.floor(Math.random() * texts.length)];
+  });
   const navigate = useNavigate();
 
   const handleEnter = () => {
@@ -288,56 +300,101 @@ const Landing = () => {
                     type: 'spring',
                     stiffness: 200,
                   }}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                  whileHover={{ 
+                    scale: 1.05,
+                  }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  <Button
-                    variant="contained"
-                    size="large"
-                    endIcon={<ArrowForward />}
-                    onClick={handleEnter}
+                  <Box
                     sx={{
-                      fontSize: '1.3rem',
-                      fontWeight: 700,
-                      px: 6,
-                      py: 2,
-                      borderRadius: 5,
-                      background: 'white',
-                      color: '#667eea',
-                      boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
-                      textTransform: 'none',
-                      '&:hover': {
-                        background: 'rgba(255, 255, 255, 0.95)',
-                        boxShadow: '0 15px 50px rgba(0, 0, 0, 0.4)',
-                      },
+                      position: 'relative',
+                      display: 'inline-block',
                     }}
                   >
-                    Enter the Gate
-                  </Button>
-                </motion.div>
-
-                {/* Floating Particles */}
-                <Box
-                  sx={{
-                    position: 'absolute',
-                    bottom: 40,
-                    left: 0,
-                    right: 0,
-                    textAlign: 'center',
-                  }}
-                >
-                  <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    <Typography
-                      variant="body2"
-                      sx={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                    {/* Animated glow ring */}
+                    <motion.div
+                      animate={{
+                        scale: [1, 1.1, 1],
+                        opacity: [0.5, 0.8, 0.5],
+                      }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                      }}
+                      style={{
+                        position: 'absolute',
+                        top: -4,
+                        left: -4,
+                        right: -4,
+                        bottom: -4,
+                        borderRadius: '50px',
+                        background: 'linear-gradient(135deg, rgba(255,255,255,0.4), rgba(102,126,234,0.4))',
+                        filter: 'blur(8px)',
+                        zIndex: 0,
+                      }}
+                    />
+                    
+                    <Button
+                      variant="contained"
+                      endIcon={<ArrowForward sx={{ fontSize: '1rem' }} />}
+                      onClick={handleEnter}
+                      sx={{
+                        position: 'relative',
+                        zIndex: 1,
+                        fontSize: { xs: '0.95rem', md: '1rem' },
+                        fontWeight: 600,
+                        px: { xs: 3.5, md: 4 },
+                        py: { xs: 1.2, md: 1.3 },
+                        borderRadius: '50px',
+                        background: 'linear-gradient(135deg, #c2bcbcff 0%, #f8f8f8 100%)',
+                        color: '#667eea',
+                        boxShadow: '0 8px 32px rgba(255, 255, 255, 0.3), inset 0 1px 0 rgba(255,255,255,0.8)',
+                        textTransform: 'none',
+                        letterSpacing: '0.3px',
+                        border: '2px solid rgba(255, 255, 255, 0.5)',
+                        overflow: 'hidden',
+                        '&::before': {
+                          content: '""',
+                          position: 'absolute',
+                          top: 0,
+                          left: '-100%',
+                          width: '100%',
+                          height: '100%',
+                          background: 'linear-gradient(90deg, transparent, rgba(102,126,234,0.2), transparent)',
+                          transition: 'left 0.6s ease',
+                        },
+                        '&::after': {
+                          content: '""',
+                          position: 'absolute',
+                          top: '50%',
+                          left: '50%',
+                          width: '0',
+                          height: '0',
+                          borderRadius: '50%',
+                          background: 'rgba(102, 126, 234, 0.1)',
+                          transform: 'translate(-50%, -50%)',
+                          transition: 'width 0.6s, height 0.6s',
+                        },
+                        '&:hover': {
+                          background: 'linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%)',
+                          boxShadow: '0 12px 40px rgba(255, 255, 255, 0.4), 0 0 0 4px rgba(102, 126, 234, 0.1), inset 0 1px 0 rgba(255,255,255,0.9)',
+                          transform: 'translateY(-2px)',
+                          borderColor: 'rgba(102, 126, 234, 0.3)',
+                        },
+                        '&:hover::before': {
+                          left: '100%',
+                        },
+                        '&:hover::after': {
+                          width: '300px',
+                          height: '300px',
+                        },
+                      }}
                     >
-                      Click to begin your journey
-                    </Typography>
-                  </motion.div>
-                </Box>
+                      {buttonText}
+                    </Button>
+                  </Box>
+                </motion.div>
               </Box>
             </Container>
           </motion.div>
