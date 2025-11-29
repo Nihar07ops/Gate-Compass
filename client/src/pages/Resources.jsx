@@ -25,6 +25,7 @@ import {
   Edit,
   Refresh,
 } from '@mui/icons-material';
+import { Paper } from '@mui/material';
 import { motion } from 'framer-motion';
 
 const Resources = () => {
@@ -187,21 +188,73 @@ const Resources = () => {
 
   return (
     <Box>
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <Box mb={4}>
-          <Box display="flex" alignItems="center" gap={1.5}>
-            <Typography variant="h3" fontWeight={700}>
-              Study Resources
-            </Typography>
-            <MenuBook sx={{ fontSize: 48, color: '#667eea' }} />
+        <Paper
+          elevation={0}
+          sx={{
+            mb: 4,
+            p: 4,
+            background: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
+            color: 'white',
+            borderRadius: 4,
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <Box
+            sx={{
+              position: 'absolute',
+              top: -50,
+              right: -50,
+              width: 200,
+              height: 200,
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.1)',
+            }}
+          />
+          <Box position="relative" zIndex={1}>
+            <Box display="flex" alignItems="center" gap={2} mb={2}>
+              <Box
+                sx={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: 3,
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <MenuBook sx={{ fontSize: 36 }} />
+              </Box>
+              <Box>
+                <Typography variant="h3" fontWeight={700}>
+                  Study Resources
+                </Typography>
+                <Typography variant="h6" sx={{ opacity: 0.95 }}>
+                  Curated materials to help you ace GATE CSE
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                mt: 3,
+                p: 2,
+                background: 'rgba(255, 255, 255, 0.15)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: 2,
+              }}
+            >
+              <Typography variant="body1" sx={{ opacity: 0.95 }}>
+                📚 Access top-quality study materials from PhysicsWallah, GeeksforGeeks, and more
+              </Typography>
+            </Box>
           </Box>
-          <Typography variant="h6" color="text.secondary" mt={1}>
-            Curated materials to help you ace GATE CSE
-          </Typography>
-        </Box>
+        </Paper>
       </motion.div>
 
       <Grid container spacing={3} mb={4}>

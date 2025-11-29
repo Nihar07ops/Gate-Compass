@@ -292,21 +292,73 @@ const Analytics = () => {
 
   return (
     <Box>
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <Box mb={4}>
-          <Box display="flex" alignItems="center" gap={1.5}>
-            <Typography variant="h3" fontWeight={700}>
-              Performance Analytics
-            </Typography>
-            <Assessment sx={{ fontSize: 48, color: '#667eea' }} />
+        <Paper
+          elevation={0}
+          sx={{
+            mb: 4,
+            p: 4,
+            background: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+            color: 'white',
+            borderRadius: 4,
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <Box
+            sx={{
+              position: 'absolute',
+              top: -50,
+              right: -50,
+              width: 200,
+              height: 200,
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.1)',
+            }}
+          />
+          <Box position="relative" zIndex={1}>
+            <Box display="flex" alignItems="center" gap={2} mb={2}>
+              <Box
+                sx={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: 3,
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Assessment sx={{ fontSize: 36 }} />
+              </Box>
+              <Box>
+                <Typography variant="h3" fontWeight={700}>
+                  Performance Analytics
+                </Typography>
+                <Typography variant="h6" sx={{ opacity: 0.95 }}>
+                  Detailed insights into your preparation journey
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                mt: 3,
+                p: 2,
+                background: 'rgba(255, 255, 255, 0.15)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: 2,
+              }}
+            >
+              <Typography variant="body1" sx={{ opacity: 0.95 }}>
+                📈 Track your progress and identify areas for improvement
+              </Typography>
+            </Box>
           </Box>
-          <Typography variant="h6" color="text.secondary" mt={1}>
-            Detailed insights into your preparation journey
-          </Typography>
-        </Box>
+        </Paper>
       </motion.div>
 
       {/* Stats Cards */}
@@ -417,11 +469,30 @@ const Analytics = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <Card elevation={4}>
+            <Card 
+              elevation={0}
+              sx={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(102, 126, 234, 0.2)',
+              }}
+            >
               <CardContent sx={{ p: 4 }}>
                 <Box display="flex" alignItems="center" justifyContent="space-between" mb={3}>
-                  <Box display="flex" alignItems="center">
-                    <Assessment sx={{ mr: 1.5, color: '#667eea', fontSize: 32 }} />
+                  <Box display="flex" alignItems="center" gap={2}>
+                    <Box
+                      sx={{
+                        width: 56,
+                        height: 56,
+                        borderRadius: 2,
+                        background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}
+                    >
+                      <Assessment sx={{ color: 'white', fontSize: 32 }} />
+                    </Box>
                     <Box>
                       <Typography variant="h4" fontWeight={700}>
                         Topic-wise Performance
@@ -433,11 +504,14 @@ const Analytics = () => {
                   </Box>
                   <Chip 
                     label={`${analytics?.topicPerformance?.length || 0} Topics`}
-                    color="primary"
-                    sx={{ fontWeight: 600 }}
+                    sx={{ 
+                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      color: 'white',
+                      fontWeight: 600 
+                    }}
                   />
                 </Box>
-                <Divider sx={{ mb: 4 }} />
+                <Divider sx={{ mb: 4, opacity: 0.1 }} />
                 <Box sx={{ height: 500, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Radar data={performanceData} options={radarOptions} />
                 </Box>
@@ -453,15 +527,40 @@ const Analytics = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Card elevation={4} sx={{ height: '100%' }}>
+            <Card 
+              elevation={0}
+              sx={{ 
+                height: '100%',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(118, 75, 162, 0.2)',
+              }}
+            >
               <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <TrendingUp sx={{ mr: 1, color: '#764ba2', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    Overall Accuracy
-                  </Typography>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 2,
+                      background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <TrendingUp sx={{ color: 'white' }} />
+                  </Box>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Overall Accuracy
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Your success rate
+                    </Typography>
+                  </Box>
                 </Box>
-                <Divider sx={{ mb: 3 }} />
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Box sx={{ height: 400, display: 'flex', alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
                   <Doughnut data={accuracyData} options={doughnutOptions} />
                   <Box

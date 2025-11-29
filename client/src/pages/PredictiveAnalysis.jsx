@@ -19,7 +19,7 @@ import {
 } from 'chart.js';
 import { 
   TrendingUp, Psychology, Warning, CheckCircle, 
-  AutoGraph, Lightbulb 
+  AutoGraph, Lightbulb, EmojiEvents 
 } from '@mui/icons-material';
 import api from '../utils/api';
 import { motion } from 'framer-motion';
@@ -269,21 +269,84 @@ const PredictiveAnalysis = () => {
 
   return (
     <Box>
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <Box mb={4}>
-          <Box display="flex" alignItems="center" gap={1.5}>
-            <Typography variant="h3" fontWeight={700}>
-              AI-Powered Predictions
-            </Typography>
-            <Psychology sx={{ fontSize: 48, color: '#667eea' }} />
+        <Paper
+          elevation={0}
+          sx={{
+            mb: 4,
+            p: 4,
+            background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+            color: 'white',
+            borderRadius: 4,
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <Box
+            sx={{
+              position: 'absolute',
+              top: -50,
+              right: -50,
+              width: 200,
+              height: 200,
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.1)',
+            }}
+          />
+          <Box
+            sx={{
+              position: 'absolute',
+              bottom: -30,
+              left: -30,
+              width: 150,
+              height: 150,
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.1)',
+            }}
+          />
+          <Box position="relative" zIndex={1}>
+            <Box display="flex" alignItems="center" gap={2} mb={2}>
+              <Box
+                sx={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: 3,
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <Psychology sx={{ fontSize: 36 }} />
+              </Box>
+              <Box>
+                <Typography variant="h3" fontWeight={700}>
+                  AI-Powered Predictions
+                </Typography>
+                <Typography variant="h6" sx={{ opacity: 0.95 }}>
+                  Machine learning analysis of GATE CSE exam patterns
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                mt: 3,
+                p: 2,
+                background: 'rgba(255, 255, 255, 0.15)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: 2,
+              }}
+            >
+              <Typography variant="body1" sx={{ opacity: 0.95 }}>
+                🤖 Our AI analyzes 10+ years of data with 87% accuracy to predict important topics
+              </Typography>
+            </Box>
           </Box>
-          <Typography variant="h6" color="text.secondary" mt={1}>
-            Machine learning analysis of GATE CSE exam patterns
-          </Typography>
-        </Box>
+        </Paper>
       </motion.div>
 
       <Grid container spacing={3}>
@@ -293,18 +356,45 @@ const PredictiveAnalysis = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <Card elevation={4} sx={{ height: '100%' }}>
+            <Card 
+              elevation={0}
+              sx={{ 
+                height: '100%',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(102, 126, 234, 0.2)',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  border: '1px solid rgba(102, 126, 234, 0.5)',
+                  boxShadow: '0 8px 32px rgba(102, 126, 234, 0.2)',
+                }
+              }}
+            >
               <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <AutoGraph sx={{ mr: 1, color: '#667eea', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    Topic Importance Radar
-                  </Typography>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 2,
+                      background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <AutoGraph sx={{ color: 'white' }} />
+                  </Box>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Topic Importance Radar
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      360° ML-powered analysis
+                    </Typography>
+                  </Box>
                 </Box>
-                <Divider sx={{ mb: 3 }} />
-                <Typography variant="body2" color="text.secondary" mb={2}>
-                  360° view of topic importance based on ML predictions
-                </Typography>
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Box sx={{ height: 400, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Radar data={radarData} options={radarOptions} />
                 </Box>
@@ -319,15 +409,45 @@ const PredictiveAnalysis = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3 }}
           >
-            <Card elevation={4} sx={{ height: '100%' }}>
+            <Card 
+              elevation={0}
+              sx={{ 
+                height: '100%',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(118, 75, 162, 0.2)',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  border: '1px solid rgba(118, 75, 162, 0.5)',
+                  boxShadow: '0 8px 32px rgba(118, 75, 162, 0.2)',
+                }
+              }}
+            >
               <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <Psychology sx={{ mr: 1, color: '#764ba2', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    Importance Breakdown
-                  </Typography>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 2,
+                      background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Psychology sx={{ color: 'white' }} />
+                  </Box>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Importance Breakdown
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Detailed topic analysis
+                    </Typography>
+                  </Box>
                 </Box>
-                <Divider sx={{ mb: 3 }} />
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Box sx={{ height: 400, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Bar data={barData} options={barOptions} />
                 </Box>
@@ -343,15 +463,45 @@ const PredictiveAnalysis = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Card elevation={4} sx={{ height: '100%' }}>
+            <Card 
+              elevation={0}
+              sx={{ 
+                height: '100%',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(240, 147, 251, 0.2)',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  border: '1px solid rgba(240, 147, 251, 0.5)',
+                  boxShadow: '0 8px 32px rgba(240, 147, 251, 0.2)',
+                }
+              }}
+            >
               <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <TrendingUp sx={{ mr: 1, color: '#f093fb', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    Priority Distribution
-                  </Typography>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 2,
+                      background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <TrendingUp sx={{ color: 'white' }} />
+                  </Box>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Priority Distribution
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Visual priority map
+                    </Typography>
+                  </Box>
                 </Box>
-                <Divider sx={{ mb: 3 }} />
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Box sx={{ height: 400, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <PolarArea data={polarData} options={polarOptions} />
                 </Box>
@@ -367,18 +517,39 @@ const PredictiveAnalysis = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <Card elevation={4} sx={{ 
-              height: '100%',
-              background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)',
-            }}>
+            <Card 
+              elevation={0}
+              sx={{ 
+                height: '100%',
+                background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%)',
+                border: '1px solid rgba(102, 126, 234, 0.3)',
+              }}
+            >
               <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <AutoGraph sx={{ mr: 1, color: '#4facfe', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    AI Confidence Metrics
-                  </Typography>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 2,
+                      background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <EmojiEvents sx={{ color: 'white' }} />
+                  </Box>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      AI Confidence Metrics
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Model accuracy & data
+                    </Typography>
+                  </Box>
                 </Box>
-                <Divider sx={{ mb: 3 }} />
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Grid container spacing={3}>
                   <Grid item xs={12}>
                     <Paper elevation={2} sx={{ p: 3, textAlign: 'center', background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)', color: 'white' }}>
@@ -424,13 +595,37 @@ const PredictiveAnalysis = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" mb={3}>
-                  <Lightbulb sx={{ mr: 1, color: '#ffd700' }} />
-                  <Typography variant="h6" fontWeight={600}>
-                    Detailed Topic Analysis
-                  </Typography>
+            <Card
+              elevation={0}
+              sx={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(102, 126, 234, 0.2)',
+              }}
+            >
+              <CardContent sx={{ p: 4 }}>
+                <Box display="flex" alignItems="center" gap={2} mb={3}>
+                  <Box
+                    sx={{
+                      width: 48,
+                      height: 48,
+                      borderRadius: 2,
+                      background: 'linear-gradient(135deg, #ffd700 0%, #ffed4e 100%)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Lightbulb sx={{ color: 'white' }} />
+                  </Box>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Detailed Topic Analysis
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Priority-wise breakdown
+                    </Typography>
+                  </Box>
                 </Box>
                 <Grid container spacing={2}>
                   {predictions?.topicImportance?.map((topic, index) => (

@@ -8,6 +8,7 @@ import {
   Paper,
   Chip,
   Divider,
+  Avatar,
 } from '@mui/material';
 import { Line, Bar } from 'react-chartjs-2';
 import {
@@ -208,45 +209,116 @@ const HistoricalTrends = () => {
     : 0;
 
   return (
-    <Box>
+    <Box sx={{ position: 'relative' }}>
+      {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <Box mb={4}>
-          <Box display="flex" alignItems="center" gap={1.5}>
-            <Typography variant="h3" fontWeight={700}>
-              Historical Trends
-            </Typography>
-            <TrendingUp sx={{ fontSize: 48, color: '#667eea' }} />
+        <Paper
+          elevation={0}
+          sx={{
+            mb: 4,
+            p: 4,
+            background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+            color: 'white',
+            borderRadius: 4,
+            position: 'relative',
+            overflow: 'hidden',
+          }}
+        >
+          <Box
+            sx={{
+              position: 'absolute',
+              top: -50,
+              right: -50,
+              width: 200,
+              height: 200,
+              borderRadius: '50%',
+              background: 'rgba(255, 255, 255, 0.1)',
+            }}
+          />
+          <Box position="relative" zIndex={1}>
+            <Box display="flex" alignItems="center" gap={2} mb={2}>
+              <Box
+                sx={{
+                  width: 60,
+                  height: 60,
+                  borderRadius: 3,
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                }}
+              >
+                <TrendingUp sx={{ fontSize: 36 }} />
+              </Box>
+              <Box>
+                <Typography variant="h3" fontWeight={700}>
+                  Historical Trends
+                </Typography>
+                <Typography variant="h6" sx={{ opacity: 0.95 }}>
+                  GATE CSE exam patterns and trends over the years
+                </Typography>
+              </Box>
+            </Box>
+            <Box
+              sx={{
+                mt: 3,
+                p: 2,
+                background: 'rgba(255, 255, 255, 0.15)',
+                backdropFilter: 'blur(10px)',
+                borderRadius: 2,
+              }}
+            >
+              <Typography variant="body1" sx={{ opacity: 0.95 }}>
+                📊 Analyzing 10+ years of GATE data to help you focus on high-frequency topics
+              </Typography>
+            </Box>
           </Box>
-          <Typography variant="h6" color="text.secondary" mt={1}>
-            GATE CSE exam patterns and trends over the years
-          </Typography>
-        </Box>
+        </Paper>
       </motion.div>
 
-      {/* Insight Cards */}
+      {/* Enhanced Insight Cards */}
       <Grid container spacing={3} mb={4}>
         <Grid item xs={12} md={4}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            whileHover={{ scale: 1.03, y: -5 }}
+            whileHover={{ scale: 1.05, y: -8 }}
           >
             <Card sx={{ 
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
               color: 'white',
+              position: 'relative',
+              overflow: 'hidden',
+              boxShadow: '0 8px 32px rgba(102, 126, 234, 0.3)',
             }}>
-              <CardContent>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: -30,
+                  right: -30,
+                  width: 120,
+                  height: 120,
+                  borderRadius: '50%',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                }}
+              />
+              <CardContent sx={{ p: 3 }}>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Avatar sx={{ width: 56, height: 56, background: 'rgba(255, 255, 255, 0.2)' }}>
+                    <Assessment sx={{ fontSize: 32 }} />
+                  </Avatar>
                   <Box>
-                    <Typography variant="h4" fontWeight={700}>{totalQuestions}</Typography>
-                    <Typography variant="body2">Total Questions</Typography>
+                    <Typography variant="h3" fontWeight={800}>{totalQuestions}</Typography>
+                    <Typography variant="body1" fontWeight={600}>Total Questions</Typography>
                   </Box>
-                  <Assessment sx={{ fontSize: 48, opacity: 0.8 }} />
                 </Box>
+                <Typography variant="caption" sx={{ opacity: 0.9 }}>
+                  Analyzed from past GATE papers
+                </Typography>
               </CardContent>
             </Card>
           </motion.div>
@@ -257,20 +329,55 @@ const HistoricalTrends = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            whileHover={{ scale: 1.03, y: -5 }}
+            whileHover={{ scale: 1.05, y: -8 }}
           >
             <Card sx={{ 
               background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
               color: 'white',
+              position: 'relative',
+              overflow: 'hidden',
+              boxShadow: '0 8px 32px rgba(240, 147, 251, 0.3)',
             }}>
-              <CardContent>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
-                  <Box>
-                    <Typography variant="h4" fontWeight={700}>{mostFrequentTopic?.topic || 'N/A'}</Typography>
-                    <Typography variant="body2">Most Frequent Topic</Typography>
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: -30,
+                  right: -30,
+                  width: 120,
+                  height: 120,
+                  borderRadius: '50%',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                }}
+              />
+              <CardContent sx={{ p: 3 }}>
+                <Box display="flex" alignItems="flex-start" gap={2} mb={2}>
+                  <Avatar sx={{ width: 56, height: 56, background: 'rgba(255, 255, 255, 0.2)', flexShrink: 0 }}>
+                    <TrendingUp sx={{ fontSize: 32 }} />
+                  </Avatar>
+                  <Box sx={{ minWidth: 0, flex: 1 }}>
+                    <Typography 
+                      variant="h5" 
+                      fontWeight={800}
+                      sx={{
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                        display: '-webkit-box',
+                        WebkitLineClamp: 2,
+                        WebkitBoxOrient: 'vertical',
+                        lineHeight: 1.2,
+                        mb: 0.5,
+                      }}
+                    >
+                      {mostFrequentTopic?.topic || 'N/A'}
+                    </Typography>
+                    <Typography variant="body2" fontWeight={600} sx={{ opacity: 0.9 }}>
+                      Most Frequent Topic
+                    </Typography>
                   </Box>
-                  <TrendingUp sx={{ fontSize: 48, opacity: 0.8 }} />
                 </Box>
+                <Typography variant="caption" sx={{ opacity: 0.85, display: 'block', mt: 1 }}>
+                  Focus on this high-priority topic
+                </Typography>
               </CardContent>
             </Card>
           </motion.div>
@@ -281,20 +388,39 @@ const HistoricalTrends = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            whileHover={{ scale: 1.03, y: -5 }}
+            whileHover={{ scale: 1.05, y: -8 }}
           >
             <Card sx={{ 
               background: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
               color: 'white',
+              position: 'relative',
+              overflow: 'hidden',
+              boxShadow: '0 8px 32px rgba(79, 172, 254, 0.3)',
             }}>
-              <CardContent>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
+              <Box
+                sx={{
+                  position: 'absolute',
+                  top: -30,
+                  right: -30,
+                  width: 120,
+                  height: 120,
+                  borderRadius: '50%',
+                  background: 'rgba(255, 255, 255, 0.1)',
+                }}
+              />
+              <CardContent sx={{ p: 3 }}>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Avatar sx={{ width: 56, height: 56, background: 'rgba(255, 255, 255, 0.2)' }}>
+                    <ShowChart sx={{ fontSize: 32 }} />
+                  </Avatar>
                   <Box>
-                    <Typography variant="h4" fontWeight={700}>{avgDifficulty}/5</Typography>
-                    <Typography variant="body2">Average Difficulty</Typography>
+                    <Typography variant="h3" fontWeight={800}>{avgDifficulty}/5</Typography>
+                    <Typography variant="body1" fontWeight={600}>Avg Difficulty</Typography>
                   </Box>
-                  <ShowChart sx={{ fontSize: 48, opacity: 0.8 }} />
                 </Box>
+                <Typography variant="caption" sx={{ opacity: 0.9 }}>
+                  Moderate challenge level
+                </Typography>
               </CardContent>
             </Card>
           </motion.div>
@@ -310,18 +436,35 @@ const HistoricalTrends = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <Card elevation={4} sx={{ height: '100%' }}>
+            <Card 
+              elevation={0}
+              sx={{ 
+                height: '100%',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(102, 126, 234, 0.2)',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  border: '1px solid rgba(102, 126, 234, 0.5)',
+                  boxShadow: '0 8px 32px rgba(102, 126, 234, 0.2)',
+                }
+              }}
+            >
               <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <BarChart sx={{ mr: 1, color: '#667eea', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    Topic Frequency
-                  </Typography>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Avatar sx={{ background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)' }}>
+                    <BarChart />
+                  </Avatar>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Topic Frequency
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Question distribution analysis
+                    </Typography>
+                  </Box>
                 </Box>
-                <Divider sx={{ mb: 3 }} />
-                <Typography variant="body2" color="text.secondary" mb={2}>
-                  Distribution of questions across different topics in GATE CSE
-                </Typography>
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Box sx={{ height: 400 }}>
                   <Bar data={topicFrequencyData} options={barOptions} />
                 </Box>
@@ -337,18 +480,35 @@ const HistoricalTrends = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
           >
-            <Card elevation={4} sx={{ height: '100%' }}>
+            <Card 
+              elevation={0}
+              sx={{ 
+                height: '100%',
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(118, 75, 162, 0.2)',
+                transition: 'all 0.3s ease',
+                '&:hover': {
+                  border: '1px solid rgba(118, 75, 162, 0.5)',
+                  boxShadow: '0 8px 32px rgba(118, 75, 162, 0.2)',
+                }
+              }}
+            >
               <CardContent sx={{ p: 3 }}>
-                <Box display="flex" alignItems="center" mb={2}>
-                  <ShowChart sx={{ mr: 1, color: '#764ba2', fontSize: 28 }} />
-                  <Typography variant="h5" fontWeight={600}>
-                    Difficulty Trend
-                  </Typography>
+                <Box display="flex" alignItems="center" gap={2} mb={2}>
+                  <Avatar sx={{ background: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)' }}>
+                    <ShowChart />
+                  </Avatar>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Difficulty Trend
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Year-wise difficulty analysis
+                    </Typography>
+                  </Box>
                 </Box>
-                <Divider sx={{ mb: 3 }} />
-                <Typography variant="body2" color="text.secondary" mb={2}>
-                  Average difficulty level of GATE CSE papers over the years
-                </Typography>
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Box sx={{ height: 400 }}>
                   <Line data={difficultyTrendData} options={lineOptions} />
                 </Box>
@@ -364,12 +524,29 @@ const HistoricalTrends = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
           >
-            <Card elevation={4}>
-              <CardContent sx={{ p: 3 }}>
-                <Typography variant="h5" fontWeight={600} gutterBottom>
-                  Topic-wise Breakdown
-                </Typography>
-                <Divider sx={{ mb: 3 }} />
+            <Card 
+              elevation={0}
+              sx={{
+                background: 'rgba(255, 255, 255, 0.05)',
+                backdropFilter: 'blur(10px)',
+                border: '1px solid rgba(102, 126, 234, 0.2)',
+              }}
+            >
+              <CardContent sx={{ p: 4 }}>
+                <Box display="flex" alignItems="center" gap={2} mb={3}>
+                  <Avatar sx={{ width: 48, height: 48, background: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)' }}>
+                    <Assessment />
+                  </Avatar>
+                  <Box>
+                    <Typography variant="h5" fontWeight={600}>
+                      Topic-wise Breakdown
+                    </Typography>
+                    <Typography variant="caption" color="text.secondary">
+                      Detailed analysis of all topics
+                    </Typography>
+                  </Box>
+                </Box>
+                <Divider sx={{ mb: 3, opacity: 0.1 }} />
                 <Grid container spacing={2}>
                   {trendsData?.topicFrequency?.map((topic, index) => (
                     <Grid item xs={12} sm={6} md={4} key={index}>
