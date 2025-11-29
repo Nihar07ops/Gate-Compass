@@ -36,10 +36,10 @@
 
 ```bash
 # Run complete setup
-setup-complete.bat
+scripts\setup-complete.bat
 
 # Start the application
-start-production.bat
+scripts\start-production.bat
 ```
 
 ### Option 2: Manual Setup
@@ -110,10 +110,13 @@ Or create your own account!
 
 ## 📖 Documentation
 
-- [Production Ready Guide](PRODUCTION_READY.md) - Complete feature list and setup
-- [How to Run](HOW_TO_RUN.md) - Quick start guide
-- [Deployment Checklist](DEPLOYMENT_CHECKLIST.md) - Production deployment steps
-- [Authentication Guide](AUTHENTICATION_GUIDE.md) - Login/register troubleshooting
+- [Folder Structure](FOLDER_STRUCTURE.md) - Complete project structure overview
+- [Production Ready Guide](docs/PRODUCTION_READY.md) - Complete feature list and setup
+- [How to Run](docs/HOW_TO_RUN.md) - Quick start guide
+- [Deployment Checklist](docs/DEPLOYMENT_CHECKLIST.md) - Production deployment steps
+- [Authentication Guide](docs/AUTHENTICATION_GUIDE.md) - Login/register troubleshooting
+- [Git Setup Guide](docs/GIT_SETUP_GUIDE.md) - Version control setup
+- [Contributing](docs/CONTRIBUTING.md) - Contribution guidelines
 
 ## 🔧 Configuration
 
