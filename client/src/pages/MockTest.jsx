@@ -44,7 +44,7 @@ import api from '../utils/api';
 const MockTest = () => {
   const [mode, setMode] = useState(null); // 'timed' or 'freestyle'
   const [format, setFormat] = useState(null); // 'gate' or 'custom'
-  const [difficulty, setDifficulty] = useState('intermediate'); // Default to intermediate
+  const [difficulty, setDifficulty] = useState('intermediate'); // 'beginner', 'intermediate', 'advanced'
   const [test, setTest] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -174,9 +174,63 @@ const MockTest = () => {
             }}>
               GATE CSE Mock Tests
             </Typography>
-            <Typography variant="h6" color="text.secondary" mb={3}>
+            <Typography variant="h6" color="text.secondary" mb={1}>
               Choose your test mode to begin
             </Typography>
+            
+            {/* Difficulty Selector */}
+            <Box sx={{ mb: 4, display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 2 }}>
+              <Typography variant="body1" fontWeight={600}>
+                Difficulty:
+              </Typography>
+              <ButtonGroup variant="outlined">
+                <Button 
+                  onClick={() => setDifficulty('beginner')}
+                  variant={difficulty === 'beginner' ? 'contained' : 'outlined'}
+                  sx={{ 
+                    minWidth: 100,
+                    ...(difficulty === 'beginner' && {
+                      background: '#43e97b',
+                      color: 'white',
+                      borderColor: '#43e97b',
+                      '&:hover': { background: '#38d96b', borderColor: '#38d96b' }
+                    })
+                  }}
+                >
+                  Easy
+                </Button>
+                <Button 
+                  onClick={() => setDifficulty('intermediate')}
+                  variant={difficulty === 'intermediate' ? 'contained' : 'outlined'}
+                  sx={{ 
+                    minWidth: 100,
+                    ...(difficulty === 'intermediate' && {
+                      background: '#4facfe',
+                      color: 'white',
+                      borderColor: '#4facfe',
+                      '&:hover': { background: '#3f9cee', borderColor: '#3f9cee' }
+                    })
+                  }}
+                >
+                  Medium
+                </Button>
+                <Button 
+                  onClick={() => setDifficulty('advanced')}
+                  variant={difficulty === 'advanced' ? 'contained' : 'outlined'}
+                  sx={{ 
+                    minWidth: 100,
+                    ...(difficulty === 'advanced' && {
+                      background: '#f093fb',
+                      color: 'white',
+                      borderColor: '#f093fb',
+                      '&:hover': { background: '#e083eb', borderColor: '#e083eb' }
+                    })
+                  }}
+                >
+                  Hard
+                </Button>
+              </ButtonGroup>
+            </Box>
           </Box>
 
           <Grid container spacing={3} maxWidth="lg" mx="auto">
@@ -352,47 +406,9 @@ const MockTest = () => {
               <School sx={{ color: '#667eea' }} />
               <Box>
                 <Typography variant="caption" color="text.secondary">Difficulty</Typography>
-                <ButtonGroup size="small" variant="outlined">
-                  <Button 
-                    onClick={() => setDifficulty('beginner')}
-                    variant={difficulty === 'beginner' ? 'contained' : 'outlined'}
-                    sx={{ 
-                      minWidth: 60,
-                      ...(difficulty === 'beginner' && {
-                        background: '#43e97b',
-                        '&:hover': { background: '#38d96b' }
-                      })
-                    }}
-                  >
-                    Easy
-                  </Button>
-                  <Button 
-                    onClick={() => setDifficulty('intermediate')}
-                    variant={difficulty === 'intermediate' ? 'contained' : 'outlined'}
-                    sx={{ 
-                      minWidth: 60,
-                      ...(difficulty === 'intermediate' && {
-                        background: '#4facfe',
-                        '&:hover': { background: '#3f9cee' }
-                      })
-                    }}
-                  >
-                    Medium
-                  </Button>
-                  <Button 
-                    onClick={() => setDifficulty('advanced')}
-                    variant={difficulty === 'advanced' ? 'contained' : 'outlined'}
-                    sx={{ 
-                      minWidth: 60,
-                      ...(difficulty === 'advanced' && {
-                        background: '#f093fb',
-                        '&:hover': { background: '#e083eb' }
-                      })
-                    }}
-                  >
-                    Hard
-                  </Button>
-                </ButtonGroup>
+                <Typography variant="body1" fontWeight={600}>
+                  {difficulty === 'beginner' ? 'Easy' : difficulty === 'intermediate' ? 'Medium' : 'Hard'}
+                </Typography>
               </Box>
             </Box>
           </Grid>
