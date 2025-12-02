@@ -179,111 +179,138 @@ const MockTest = () => {
             </Typography>
             
             {/* Difficulty Selection */}
-            <Paper elevation={3} sx={{ p: 3, mb: 4, maxWidth: 800, mx: 'auto', background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)' }}>
-              <Typography variant="h5" fontWeight={600} gutterBottom textAlign="center" mb={3}>
+            <Paper elevation={2} sx={{ p: 4, mb: 4, maxWidth: 900, mx: 'auto' }}>
+              <Typography variant="h5" fontWeight={600} textAlign="center" mb={4}>
                 Select Difficulty Level
               </Typography>
-              <Grid container spacing={2}>
+              <Grid container spacing={3}>
                 <Grid item xs={12} md={4}>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Card 
-                      sx={{ 
-                        cursor: 'pointer',
-                        border: difficulty === 'beginner' ? '3px solid #43e97b' : '2px solid #43e97b30',
-                        background: difficulty === 'beginner' ? 'linear-gradient(135deg, #43e97b15 0%, #38f9d715 100%)' : 'transparent',
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          border: '3px solid #43e97b',
-                          boxShadow: '0 4px 20px rgba(67, 233, 123, 0.3)',
-                        }
-                      }}
-                      onClick={() => setDifficulty('beginner')}
-                    >
-                      <CardContent sx={{ textAlign: 'center', py: 3 }}>
-                        <Typography variant="h5" fontWeight={700} color="#43e97b" gutterBottom>
-                          📘 Beginner
+                  <Card 
+                    sx={{ 
+                      cursor: 'pointer',
+                      border: difficulty === 'beginner' ? '2px solid #43e97b' : '1px solid rgba(0,0,0,0.12)',
+                      background: difficulty === 'beginner' ? 'rgba(67, 233, 123, 0.08)' : 'white',
+                      transition: 'all 0.2s ease',
+                      '&:hover': {
+                        border: '2px solid #43e97b',
+                        transform: 'translateY(-4px)',
+                        boxShadow: 3
+                      }
+                    }}
+                    onClick={() => setDifficulty('beginner')}
+                  >
+                    <CardContent sx={{ textAlign: 'center', py: 3 }}>
+                      <Typography variant="h5" fontWeight={600} gutterBottom>
+                        Beginner
+                      </Typography>
+                      <Divider sx={{ my: 2 }} />
+                      <Box sx={{ textAlign: 'left', px: 2 }}>
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Questions: 20
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={2}>
-                          Foundation Building
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Duration: 30 minutes
                         </Typography>
-                        <Chip label="20 Questions" size="small" sx={{ mb: 0.5 }} />
-                        <Typography variant="caption" display="block">30 minutes</Typography>
-                        <Typography variant="caption" display="block">1 mark each</Typography>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Marks: 1 per question
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Total: 20 marks
+                        </Typography>
+                      </Box>
+                      <Typography variant="caption" display="block" mt={2} color="text.secondary">
+                        Foundation concepts and basic definitions
+                      </Typography>
+                    </CardContent>
+                  </Card>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Card 
-                      sx={{ 
-                        cursor: 'pointer',
-                        border: difficulty === 'intermediate' ? '3px solid #4facfe' : '2px solid #4facfe30',
-                        background: difficulty === 'intermediate' ? 'linear-gradient(135deg, #4facfe15 0%, #00f2fe15 100%)' : 'transparent',
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          border: '3px solid #4facfe',
-                          boxShadow: '0 4px 20px rgba(79, 172, 254, 0.3)',
-                        }
-                      }}
-                      onClick={() => setDifficulty('intermediate')}
-                    >
-                      <CardContent sx={{ textAlign: 'center', py: 3 }}>
-                        <Typography variant="h5" fontWeight={700} color="#4facfe" gutterBottom>
-                          📙 Intermediate
+                  <Card 
+                    sx={{ 
+                      cursor: 'pointer',
+                      border: difficulty === 'intermediate' ? '2px solid #4facfe' : '1px solid rgba(0,0,0,0.12)',
+                      background: difficulty === 'intermediate' ? 'rgba(79, 172, 254, 0.08)' : 'white',
+                      transition: 'all 0.2s ease',
+                      '&:hover': {
+                        border: '2px solid #4facfe',
+                        transform: 'translateY(-4px)',
+                        boxShadow: 3
+                      }
+                    }}
+                    onClick={() => setDifficulty('intermediate')}
+                  >
+                    <CardContent sx={{ textAlign: 'center', py: 3 }}>
+                      <Typography variant="h5" fontWeight={600} gutterBottom>
+                        Intermediate
+                      </Typography>
+                      <Divider sx={{ my: 2 }} />
+                      <Box sx={{ textAlign: 'left', px: 2 }}>
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Questions: 20
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={2}>
-                          Concept Application
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Duration: 45 minutes
                         </Typography>
-                        <Chip label="20 Questions" size="small" sx={{ mb: 0.5 }} />
-                        <Typography variant="caption" display="block">45 minutes</Typography>
-                        <Typography variant="caption" display="block">2 marks each</Typography>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Marks: 2 per question
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Total: 40 marks
+                        </Typography>
+                      </Box>
+                      <Typography variant="caption" display="block" mt={2} color="text.secondary">
+                        Problem-solving and concept application
+                      </Typography>
+                    </CardContent>
+                  </Card>
                 </Grid>
                 <Grid item xs={12} md={4}>
-                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Card 
-                      sx={{ 
-                        cursor: 'pointer',
-                        border: difficulty === 'advanced' ? '3px solid #f093fb' : '2px solid #f093fb30',
-                        background: difficulty === 'advanced' ? 'linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%)' : 'transparent',
-                        transition: 'all 0.3s ease',
-                        '&:hover': {
-                          border: '3px solid #f093fb',
-                          boxShadow: '0 4px 20px rgba(240, 147, 251, 0.3)',
-                        }
-                      }}
-                      onClick={() => setDifficulty('advanced')}
-                    >
-                      <CardContent sx={{ textAlign: 'center', py: 3 }}>
-                        <Typography variant="h5" fontWeight={700} color="#f093fb" gutterBottom>
-                          📕 Advanced
+                  <Card 
+                    sx={{ 
+                      cursor: 'pointer',
+                      border: difficulty === 'advanced' ? '2px solid #f093fb' : '1px solid rgba(0,0,0,0.12)',
+                      background: difficulty === 'advanced' ? 'rgba(240, 147, 251, 0.08)' : 'white',
+                      transition: 'all 0.2s ease',
+                      '&:hover': {
+                        border: '2px solid #f093fb',
+                        transform: 'translateY(-4px)',
+                        boxShadow: 3
+                      }
+                    }}
+                    onClick={() => setDifficulty('advanced')}
+                  >
+                    <CardContent sx={{ textAlign: 'center', py: 3 }}>
+                      <Typography variant="h5" fontWeight={600} gutterBottom>
+                        Advanced
+                      </Typography>
+                      <Divider sx={{ my: 2 }} />
+                      <Box sx={{ textAlign: 'left', px: 2 }}>
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Questions: 15
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={2}>
-                          GATE Level
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Duration: 60 minutes
                         </Typography>
-                        <Chip label="15 Questions" size="small" sx={{ mb: 0.5 }} />
-                        <Typography variant="caption" display="block">60 minutes</Typography>
-                        <Typography variant="caption" display="block">3 marks each</Typography>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                        <Typography variant="body2" color="text.secondary" mb={1}>
+                          Marks: 3 per question
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                          Total: 45 marks
+                        </Typography>
+                      </Box>
+                      <Typography variant="caption" display="block" mt={2} color="text.secondary">
+                        Complex GATE-level numerical problems
+                      </Typography>
+                    </CardContent>
+                  </Card>
                 </Grid>
               </Grid>
               {difficulty && (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-                  <Alert severity="info" sx={{ mt: 3 }}>
-                    <Typography variant="body2">
-                      <strong>{difficulty.charAt(0).toUpperCase() + difficulty.slice(1)} Level Selected:</strong> {
-                        difficulty === 'beginner' ? 'Perfect for building foundation with basic concepts and definitions.' :
-                        difficulty === 'intermediate' ? 'Ideal for applying concepts with moderate problem-solving.' :
-                        'Challenging GATE-level questions for serious preparation.'
-                      }
-                    </Typography>
-                  </Alert>
-                </motion.div>
+                <Box sx={{ mt: 3, p: 2, bgcolor: 'rgba(102, 126, 234, 0.08)', borderRadius: 1 }}>
+                  <Typography variant="body2" color="text.secondary">
+                    Selected: <strong>{difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</strong>
+                  </Typography>
+                </Box>
               )}
             </Paper>
           </Box>
