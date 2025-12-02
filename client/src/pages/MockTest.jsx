@@ -44,6 +44,7 @@ import api from '../utils/api';
 const MockTest = () => {
   const [mode, setMode] = useState(null); // 'timed' or 'freestyle'
   const [format, setFormat] = useState(null); // 'gate' or 'custom'
+  const [difficulty, setDifficulty] = useState(null); // 'beginner', 'intermediate', 'advanced'
   const [test, setTest] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -77,12 +78,12 @@ const MockTest = () => {
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
   };
 
-  const generateTest = async (testFormat, testMode) => {
+  const generateTest = async (testFormat, testMode, testDifficulty) => {
     setLoading(true);
     try {
       const response = await api.post('/api/generate-test', {
         format: testFormat,
-        difficulty: 'medium',
+        difficulty: testDifficulty,
         topicCount: testFormat === 'gate' ? 65 : 20
       });
       setTest(response.data);
@@ -91,9 +92,16 @@ const MockTest = () => {
       setCurrentQuestion(0);
       setFormat(testFormat);
       setMode(testMode);
+      setDifficulty(testDifficulty);
       
+      // Set time based on difficulty
       if (testMode === 'timed') {
-        setTimeRemaining(testFormat === 'gate' ? 10800 : 3600); // 180 min for GATE, 60 min for custom
+        const timeMap = {
+          'beginner': 1800,      // 30 min
+          'intermediate': 2700,  // 45 min
+          'advanced': 3600       // 60 min
+        };
+        setTimeRemaining(timeMap[testDifficulty] || 3600);
       }
     } catch (error) {
       console.error('Error generating test:', error);
@@ -150,7 +158,7 @@ const MockTest = () => {
   };
 
   // Mode Selection Screen
-  if (!mode || !format) {
+  if (!mode || !format || !difficulty) {
     return (
       <Box>
         <motion.div
@@ -166,9 +174,118 @@ const MockTest = () => {
             }}>
               GATE CSE Mock Tests
             </Typography>
-            <Typography variant="h6" color="text.secondary">
-              Choose your test format and mode
+            <Typography variant="h6" color="text.secondary" mb={3}>
+              Choose your difficulty level and test mode
             </Typography>
+            
+            {/* Difficulty Selection */}
+            <Paper elevation={3} sx={{ p: 3, mb: 4, maxWidth: 800, mx: 'auto', background: 'linear-gradient(135deg, rgba(102, 126, 234, 0.05) 0%, rgba(118, 75, 162, 0.05) 100%)' }}>
+              <Typography variant="h5" fontWeight={600} gutterBottom textAlign="center" mb={3}>
+                Select Difficulty Level
+              </Typography>
+              <Grid container spacing={2}>
+                <Grid item xs={12} md={4}>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Card 
+                      sx={{ 
+                        cursor: 'pointer',
+                        border: difficulty === 'beginner' ? '3px solid #43e97b' : '2px solid #43e97b30',
+                        background: difficulty === 'beginner' ? 'linear-gradient(135deg, #43e97b15 0%, #38f9d715 100%)' : 'transparent',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          border: '3px solid #43e97b',
+                          boxShadow: '0 4px 20px rgba(67, 233, 123, 0.3)',
+                        }
+                      }}
+                      onClick={() => setDifficulty('beginner')}
+                    >
+                      <CardContent sx={{ textAlign: 'center', py: 3 }}>
+                        <Typography variant="h5" fontWeight={700} color="#43e97b" gutterBottom>
+                          📘 Beginner
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" mb={2}>
+                          Foundation Building
+                        </Typography>
+                        <Chip label="20 Questions" size="small" sx={{ mb: 0.5 }} />
+                        <Typography variant="caption" display="block">30 minutes</Typography>
+                        <Typography variant="caption" display="block">1 mark each</Typography>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Card 
+                      sx={{ 
+                        cursor: 'pointer',
+                        border: difficulty === 'intermediate' ? '3px solid #4facfe' : '2px solid #4facfe30',
+                        background: difficulty === 'intermediate' ? 'linear-gradient(135deg, #4facfe15 0%, #00f2fe15 100%)' : 'transparent',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          border: '3px solid #4facfe',
+                          boxShadow: '0 4px 20px rgba(79, 172, 254, 0.3)',
+                        }
+                      }}
+                      onClick={() => setDifficulty('intermediate')}
+                    >
+                      <CardContent sx={{ textAlign: 'center', py: 3 }}>
+                        <Typography variant="h5" fontWeight={700} color="#4facfe" gutterBottom>
+                          📙 Intermediate
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" mb={2}>
+                          Concept Application
+                        </Typography>
+                        <Chip label="20 Questions" size="small" sx={{ mb: 0.5 }} />
+                        <Typography variant="caption" display="block">45 minutes</Typography>
+                        <Typography variant="caption" display="block">2 marks each</Typography>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </Grid>
+                <Grid item xs={12} md={4}>
+                  <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                    <Card 
+                      sx={{ 
+                        cursor: 'pointer',
+                        border: difficulty === 'advanced' ? '3px solid #f093fb' : '2px solid #f093fb30',
+                        background: difficulty === 'advanced' ? 'linear-gradient(135deg, #f093fb15 0%, #f5576c15 100%)' : 'transparent',
+                        transition: 'all 0.3s ease',
+                        '&:hover': {
+                          border: '3px solid #f093fb',
+                          boxShadow: '0 4px 20px rgba(240, 147, 251, 0.3)',
+                        }
+                      }}
+                      onClick={() => setDifficulty('advanced')}
+                    >
+                      <CardContent sx={{ textAlign: 'center', py: 3 }}>
+                        <Typography variant="h5" fontWeight={700} color="#f093fb" gutterBottom>
+                          📕 Advanced
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" mb={2}>
+                          GATE Level
+                        </Typography>
+                        <Chip label="15 Questions" size="small" sx={{ mb: 0.5 }} />
+                        <Typography variant="caption" display="block">60 minutes</Typography>
+                        <Typography variant="caption" display="block">3 marks each</Typography>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </Grid>
+              </Grid>
+              {difficulty && (
+                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+                  <Alert severity="info" sx={{ mt: 3 }}>
+                    <Typography variant="body2">
+                      <strong>{difficulty.charAt(0).toUpperCase() + difficulty.slice(1)} Level Selected:</strong> {
+                        difficulty === 'beginner' ? 'Perfect for building foundation with basic concepts and definitions.' :
+                        difficulty === 'intermediate' ? 'Ideal for applying concepts with moderate problem-solving.' :
+                        'Challenging GATE-level questions for serious preparation.'
+                      }
+                    </Typography>
+                  </Alert>
+                </motion.div>
+              )}
+            </Paper>
           </Box>
 
           <Grid container spacing={3} maxWidth="lg" mx="auto">
