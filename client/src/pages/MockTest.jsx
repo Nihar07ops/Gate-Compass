@@ -44,7 +44,7 @@ import api from '../utils/api';
 const MockTest = () => {
   const [mode, setMode] = useState(null); // 'timed' or 'freestyle'
   const [format, setFormat] = useState(null); // 'gate' or 'custom'
-  const [difficulty, setDifficulty] = useState(null); // 'beginner', 'intermediate', 'advanced'
+  const [difficulty, setDifficulty] = useState('intermediate'); // Default to intermediate
   const [test, setTest] = useState(null);
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState({});
@@ -158,7 +158,7 @@ const MockTest = () => {
   };
 
   // Mode Selection Screen
-  if (!mode || !format || !difficulty) {
+  if (!mode || !format) {
     return (
       <Box>
         <motion.div
@@ -175,144 +175,8 @@ const MockTest = () => {
               GATE CSE Mock Tests
             </Typography>
             <Typography variant="h6" color="text.secondary" mb={3}>
-              Choose your difficulty level and test mode
+              Choose your test mode to begin
             </Typography>
-            
-            {/* Difficulty Selection */}
-            <Paper elevation={2} sx={{ p: 4, mb: 4, maxWidth: 900, mx: 'auto' }}>
-              <Typography variant="h5" fontWeight={600} textAlign="center" mb={4}>
-                Select Difficulty Level
-              </Typography>
-              <Grid container spacing={3}>
-                <Grid item xs={12} md={4}>
-                  <Card 
-                    sx={{ 
-                      cursor: 'pointer',
-                      border: difficulty === 'beginner' ? '2px solid #43e97b' : '1px solid rgba(0,0,0,0.12)',
-                      background: difficulty === 'beginner' ? 'rgba(67, 233, 123, 0.08)' : 'white',
-                      transition: 'all 0.2s ease',
-                      '&:hover': {
-                        border: '2px solid #43e97b',
-                        transform: 'translateY(-4px)',
-                        boxShadow: 3
-                      }
-                    }}
-                    onClick={() => setDifficulty('beginner')}
-                  >
-                    <CardContent sx={{ textAlign: 'center', py: 3 }}>
-                      <Typography variant="h5" fontWeight={600} gutterBottom>
-                        Beginner
-                      </Typography>
-                      <Divider sx={{ my: 2 }} />
-                      <Box sx={{ textAlign: 'left', px: 2 }}>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Questions: 20
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Duration: 30 minutes
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Marks: 1 per question
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Total: 20 marks
-                        </Typography>
-                      </Box>
-                      <Typography variant="caption" display="block" mt={2} color="text.secondary">
-                        Foundation concepts and basic definitions
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                  <Card 
-                    sx={{ 
-                      cursor: 'pointer',
-                      border: difficulty === 'intermediate' ? '2px solid #4facfe' : '1px solid rgba(0,0,0,0.12)',
-                      background: difficulty === 'intermediate' ? 'rgba(79, 172, 254, 0.08)' : 'white',
-                      transition: 'all 0.2s ease',
-                      '&:hover': {
-                        border: '2px solid #4facfe',
-                        transform: 'translateY(-4px)',
-                        boxShadow: 3
-                      }
-                    }}
-                    onClick={() => setDifficulty('intermediate')}
-                  >
-                    <CardContent sx={{ textAlign: 'center', py: 3 }}>
-                      <Typography variant="h5" fontWeight={600} gutterBottom>
-                        Intermediate
-                      </Typography>
-                      <Divider sx={{ my: 2 }} />
-                      <Box sx={{ textAlign: 'left', px: 2 }}>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Questions: 20
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Duration: 45 minutes
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Marks: 2 per question
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Total: 40 marks
-                        </Typography>
-                      </Box>
-                      <Typography variant="caption" display="block" mt={2} color="text.secondary">
-                        Problem-solving and concept application
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-                <Grid item xs={12} md={4}>
-                  <Card 
-                    sx={{ 
-                      cursor: 'pointer',
-                      border: difficulty === 'advanced' ? '2px solid #f093fb' : '1px solid rgba(0,0,0,0.12)',
-                      background: difficulty === 'advanced' ? 'rgba(240, 147, 251, 0.08)' : 'white',
-                      transition: 'all 0.2s ease',
-                      '&:hover': {
-                        border: '2px solid #f093fb',
-                        transform: 'translateY(-4px)',
-                        boxShadow: 3
-                      }
-                    }}
-                    onClick={() => setDifficulty('advanced')}
-                  >
-                    <CardContent sx={{ textAlign: 'center', py: 3 }}>
-                      <Typography variant="h5" fontWeight={600} gutterBottom>
-                        Advanced
-                      </Typography>
-                      <Divider sx={{ my: 2 }} />
-                      <Box sx={{ textAlign: 'left', px: 2 }}>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Questions: 15
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Duration: 60 minutes
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" mb={1}>
-                          Marks: 3 per question
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          Total: 45 marks
-                        </Typography>
-                      </Box>
-                      <Typography variant="caption" display="block" mt={2} color="text.secondary">
-                        Complex GATE-level numerical problems
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              </Grid>
-              {difficulty && (
-                <Box sx={{ mt: 3, p: 2, bgcolor: 'rgba(102, 126, 234, 0.08)', borderRadius: 1 }}>
-                  <Typography variant="body2" color="text.secondary">
-                    Selected: <strong>{difficulty.charAt(0).toUpperCase() + difficulty.slice(1)}</strong>
-                  </Typography>
-                </Box>
-              )}
-            </Paper>
           </Box>
 
           <Grid container spacing={3} maxWidth="lg" mx="auto">
@@ -487,10 +351,48 @@ const MockTest = () => {
             <Box display="flex" alignItems="center" gap={1}>
               <School sx={{ color: '#667eea' }} />
               <Box>
-                <Typography variant="caption" color="text.secondary">Format</Typography>
-                <Typography variant="body1" fontWeight={600}>
-                  {format === 'gate' ? 'GATE CSE' : 'Custom'}
-                </Typography>
+                <Typography variant="caption" color="text.secondary">Difficulty</Typography>
+                <ButtonGroup size="small" variant="outlined">
+                  <Button 
+                    onClick={() => setDifficulty('beginner')}
+                    variant={difficulty === 'beginner' ? 'contained' : 'outlined'}
+                    sx={{ 
+                      minWidth: 60,
+                      ...(difficulty === 'beginner' && {
+                        background: '#43e97b',
+                        '&:hover': { background: '#38d96b' }
+                      })
+                    }}
+                  >
+                    Easy
+                  </Button>
+                  <Button 
+                    onClick={() => setDifficulty('intermediate')}
+                    variant={difficulty === 'intermediate' ? 'contained' : 'outlined'}
+                    sx={{ 
+                      minWidth: 60,
+                      ...(difficulty === 'intermediate' && {
+                        background: '#4facfe',
+                        '&:hover': { background: '#3f9cee' }
+                      })
+                    }}
+                  >
+                    Medium
+                  </Button>
+                  <Button 
+                    onClick={() => setDifficulty('advanced')}
+                    variant={difficulty === 'advanced' ? 'contained' : 'outlined'}
+                    sx={{ 
+                      minWidth: 60,
+                      ...(difficulty === 'advanced' && {
+                        background: '#f093fb',
+                        '&:hover': { background: '#e083eb' }
+                      })
+                    }}
+                  >
+                    Hard
+                  </Button>
+                </ButtonGroup>
               </Box>
             </Box>
           </Grid>
