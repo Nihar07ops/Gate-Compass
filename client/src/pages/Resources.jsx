@@ -160,6 +160,11 @@ const Resources = () => {
 
   const generalResources = [
     {
+      title: 'GATE Materials Repository ⭐',
+      link: 'https://github.com/himanshupdev123/GateMaterials',
+      description: 'Comprehensive collection of authentic GATE study materials, notes, and previous year questions'
+    },
+    {
       title: 'GATE Official Website',
       link: 'https://gate.iitk.ac.in/',
       description: 'Official GATE exam information and updates'

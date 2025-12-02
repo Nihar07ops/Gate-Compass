@@ -3,9 +3,14 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 import { inMemoryDb } from './utils/inMemoryDb.js';
 
-dotenv.config();
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+dotenv.config({ path: join(__dirname, '.env') });
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -29,12 +34,24 @@ const authMiddleware = (req, res, next) => {
 // Auth routes
 app.post('/api/auth/register', async (req, res) => {
   try {
+    console.log('📝 Register request received:', req.body);
     const { name, email, password } = req.body;
+    
+    if (!name || !email || !password) {
+      console.log('❌ Missing required fields');
+      return res.status(400).json({ message: 'All fields are required' });
+    }
+    
     const existingUser = inMemoryDb.findUser({ email });
     if (existingUser) {
+      console.log('❌ User already exists:', email);
       return res.status(400).json({ message: 'User already exists' });
     }
+    
+    console.log('🔐 Hashing password...');
     const hashedPassword = await bcrypt.hash(password, 10);
+    
+    console.log('💾 Saving user...');
     const user = inMemoryDb.saveUser({
       name,
       email,
@@ -45,9 +62,14 @@ app.post('/api/auth/register', async (req, res) => {
       topicPerformance: [],
       createdAt: new Date()
     });
+    
+    console.log('🎫 Generating token...');
     const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
+    
+    console.log('✅ Registration successful:', user.email);
     res.status(201).json({ token, user: { id: user._id, name: user.name, email: user.email } });
   } catch (error) {
+    console.error('❌ Registration error:', error);
     res.status(500).json({ message: 'Server error', error: error.message });
   }
 });
