@@ -11,11 +11,11 @@ const tests = new Map();
 const questions = new Map();
 const trends = new Map();
 
-// Load questions from JSON file - Try comprehensive 300+ questions first
+// Load questions from JSON file - Use GATE Professional Bank
 let sampleQuestions = [];
 try {
-  const comprehensivePath = path.join(__dirname, '../../ml_service/data/comprehensive_300_questions.json');
-  const questionsData = JSON.parse(fs.readFileSync(comprehensivePath, 'utf8'));
+  const gateProfessionalPath = path.join(__dirname, '../../ml_service/data/gate_professional_bank.json');
+  const questionsData = JSON.parse(fs.readFileSync(gateProfessionalPath, 'utf8'));
   sampleQuestions = questionsData.map(q => ({
     _id: q.id,
     text: q.text,

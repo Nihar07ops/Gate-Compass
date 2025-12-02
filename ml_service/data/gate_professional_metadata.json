@@ -1,0 +1,21 @@
+{
+  "total_questions": 59,
+  "difficulty_distribution": {
+    "hard": 48,
+    "medium": 10,
+    "easy": 1
+  },
+  "section_distribution": {
+    "Core Computer Science": 50,
+    "General Aptitude": 9
+  },
+  "type_distribution": {
+    "Numerical": 42,
+    "MCQ": 17
+  },
+  "quality_standard": "GATE Professional Level",
+  "no_definitions": true,
+  "no_simple_answers": true,
+  "application_based": true,
+  "generated_at": "2025-12-02T21:15:36.902525"
+}
