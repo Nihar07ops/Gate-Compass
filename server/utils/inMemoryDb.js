@@ -106,7 +106,18 @@ export const inMemoryDb = {
     
     // Apply filters
     if (filters.difficulty) {
-      allQuestions = allQuestions.filter(q => q.difficulty === filters.difficulty);
+      // Map frontend difficulty names to database difficulty names
+      const difficultyMap = {
+        'beginner': ['easy', 'beginner'],
+        'intermediate': ['medium', 'intermediate'],
+        'advanced': ['hard', 'advanced']
+      };
+      
+      const mappedDifficulties = difficultyMap[filters.difficulty] || [filters.difficulty];
+      allQuestions = allQuestions.filter(q => mappedDifficulties.includes(q.difficulty));
+      
+      console.log(`🎯 Filtering by difficulty: ${filters.difficulty} -> ${mappedDifficulties.join(', ')}`);
+      console.log(`📊 Found ${allQuestions.length} questions matching difficulty`);
     }
     if (filters.topic) {
       allQuestions = allQuestions.filter(q => q.topic === filters.topic);
