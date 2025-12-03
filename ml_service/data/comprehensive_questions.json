@@ -1,0 +1,8 @@
+{
+  "metadata": {
+    "totalQuestions": 100,
+    "subjects": ["Algorithms", "Data Structures", "Operating Systems", "DBMS", "Computer Networks", "Theory of Computation", "Compiler Design", "Digital Logic", "Computer Organization", "Programming", "Discrete Mathematics"],
+    "years": [2019, 2020, 2021, 2022, 2023, 2024],
+    "lastUpdated": "2024-11-29"
+  },
+  "questions": [

@@ -1,0 +1,24 @@
+[
+  {
+    "text": "What is the time complexity of binary search?",
+    "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+    "correctAnswer": "O(log n)",
+    "topic": "Algorithms",
+    "subject": "Data Structures and Algorithms",
+    "difficulty": "easy",
+    "questionType": "MCQ",
+    "year": 2023,
+    "marks": 1
+  },
+  {
+    "text": "Which scheduling algorithm can cause starvation?",
+    "options": ["FCFS", "Round Robin", "Priority Scheduling", "SJF"],
+    "correctAnswer": "Priority Scheduling",
+    "topic": "Process Scheduling",
+    "subject": "Operating Systems",
+    "difficulty": "medium",
+    "questionType": "MCQ",
+    "year": 2023,
+    "marks": 2
+  }
+]
