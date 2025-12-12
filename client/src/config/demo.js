@@ -2,14 +2,28 @@
 // Enable demo mode in production OR when backend is not available
 const isDemoMode = () => {
     try {
-        return process.env.NODE_ENV === 'production' ||
-            process.env.VITE_DEMO_MODE === 'true' ||
-            (typeof window !== 'undefined' && window.location.hostname.includes('github.io')) ||
-            (typeof window !== 'undefined' && window.location.search.includes('demo=true')) ||
-            (typeof localStorage !== 'undefined' && localStorage.getItem('forceDemo') === 'true');
+        const isProduction = process.env.NODE_ENV === 'production';
+        const isVercel = typeof window !== 'undefined' && window.location.hostname.includes('vercel.app');
+        const isGitHub = typeof window !== 'undefined' && window.location.hostname.includes('github.io');
+        const isDemoParam = typeof window !== 'undefined' && window.location.search.includes('demo=true');
+        const isForceDemo = typeof localStorage !== 'undefined' && localStorage.getItem('forceDemo') === 'true';
+
+        const demoMode = isProduction || isVercel || isGitHub || isDemoParam || isForceDemo;
+
+        console.log('Demo mode detection:', {
+            isProduction,
+            isVercel,
+            isGitHub,
+            isDemoParam,
+            isForceDemo,
+            finalDemoMode: demoMode,
+            hostname: typeof window !== 'undefined' ? window.location.hostname : 'server'
+        });
+
+        return demoMode;
     } catch (error) {
         console.log('Demo mode detection error:', error);
-        return false;
+        return true; // Default to demo mode if detection fails
     }
 };
 
