@@ -1,16 +1,42 @@
 {
-  "name": "gate-cse-prep-platform",
+  "name": "gate-compass",
   "version": "1.0.0",
-  "description": "GATE CSE Preparation Platform with ML-powered predictions",
+  "description": "Gate-Compass: Comprehensive GATE CSE Preparation Platform with AI-powered Analytics",
+  "main": "server/server-inmemory.js",
   "scripts": {
-    "install-all": "npm install && cd client && npm install && cd ../server && npm install",
-    "dev": "concurrently \"cd server && npm run dev\" \"cd client && npm run dev\"",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install && cd ../ml_service && pip install -r requirements.txt",
+    "dev": "concurrently \"cd ml_service && python app.py\" \"cd server && node server-inmemory.js\" \"cd client && npm run dev\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && node server-inmemory.js", 
+    "dev:ml": "cd ml_service && python app.py",
     "build": "cd client && npm run build",
-    "start": "cd server && npm start"
+    "start": "cd server && npm start",
+    "test": "python test_complete_system.py",
+    "test:system": "python test_complete_system.py",
+    "clean": "rm -rf client/node_modules server/node_modules node_modules ml_service/__pycache__",
+    "setup": "npm run install-all"
   },
-  "keywords": ["gate", "cse", "mern", "ml"],
-  "author": "",
+  "keywords": [
+    "gate",
+    "cse", 
+    "preparation",
+    "mern",
+    "ml",
+    "ai",
+    "analytics",
+    "education",
+    "exam-prep"
+  ],
+  "author": "Gate-Compass Team",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/gate-compass.git"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "python": ">=3.8.0"
+  },
   "devDependencies": {
     "concurrently": "^8.2.2"
   }

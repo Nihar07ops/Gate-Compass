@@ -141,44 +141,171 @@ app.get('/api/dashboard', authMiddleware, async (req, res) => {
   }
 });
 
-// Trends
+// Enhanced Historical Trends
 app.get('/api/trends', authMiddleware, async (req, res) => {
-  const allQuestions = inMemoryDb.getQuestions(1000);
-  const topicCount = {};
-  const yearCount = {};
-  
-  allQuestions.forEach(q => {
-    topicCount[q.topic] = (topicCount[q.topic] || 0) + 1;
-    yearCount[q.year] = (yearCount[q.year] || 0) + 1;
-  });
-  
-  const topicFrequency = Object.entries(topicCount)
-    .map(([topic, count]) => ({ topic, count }))
-    .sort((a, b) => b.count - a.count);
-  
-  const years = Object.keys(yearCount).sort();
-  const difficultyTrend = years.map(() => Math.random() * 2 + 2.5);
-  
-  res.json({
-    topicFrequency,
-    years,
-    difficultyTrend,
-    totalQuestions: allQuestions.length
-  });
+  try {
+    const { startYear = 2015, endYear = 2024 } = req.query;
+    
+    // Get historical trends from ML service
+    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
+    const response = await fetch(`${mlServiceUrl}/historical/trends?start_year=${startYear}&end_year=${endYear}`);
+    
+    if (response.ok) {
+      const historicalData = await response.json();
+      
+      // Enhance with local question data
+      const allQuestions = inMemoryDb.getQuestions(1000);
+      const topicCount = {};
+      const yearCount = {};
+      
+      allQuestions.forEach(q => {
+        topicCount[q.topic] = (topicCount[q.topic] || 0) + 1;
+        yearCount[q.year] = (yearCount[q.year] || 0) + 1;
+      });
+      
+      const topicFrequency = Object.entries(topicCount)
+        .map(([topic, count]) => ({ topic, count }))
+        .sort((a, b) => b.count - a.count);
+      
+      res.json({
+        ...historicalData,
+        localData: {
+          topicFrequency,
+          yearCount,
+          totalQuestions: allQuestions.length
+        },
+        enhanced: true
+      });
+    } else {
+      throw new Error('Historical data unavailable');
+    }
+  } catch (error) {
+    console.error('Historical trends error:', error);
+    
+    // Fallback to basic trends
+    const allQuestions = inMemoryDb.getQuestions(1000);
+    const topicCount = {};
+    const yearCount = {};
+    
+    allQuestions.forEach(q => {
+      topicCount[q.topic] = (topicCount[q.topic] || 0) + 1;
+      yearCount[q.year] = (yearCount[q.year] || 0) + 1;
+    });
+    
+    const topicFrequency = Object.entries(topicCount)
+      .map(([topic, count]) => ({ topic, count }))
+      .sort((a, b) => b.count - a.count);
+    
+    const years = Object.keys(yearCount).sort();
+    const difficultyTrend = years.map(() => Math.random() * 2 + 2.5);
+    
+    res.json({
+      topicFrequency,
+      years,
+      difficultyTrend,
+      totalQuestions: allQuestions.length,
+      fallback: true
+    });
+  }
 });
 
-// Predictions
+// Subject-specific historical trends
+app.get('/api/trends/subject/:subject', authMiddleware, async (req, res) => {
+  try {
+    const { subject } = req.params;
+    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
+    const response = await fetch(`${mlServiceUrl}/historical/subject/${encodeURIComponent(subject)}`);
+    
+    if (response.ok) {
+      const data = await response.json();
+      res.json(data);
+    } else {
+      res.status(404).json({ error: 'Subject data not found' });
+    }
+  } catch (error) {
+    console.error('Subject trends error:', error);
+    res.status(500).json({ error: 'Failed to fetch subject trends' });
+  }
+});
+
+// Historical predictions
+app.get('/api/trends/predictions', authMiddleware, async (req, res) => {
+  try {
+    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
+    const response = await fetch(`${mlServiceUrl}/historical/predictions`);
+    
+    if (response.ok) {
+      const data = await response.json();
+      res.json(data);
+    } else {
+      throw new Error('Predictions unavailable');
+    }
+  } catch (error) {
+    console.error('Predictions error:', error);
+    res.status(500).json({ error: 'Failed to fetch predictions' });
+  }
+});
+
+// Study recommendations
+app.get('/api/trends/recommendations', authMiddleware, async (req, res) => {
+  try {
+    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
+    const response = await fetch(`${mlServiceUrl}/historical/recommendations`);
+    
+    if (response.ok) {
+      const data = await response.json();
+      res.json(data);
+    } else {
+      throw new Error('Recommendations unavailable');
+    }
+  } catch (error) {
+    console.error('Recommendations error:', error);
+    res.status(500).json({ error: 'Failed to fetch recommendations' });
+  }
+});
+
+// Enhanced Predictions with Historical Data
 app.get('/api/predict', authMiddleware, async (req, res) => {
-  res.json({
-    topicImportance: [
-      { topic: 'Algorithms', score: 90 },
-      { topic: 'Data Structures', score: 85 },
-      { topic: 'Operating Systems', score: 75 },
-      { topic: 'DBMS', score: 80 },
-      { topic: 'Networks', score: 70 }
-    ],
-    highPriorityTopics: ['Algorithms', 'Data Structures', 'DBMS']
-  });
+  try {
+    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
+    const response = await fetch(`${mlServiceUrl}/historical/predictions`);
+    
+    if (response.ok) {
+      const data = await response.json();
+      
+      // Format for compatibility
+      const topicImportance = data.topicImportance || [];
+      const highPriorityTopics = topicImportance
+        .filter(t => t.score >= 70)
+        .slice(0, 5)
+        .map(t => t.topic);
+      
+      res.json({
+        topicImportance,
+        highPriorityTopics,
+        recommendations: data.recommendations,
+        year: data.year,
+        enhanced: true
+      });
+    } else {
+      throw new Error('Historical predictions unavailable');
+    }
+  } catch (error) {
+    console.error('Predictions error:', error);
+    
+    // Fallback predictions
+    res.json({
+      topicImportance: [
+        { topic: 'Programming & Data Structures', score: 95 },
+        { topic: 'Algorithms', score: 90 },
+        { topic: 'Database Management', score: 85 },
+        { topic: 'Computer Organization', score: 80 },
+        { topic: 'Operating Systems', score: 75 }
+      ],
+      highPriorityTopics: ['Programming & Data Structures', 'Algorithms', 'Database Management'],
+      fallback: true
+    });
+  }
 });
 
 // Generate test
