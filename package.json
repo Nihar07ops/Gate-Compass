@@ -5,9 +5,11 @@
   "main": "server/server-inmemory.js",
   "scripts": {
     "install-all": "npm install && cd client && npm install && cd ../server && npm install && cd ../ml_service && pip install -r requirements.txt",
-    "dev": "concurrently \"cd ml_service && python app.py\" \"cd server && node server-inmemory.js\" \"cd client && npm run dev\"",
+    "dev": "concurrently \"cd ml_service && python app.py\" \"cd server && node server.js\" \"cd client && npm run dev\"",
+    "dev:memory": "concurrently \"cd ml_service && python app.py\" \"cd server && node server-inmemory.js\" \"cd client && npm run dev\"",
     "dev:client": "cd client && npm run dev",
-    "dev:server": "cd server && node server-inmemory.js", 
+    "dev:server": "cd server && node server.js",
+    "dev:server:memory": "cd server && node server-inmemory.js", 
     "dev:ml": "cd ml_service && python app.py",
     "build": "cd client && npm run build",
     "start": "cd server && npm start",

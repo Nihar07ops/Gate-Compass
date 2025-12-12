@@ -5,7 +5,10 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js",
-    "dev:memory": "nodemon server-inmemory.js"
+    "dev:memory": "nodemon server-inmemory.js",
+    "seed": "node -e \"import('./utils/seedData.js').then(m => m.seedDatabase())\"",
+    "mongo:local": "mongosh mongodb://localhost:27017/gate-compass",
+    "mongo:reset": "node -e \"import('mongoose').then(m => m.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/gate-compass').then(() => m.connection.db.dropDatabase()).then(() => console.log('Database reset')).then(() => process.exit()))\""
   },
   "dependencies": {
     "express": "^4.18.2",

@@ -29,11 +29,12 @@ services:
       - NODE_ENV=development
       - API_PORT=3001
       - ML_SERVICE_URL=http://ml-service:5000
+      - MONGODB_URI=mongodb://mongodb:27017/gate_compass
     volumes:
       - ./server:/app
       - /app/node_modules
     depends_on:
-      - database
+      - mongodb
 
   # ML Service Python
   ml-service:
@@ -49,17 +50,16 @@ services:
       - ./ml_service:/app
       - ./GateMaterials:/app/materials
 
-  # Database
-  database:
-    image: postgres:13
+  # MongoDB Database
+  mongodb:
+    image: mongo:latest
     environment:
-      - POSTGRES_DB=gate_compass
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
+      - MONGO_INITDB_DATABASE=gate_compass
     ports:
-      - "5432:5432"
+      - "27017:27017"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - mongodb_data:/data/db
+      - ./server/utils/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
 
 volumes:
-  postgres_data:
+  mongodb_data:
