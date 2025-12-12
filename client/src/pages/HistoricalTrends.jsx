@@ -264,33 +264,7 @@ const HistoricalTrends = () => {
 
 
 
-        {/* Yearly Trends Table */}
-        <Card sx={{ mb: 4 }}>
-          <CardContent>
-            <Typography variant="h6" gutterBottom>
-              Total Marks Distribution Over Years
-            </Typography>
-            <Grid container spacing={2}>
-              {trendsData.yearlyData.map((yearData, index) => (
-                <Grid item xs={6} sm={4} md={2} key={yearData.year}>
-                  <Card variant="outlined">
-                    <CardContent sx={{ textAlign: 'center', py: 2 }}>
-                      <Typography variant="h6" color="primary">
-                        {yearData.year}
-                      </Typography>
-                      <Typography variant="h4" fontWeight="bold">
-                        {yearData.totalMarks}
-                      </Typography>
-                      <Typography variant="caption" color="text.secondary">
-                        Total Marks
-                      </Typography>
-                    </CardContent>
-                  </Card>
-                </Grid>
-              ))}
-            </Grid>
-          </CardContent>
-        </Card>
+
 
         {/* Subject-wise Analysis */}
         <Grid container spacing={3}>
