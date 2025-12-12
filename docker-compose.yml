@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  # Frontend React App
+  frontend:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:3001
+      - REACT_APP_ML_SERVICE_URL=http://localhost:5000
+    depends_on:
+      - backend
+      - ml-service
+    volumes:
+      - ./client:/app
+      - /app/node_modules
+
+  # Backend Node.js API
+  backend:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+      - API_PORT=3001
+      - ML_SERVICE_URL=http://ml-service:5000
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+    depends_on:
+      - database
+
+  # ML Service Python
+  ml-service:
+    build:
+      context: ./ml_service
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=development
+      - ML_SERVICE_PORT=5000
+    volumes:
+      - ./ml_service:/app
+      - ./GateMaterials:/app/materials
+
+  # Database
+  database:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=gate_compass
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

@@ -1,0 +1,28 @@
+{
+  "topics": [
+    {
+      "id": 1,
+      "name": "Mathematics",
+      "difficulty": "Medium",
+      "questions": 50
+    },
+    {
+      "id": 2,
+      "name": "Physics",
+      "difficulty": "Hard",
+      "questions": 30
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "testuser1",
+      "email": "test1@example.com"
+    },
+    {
+      "id": 2,
+      "username": "testuser2",
+      "email": "test2@example.com"
+    }
+  ]
+}
