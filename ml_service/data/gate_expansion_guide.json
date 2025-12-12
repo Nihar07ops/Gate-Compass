@@ -1,0 +1,31 @@
+{
+  "current_count": 59,
+  "target_count": 200,
+  "gap": 141,
+  "needed_by_topic": {
+    "Operating Systems": 30,
+    "Algorithms & Data Structures": 30,
+    "Database Systems": 25,
+    "Computer Networks": 25,
+    "Theory of Computation": 20,
+    "Computer Organization & Architecture": 25,
+    "Digital Logic": 15,
+    "Programming & Compilers": 15,
+    "Engineering Mathematics": 20,
+    "General Aptitude": 15
+  },
+  "quality_criteria": {
+    "no_definitions": true,
+    "no_simple_answers": true,
+    "application_based": true,
+    "numerical_preferred": true,
+    "multi_concept": true,
+    "gate_previous_years": true
+  },
+  "sources": [
+    "GATE CSE Previous Year Papers (2010-2024)",
+    "GATE CSE Official Question Banks",
+    "Standard GATE Preparation Books",
+    "GATE Online Test Series"
+  ]
+}

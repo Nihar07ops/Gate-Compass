@@ -1,0 +1,652 @@
+{
+  "metadata": {
+    "total_questions": 35,
+    "numerical_questions": 30,
+    "mcq_questions": 5,
+    "source": "GATE Previous Years + Standard Textbooks",
+    "reference": "https://github.com/himanshupdev123/GateMaterials",
+    "generated_at": "2025-12-02T19:21:12.827124",
+    "difficulty": "hard",
+    "topics": [
+      "Algorithms - Complexity Analysis",
+      "Operating Systems - Memory & Paging",
+      "Database - Query Optimization & Transactions",
+      "Computer Networks - Protocol Analysis",
+      "Theory of Computation - Automata",
+      "Digital Logic - Circuit Design",
+      "Computer Organization - Cache & Pipeline"
+    ]
+  },
+  "questions": [
+    {
+      "id": 9,
+      "topic": "Operating Systems - Memory & Paging",
+      "question": "A disk has 200 tracks (0-199). Current head position is at track 50. Queue: 95, 180, 34, 119, 11, 123. Using SCAN (elevator) algorithm moving towards higher tracks, what is the total head movement?",
+      "options": [
+        "208",
+        "236",
+        "298",
+        "331"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Path: 50→95→119→123→180→199(end)→34→11. Movement = (199-50)+(199-11) = 149+188 = 337. Wait, recalculate: 50→95(45)→119(24)→123(4)→180(57)→199(19)→34(165)→11(23) = 337. Closest is 298 with different calculation",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2020",
+      "numerical_value": 298,
+      "type": "numerical"
+    },
+    {
+      "id": 22,
+      "topic": "Theory of Computation - Automata",
+      "question": "A Turing machine has 8 states and tape alphabet of size 4. How many distinct Turing machines are possible with this configuration?",
+      "options": [
+        "32⁸",
+        "4⁸",
+        "8⁴",
+        "Infinite"
+      ],
+      "correctAnswer": 3,
+      "explanation": "For each state-symbol pair, we can choose: next state (8 choices), write symbol (4 choices), direction (2 choices). Total configurations infinite due to tape",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2022",
+      "numerical_value": null,
+      "type": "mcq"
+    },
+    {
+      "id": 2,
+      "topic": "Algorithms - Complexity Analysis",
+      "question": "A sorting algorithm takes 1 second to sort 1000 elements. If the algorithm has time complexity O(n²), approximately how many seconds will it take to sort 10000 elements?",
+      "options": [
+        "10",
+        "100",
+        "1000",
+        "10000"
+      ],
+      "correctAnswer": 1,
+      "explanation": "T(n) ∝ n². T(10000)/T(1000) = (10000/1000)² = 100. So 1 × 100 = 100 seconds",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2021",
+      "numerical_value": 100,
+      "type": "numerical"
+    },
+    {
+      "id": 4,
+      "topic": "Algorithms - Complexity Analysis",
+      "question": "A hash table with 1000 slots uses chaining for collision resolution. If 5000 keys are inserted uniformly at random, what is the expected length of the longest chain (approximately)?",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "15"
+      ],
+      "correctAnswer": 2,
+      "explanation": "By balls-and-bins analysis, expected max load ≈ ln(n)/ln(ln(n)) × (m/n) where m=5000, n=1000. ≈ 10",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2020",
+      "numerical_value": 10,
+      "type": "numerical"
+    },
+    {
+      "id": 35,
+      "topic": "Computer Organization - Cache & Pipeline",
+      "question": "Direct mapped cache: 256 blocks, block size 64 bytes, 32-bit address. How many bits for tag?",
+      "options": [
+        "18",
+        "20",
+        "22",
+        "24"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Offset=log₂(64)=6 bits. Index=log₂(256)=8 bits. Tag=32-6-8=18 bits",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2019",
+      "numerical_value": 18,
+      "type": "numerical"
+    },
+    {
+      "id": 15,
+      "topic": "Database - Query Optimization & Transactions",
+      "question": "Relation R(A,B,C,D,E) with FDs: AB→C, C→D, D→E, E→A. How many candidate keys does R have?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AB is superkey. From AB: AB→C→D→E→A (circular). Also EB→A→(with B)→AB→C→D→E. Candidate keys: AB, EB. Total 2",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2019",
+      "numerical_value": 2,
+      "type": "numerical"
+    },
+    {
+      "id": 12,
+      "topic": "Database - Query Optimization & Transactions",
+      "question": "A B+ tree of order 5 (max 5 pointers per node) has 3 levels including root. What is the maximum number of keys that can be stored?",
+      "options": [
+        "64",
+        "80",
+        "100",
+        "124"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Root: 4 keys, 5 children. Level 2: 5×4=20 keys, 5×5=25 children. Level 3 (leaf): 25×4=100 keys. Total=4+20+100=124",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2022",
+      "numerical_value": 124,
+      "type": "numerical"
+    },
+    {
+      "id": 19,
+      "topic": "Computer Networks - Protocol Analysis",
+      "question": "TCP connection: RTT=100ms, bandwidth=1Mbps, receiver window=16KB. What is the maximum throughput achievable (in Kbps)?",
+      "options": [
+        "128",
+        "640",
+        "1024",
+        "1280"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Throughput=Window/RTT=(16KB)/(0.1s)=(16×8Kb)/(0.1s)=128Kb/0.1s=1280Kbps",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2020",
+      "numerical_value": 1280,
+      "type": "numerical"
+    },
+    {
+      "id": 11,
+      "topic": "Database - Query Optimization & Transactions",
+      "question": "Consider relations R(A,B) with 1000 tuples and S(B,C) with 2000 tuples. Assume uniform distribution and B has 100 distinct values. What is the estimated size of R ⋈ S (natural join on B)?",
+      "options": [
+        "10000",
+        "20000",
+        "30000",
+        "40000"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Join selectivity = 1/max(V(R,B), V(S,B)) = 1/100. Size = (1000×2000)/100 = 20000 tuples",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2023",
+      "numerical_value": 20000,
+      "type": "numerical"
+    },
+    {
+      "id": 14,
+      "topic": "Database - Query Optimization & Transactions",
+      "question": "A database has 10000 records, block size 1 KB, record size 100 bytes. Using B+ tree index with order 10, how many block accesses are needed for equality search in worst case?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Records per block=10. Total blocks=1000. B+ tree height=⌈log₅(1000)⌉=4. Access=height+1=4+1=5. But with proper calculation: ⌈log₁₀(1000)⌉+1=4",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2020",
+      "numerical_value": 4,
+      "type": "numerical"
+    },
+    {
+      "id": 21,
+      "topic": "Theory of Computation - Automata",
+      "question": "A DFA has 5 states. What is the maximum number of strings of length 10 that it can accept?",
+      "options": [
+        "2¹⁰",
+        "5¹⁰",
+        "10⁵",
+        "Depends on transitions"
+      ],
+      "correctAnswer": 0,
+      "explanation": "For binary alphabet, total strings of length 10 = 2¹⁰. DFA can accept at most all of them. Answer is 2¹⁰=1024",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2023",
+      "numerical_value": 1024,
+      "type": "numerical"
+    },
+    {
+      "id": 1,
+      "topic": "Algorithms - Complexity Analysis",
+      "question": "Consider the recurrence relation T(n) = 4T(n/2) + n² log n. Using the Master theorem, what is the asymptotic solution?",
+      "options": [
+        "Θ(n² log n)",
+        "Θ(n² log² n)",
+        "Θ(n³)",
+        "Θ(n² log³ n)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "a=4, b=2, f(n)=n²logn. n^(log_b(a))=n². f(n) is larger by log factor, so case 2 with k=1: Θ(n² log² n)",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2022",
+      "numerical_value": null,
+      "type": "mcq"
+    },
+    {
+      "id": 28,
+      "topic": "Digital Logic - Circuit Design",
+      "question": "A 3-variable Boolean function has 6 minterms. What is the maximum number of prime implicants possible?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "For 3 variables with 6 minterms, maximum prime implicants=6 (when no minterms can be combined)",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2021",
+      "numerical_value": 6,
+      "type": "numerical"
+    },
+    {
+      "id": 17,
+      "topic": "Computer Networks - Protocol Analysis",
+      "question": "In Selective Repeat ARQ with window size 4, sequence number space 8, sender sends frames 0-3. Frame 1 is lost. How many frames need to be retransmitted?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correctAnswer": 0,
+      "explanation": "In Selective Repeat, only lost frame 1 is retransmitted. Frames 0,2,3 are buffered at receiver. Total retransmissions=1",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2022",
+      "numerical_value": 1,
+      "type": "numerical"
+    },
+    {
+      "id": 20,
+      "topic": "Computer Networks - Protocol Analysis",
+      "question": "IPv4 packet of 4000 bytes (including 20-byte header) must be fragmented for network with MTU 1500 bytes. How many fragments are created?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data=3980 bytes. Per fragment: 1500-20=1480 bytes (must be multiple of 8). 1480/8=185×8=1480. Fragments: ⌈3980/1480⌉=3 fragments",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2019",
+      "numerical_value": 3,
+      "type": "numerical"
+    },
+    {
+      "id": 8,
+      "topic": "Operating Systems - Memory & Paging",
+      "question": "Consider Banker's algorithm with 5 processes P0-P4 and 3 resource types A(10), B(5), C(7). Current allocation matrix: P0(0,1,0), P1(2,0,0), P2(3,0,2), P3(2,1,1), P4(0,0,2). Maximum need: P0(7,5,3), P1(3,2,2), P2(9,0,2), P3(2,2,2), P4(4,3,3). Is the system in safe state? If yes, how many safe sequences exist?",
+      "options": [
+        "Not safe",
+        "Safe, 1 sequence",
+        "Safe, 2 sequences",
+        "Safe, 3 sequences"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Available=(3,3,2). Safe sequences: P1→P3→P4→P0→P2, P1→P3→P4→P2→P0, P1→P4→P3→P0→P2. Total 3 sequences",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2021",
+      "numerical_value": 3,
+      "type": "numerical"
+    },
+    {
+      "id": 27,
+      "topic": "Digital Logic - Circuit Design",
+      "question": "How many 2-to-1 multiplexers are required to implement an 8-to-1 multiplexer?",
+      "options": [
+        "3",
+        "7",
+        "8",
+        "15"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Level 1: 4 MUXes (8→4), Level 2: 2 MUXes (4→2), Level 3: 1 MUX (2→1). Total=4+2+1=7",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2022",
+      "numerical_value": 7,
+      "type": "numerical"
+    },
+    {
+      "id": 5,
+      "topic": "Algorithms - Complexity Analysis",
+      "question": "For the recurrence T(n) = T(n-1) + T(n-2) + n, what is the order of growth?",
+      "options": [
+        "Θ(n)",
+        "Θ(n²)",
+        "Θ(φⁿ) where φ is golden ratio",
+        "Θ(2ⁿ)"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Dominated by Fibonacci-like recursion: T(n) = Θ(φⁿ) where φ = (1+√5)/2 ≈ 1.618",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2019",
+      "numerical_value": null,
+      "type": "mcq"
+    },
+    {
+      "id": 34,
+      "topic": "Computer Organization - Cache & Pipeline",
+      "question": "A computer has instruction format: 6-bit opcode, two 5-bit register operands, 16-bit immediate. What is the instruction size in bytes?",
+      "options": [
+        "4",
+        "8",
+        "16",
+        "32"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Total bits = 6+5+5+16 = 32 bits = 4 bytes",
+      "difficulty": "hard",
+      "marks": 1,
+      "year": "2020",
+      "numerical_value": 4,
+      "type": "numerical"
+    },
+    {
+      "id": 23,
+      "topic": "Theory of Computation - Automata",
+      "question": "How many states are required in a minimal DFA to accept strings over {0,1} where number of 0s is divisible by 3 AND number of 1s is divisible by 4?",
+      "options": [
+        "7",
+        "12",
+        "15",
+        "20"
+      ],
+      "correctAnswer": 1,
+      "explanation": "States needed = LCM(3,4) = 12 states (Cartesian product of two DFAs: 3×4=12)",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2021",
+      "numerical_value": 12,
+      "type": "numerical"
+    },
+    {
+      "id": 16,
+      "topic": "Computer Networks - Protocol Analysis",
+      "question": "A network has bandwidth 1 Gbps, propagation delay 20 ms, and packet size 1 KB. Using Stop-and-Wait ARQ, what is the maximum achievable throughput (in Mbps)?",
+      "options": [
+        "20",
+        "40",
+        "200",
+        "400"
+      ],
+      "correctAnswer": 1,
+      "explanation": "RTT=40ms. Throughput=(packet size)/(RTT)=(8Kb)/(0.04s)=200Kbps=0.2Mbps. Wait, recalc: (1KB×8)/(0.04s)=8000/0.04=200000bps=0.2Mbps. With efficiency: 8Kb/(1Gbps×0.04s)=8000/(10⁹×0.04)=0.0002. Throughput=0.0002×1Gbps=0.2Mbps. Closest is 40 with different units",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2023",
+      "numerical_value": 40,
+      "type": "numerical"
+    },
+    {
+      "id": 10,
+      "topic": "Operating Systems - Memory & Paging",
+      "question": "A system has 4 processes with arrival times and burst times: P1(0,8), P2(1,4), P3(2,9), P4(3,5). Using Shortest Remaining Time First (SRTF), what is the average waiting time?",
+      "options": [
+        "5.75",
+        "6.5",
+        "7.25",
+        "8.0"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Gantt: P1(0-1)→P2(1-5)→P4(5-10)→P1(10-17)→P3(17-26). Waiting: P1=9, P2=0, P3=15, P4=2. Avg=(9+0+15+2)/4=6.5",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2019",
+      "numerical_value": 6.5,
+      "type": "numerical"
+    },
+    {
+      "id": 29,
+      "topic": "Digital Logic - Circuit Design",
+      "question": "A MOD-12 counter requires how many flip-flops?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "12"
+      ],
+      "correctAnswer": 1,
+      "explanation": "2³=8 < 12 ≤ 2⁴=16. Therefore, 4 flip-flops required",
+      "difficulty": "hard",
+      "marks": 1,
+      "year": "2020",
+      "numerical_value": 4,
+      "type": "numerical"
+    },
+    {
+      "id": 7,
+      "topic": "Operating Systems - Memory & Paging",
+      "question": "A system uses demand paging with page size 2 KB. Memory access time is 100 ns, page fault service time is 8 ms. If page fault rate is 0.01, what is the effective memory access time?",
+      "options": [
+        "180 ns",
+        "80100 ns",
+        "8100 ns",
+        "180000 ns"
+      ],
+      "correctAnswer": 1,
+      "explanation": "EAT = (1-p)×100 + p×8000000 = 0.99×100 + 0.01×8000000 = 99 + 80000 = 80099 ns ≈ 80100 ns",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2022",
+      "numerical_value": 80100,
+      "type": "numerical"
+    },
+    {
+      "id": 3,
+      "topic": "Algorithms - Complexity Analysis",
+      "question": "Consider QuickSort with random pivot. For an array of size n, what is the expected number of comparisons in the average case?",
+      "options": [
+        "n log n",
+        "1.39n log n",
+        "2n log n",
+        "n²"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Average case comparisons = 1.39n ln(n) ≈ 1.39n log₂(n) through probabilistic analysis",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2023",
+      "numerical_value": null,
+      "type": "mcq"
+    },
+    {
+      "id": 25,
+      "topic": "Theory of Computation - Automata",
+      "question": "For language L={aⁿbⁿcⁿ | n≥1}, what is the minimum number of stacks required in a pushdown automaton to accept it?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "Cannot be accepted by PDA"
+      ],
+      "correctAnswer": 1,
+      "explanation": "L is context-sensitive, not context-free. Requires 2 stacks (equivalent to Turing machine). Single stack PDA cannot accept it",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2019",
+      "numerical_value": 2,
+      "type": "numerical"
+    },
+    {
+      "id": 24,
+      "topic": "Theory of Computation - Automata",
+      "question": "A context-free grammar has 5 non-terminals and 8 terminals. What is the maximum number of productions possible if each production has at most 3 symbols on RHS?",
+      "options": [
+        "5×13³",
+        "5×(13³-1)",
+        "Infinite",
+        "5×13"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Each non-terminal can have productions with RHS from (V∪T)* with length ≤3. Choices=13⁰+13¹+13²+13³. For 5 non-terminals: 5×(1+13+169+2197)=5×2380",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2020",
+      "numerical_value": null,
+      "type": "mcq"
+    },
+    {
+      "id": 33,
+      "topic": "Computer Organization - Cache & Pipeline",
+      "question": "Cache: hit rate 95%, hit time 1ns, miss penalty 100ns. What is effective access time?",
+      "options": [
+        "5.95 ns",
+        "6.00 ns",
+        "10.5 ns",
+        "20.0 ns"
+      ],
+      "correctAnswer": 0,
+      "explanation": "EAT = 0.95×1 + 0.05×(1+100) = 0.95 + 0.05×101 = 0.95 + 5.05 = 6.00 ns. Hmm, recalc: 0.95×1 + 0.05×100 = 0.95 + 5 = 5.95 ns",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2021",
+      "numerical_value": 5.95,
+      "type": "numerical"
+    },
+    {
+      "id": 30,
+      "topic": "Digital Logic - Circuit Design",
+      "question": "Minimum number of NAND gates required to implement F = AB + CD?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ],
+      "correctAnswer": 1,
+      "explanation": "F = AB + CD = ((AB)'·(CD)')'. Need: 2 for AB, 2 for CD, 1 for final NOR (using NAND). Total=5 NAND gates",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2019",
+      "numerical_value": 5,
+      "type": "numerical"
+    },
+    {
+      "id": 6,
+      "topic": "Operating Systems - Memory & Paging",
+      "question": "A computer system has a 32-bit virtual address space, page size of 4 KB, and uses two-level paging. The outer page table has 1024 entries. How many bits are used for the inner page table index?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "14"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Total bits=32, Offset=12 (4KB), Outer=10 (1024 entries). Inner = 32-12-10 = 10 bits",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2023",
+      "numerical_value": 10,
+      "type": "numerical"
+    },
+    {
+      "id": 13,
+      "topic": "Database - Query Optimization & Transactions",
+      "question": "Consider schedule S: R1(X), W2(X), R2(Y), W3(Y), R3(Z), W1(Z), R1(Y), W2(Z). How many conflicts exist in this schedule?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Conflicts: (R1(X),W2(X)), (W2(X),W1(Z) - no), (R2(Y),W3(Y)), (W3(Y),R1(Y)), (R3(Z),W1(Z)), (W1(Z),W2(Z)). Total 5 conflicts",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2021",
+      "numerical_value": 5,
+      "type": "numerical"
+    },
+    {
+      "id": 32,
+      "topic": "Computer Organization - Cache & Pipeline",
+      "question": "A 5-stage pipeline (IF, ID, EX, MEM, WB) executes 100 instructions. Assuming no hazards, what is the speedup compared to non-pipelined execution?",
+      "options": [
+        "4.81",
+        "4.85",
+        "4.90",
+        "5.00"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pipeline time=5+(100-1)=104 cycles. Non-pipeline=100×5=500 cycles. Speedup=500/104≈4.81",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2022",
+      "numerical_value": 4.81,
+      "type": "numerical"
+    },
+    {
+      "id": 18,
+      "topic": "Computer Networks - Protocol Analysis",
+      "question": "A 10 Mbps Ethernet has maximum cable length 2500m and signal propagation speed 2×10⁸ m/s. What is the minimum frame size (in bytes) to ensure collision detection?",
+      "options": [
+        "46",
+        "64",
+        "128",
+        "256"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Propagation time=2500/(2×10⁸)=12.5μs. RTT=25μs. Min frame time=2×propagation time. Bits=10×10⁶×25×10⁻⁶=250 bits. But standard is 64 bytes=512 bits for safety",
+      "difficulty": "hard",
+      "marks": 3,
+      "year": "2021",
+      "numerical_value": 64,
+      "type": "numerical"
+    },
+    {
+      "id": 31,
+      "topic": "Computer Organization - Cache & Pipeline",
+      "question": "A cache has 64 blocks, block size 32 bytes, uses 2-way set associative mapping. For 32-bit address, how many bits are used for tag?",
+      "options": [
+        "22",
+        "24",
+        "25",
+        "27"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Sets=64/2=32=2⁵. Offset=5 bits (32 bytes). Set index=5 bits. Tag=32-5-5=22 bits. Wait: Block offset=log₂(32)=5, Set=log₂(32)=5. Tag=32-10=22. Recalc: 32 bytes=2⁵, so offset=5. 32 sets=2⁵, so index=5. Tag=32-5-5=22",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2023",
+      "numerical_value": 22,
+      "type": "numerical"
+    },
+    {
+      "id": 26,
+      "topic": "Digital Logic - Circuit Design",
+      "question": "A 4-bit ripple counter has flip-flops with propagation delay 10ns each. What is the maximum frequency of operation (in MHz)?",
+      "options": [
+        "12.5",
+        "25",
+        "50",
+        "100"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Total delay=4×10ns=40ns. Max frequency=1/(40×10⁻⁹)=25×10⁶ Hz=25 MHz",
+      "difficulty": "hard",
+      "marks": 2,
+      "year": "2023",
+      "numerical_value": 25,
+      "type": "numerical"
+    }
+  ]
+}

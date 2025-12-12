@@ -1,0 +1,47 @@
+{
+  "total_questions": 398,
+  "difficulty_distribution": {
+    "medium": 180,
+    "easy": 135,
+    "hard": 63,
+    "intermediate": 8,
+    "beginner": 8,
+    "advanced": 4
+  },
+  "numerical_questions": 30,
+  "sources": [
+    "comprehensive_300_questions.json",
+    "hard_numerical_questions.json",
+    "textbook_questions.json",
+    "authentic_gate_questions.json"
+  ],
+  "generated_at": "2025-12-02T20:43:05.559372",
+  "topics": [
+    "Database - Navathe",
+    "General Aptitude",
+    "Database - Query Optimization & Transactions",
+    "Database Management",
+    "Computer Organization",
+    "Computer Organization & Architecture",
+    "Digital Logic - Circuit Design",
+    "DBMS",
+    "Compiler Design",
+    "Computer Networks",
+    "Theory of Computation",
+    "Algorithms - Complexity Analysis",
+    "Theory of Computation - Automata",
+    "Operating Systems - Tanenbaum",
+    "Computer Networks - Forouzan",
+    "Algorithms - Cormen",
+    "Digital Logic",
+    "Programming",
+    "Operating Systems",
+    "Engineering Mathematics",
+    "Computer Networks - Protocol Analysis",
+    "Data Structures",
+    "Algorithms",
+    "Data Structures & Algorithms",
+    "Operating Systems - Memory & Paging",
+    "Computer Organization - Cache & Pipeline"
+  ]
+}

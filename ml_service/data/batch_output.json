@@ -1,0 +1,192 @@
+[
+  {
+    "id": "Q0001",
+    "text": "What is the purpose of TLB?",
+    "options": [
+      "Cache memory",
+      "Speed up address translation",
+      "Store page tables",
+      "Manage processes"
+    ],
+    "correctAnswer": "Speed up address translation",
+    "explanation": "TLB caches virtual-to-physical translations",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0002",
+    "text": "Which page replacement is optimal?",
+    "options": [
+      "FIFO",
+      "LRU",
+      "Optimal",
+      "LFU"
+    ],
+    "correctAnswer": "Optimal",
+    "explanation": "Optimal replaces page not used for longest time in future",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0003",
+    "text": "Max processes in deadlock with 3 resources?",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "Unlimited"
+    ],
+    "correctAnswer": "3",
+    "explanation": "Max processes = number of resources",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0004",
+    "text": "Which scheduling causes starvation?",
+    "options": [
+      "FCFS",
+      "Round Robin",
+      "Priority",
+      "SJF"
+    ],
+    "correctAnswer": "Priority",
+    "explanation": "Low priority may never execute",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0005",
+    "text": "Critical section ensures?",
+    "options": [
+      "Deadlock",
+      "Race condition",
+      "Mutual exclusion",
+      "Starvation"
+    ],
+    "correctAnswer": "Mutual exclusion",
+    "explanation": "Critical section ensures mutual exclusion",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0006",
+    "text": "Fastest IPC mechanism?",
+    "options": [
+      "Pipes",
+      "Message Queue",
+      "Shared Memory",
+      "Sockets"
+    ],
+    "correctAnswer": "Shared Memory",
+    "explanation": "Shared memory avoids kernel copying",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0007",
+    "text": "Banker algorithm for?",
+    "options": [
+      "Scheduling",
+      "Deadlock avoidance",
+      "Memory allocation",
+      "File management"
+    ],
+    "correctAnswer": "Deadlock avoidance",
+    "explanation": "Prevents deadlock",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0008",
+    "text": "Round Robin uses?",
+    "options": [
+      "Fixed time slice",
+      "Variable time",
+      "Priority based",
+      "Random"
+    ],
+    "correctAnswer": "Fixed time slice",
+    "explanation": "RR uses fixed quantum",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0009",
+    "text": "External fragmentation in?",
+    "options": [
+      "Paging",
+      "Segmentation",
+      "Both",
+      "Neither"
+    ],
+    "correctAnswer": "Segmentation",
+    "explanation": "Segmentation causes external fragmentation",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0010",
+    "text": "Working set is?",
+    "options": [
+      "Pages in memory",
+      "Processes",
+      "Resources",
+      "Threads"
+    ],
+    "correctAnswer": "Pages in memory",
+    "explanation": "Pages referenced in time window",
+    "topic": "Operating Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  }
+]

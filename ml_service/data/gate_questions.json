@@ -1,0 +1,60 @@
+{
+  "questions": [
+    {
+      "id": "Q001",
+      "text": "What is the time complexity of binary search?",
+      "options": ["O(n)", "O(log n)", "O(n^2)", "O(1)"],
+      "correctAnswer": "O(log n)",
+      "topic": "Algorithms",
+      "subject": "Data Structures and Algorithms",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1
+    },
+    {
+      "id": "Q002",
+      "text": "Which scheduling algorithm can cause starvation?",
+      "options": ["FCFS", "Round Robin", "Priority Scheduling", "SJF"],
+      "correctAnswer": "Priority Scheduling",
+      "topic": "Process Scheduling",
+      "subject": "Operating Systems",
+      "difficulty": "medium",
+      "year": 2023,
+      "marks": 2
+    },
+    {
+      "id": "Q003",
+      "text": "In a B-tree of order m, what is the maximum number of children a node can have?",
+      "options": ["m", "m-1", "m+1", "2m"],
+      "correctAnswer": "m",
+      "topic": "Data Structures",
+      "subject": "Data Structures and Algorithms",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 2
+    },
+    {
+      "id": "Q004",
+      "text": "What is the purpose of the Transport Layer in the OSI model?",
+      "options": ["Routing", "End-to-end communication", "Physical transmission", "Data encryption"],
+      "correctAnswer": "End-to-end communication",
+      "topic": "Network Layers",
+      "subject": "Computer Networks",
+      "difficulty": "easy",
+      "year": 2023,
+      "marks": 1
+    },
+    {
+      "id": "Q005",
+      "text": "Which normal form eliminates transitive dependencies?",
+      "options": ["1NF", "2NF", "3NF", "BCNF"],
+      "correctAnswer": "3NF",
+      "topic": "Normalization",
+      "subject": "DBMS",
+      "difficulty": "medium",
+      "year": 2022,
+      "marks": 2
+    }
+  ]
+}
+

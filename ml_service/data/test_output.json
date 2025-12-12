@@ -1,0 +1,572 @@
+[
+  {
+    "id": "Q0001",
+    "text": "Operating Systems question about Process Management - Question 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0002",
+    "text": "Operating Systems question about Process Management - Question 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2024,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0003",
+    "text": "Operating Systems question about Process Management - Question 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0004",
+    "text": "Operating Systems question about Process Management - Question 4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2024,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0005",
+    "text": "Operating Systems question about Process Management - Question 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0006",
+    "text": "Operating Systems question about Process Management - Question 6",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0007",
+    "text": "Operating Systems question about Process Management - Question 7",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0008",
+    "text": "Operating Systems question about Process Management - Question 8",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0009",
+    "text": "Operating Systems question about Process Management - Question 9",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0010",
+    "text": "Operating Systems question about Process Management - Question 10",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Process Management concepts.",
+    "topic": "Process Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0011",
+    "text": "Operating Systems question about Memory Management - Question 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0012",
+    "text": "Operating Systems question about Memory Management - Question 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2020,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0013",
+    "text": "Operating Systems question about Memory Management - Question 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0014",
+    "text": "Operating Systems question about Memory Management - Question 4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0015",
+    "text": "Operating Systems question about Memory Management - Question 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0016",
+    "text": "Operating Systems question about Memory Management - Question 6",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2020,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0017",
+    "text": "Operating Systems question about Memory Management - Question 7",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2020,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0018",
+    "text": "Operating Systems question about Memory Management - Question 8",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0019",
+    "text": "Operating Systems question about Memory Management - Question 9",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0020",
+    "text": "Operating Systems question about Memory Management - Question 10",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Memory Management concepts.",
+    "topic": "Memory Management",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0021",
+    "text": "Operating Systems question about File Systems - Question 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests File Systems concepts.",
+    "topic": "File Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2020,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0022",
+    "text": "Operating Systems question about File Systems - Question 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests File Systems concepts.",
+    "topic": "File Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0023",
+    "text": "Operating Systems question about File Systems - Question 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests File Systems concepts.",
+    "topic": "File Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0024",
+    "text": "Operating Systems question about File Systems - Question 4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests File Systems concepts.",
+    "topic": "File Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "medium",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0025",
+    "text": "Operating Systems question about File Systems - Question 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests File Systems concepts.",
+    "topic": "File Systems",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2023,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0026",
+    "text": "Operating Systems question about Deadlocks - Question 1",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Deadlocks concepts.",
+    "topic": "Deadlocks",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0027",
+    "text": "Operating Systems question about Deadlocks - Question 2",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Deadlocks concepts.",
+    "topic": "Deadlocks",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2022,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0028",
+    "text": "Operating Systems question about Deadlocks - Question 3",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Deadlocks concepts.",
+    "topic": "Deadlocks",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2024,
+    "marks": 1,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0029",
+    "text": "Operating Systems question about Deadlocks - Question 4",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Deadlocks concepts.",
+    "topic": "Deadlocks",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "easy",
+    "year": 2023,
+    "marks": 2,
+    "questionType": "MCQ"
+  },
+  {
+    "id": "Q0030",
+    "text": "Operating Systems question about Deadlocks - Question 5",
+    "options": [
+      "Option A",
+      "Option B",
+      "Option C",
+      "Option D"
+    ],
+    "correctAnswer": "Option A",
+    "explanation": "This tests Deadlocks concepts.",
+    "topic": "Deadlocks",
+    "subject": "Operating Systems",
+    "section": "Core Computer Science",
+    "difficulty": "hard",
+    "year": 2021,
+    "marks": 2,
+    "questionType": "MCQ"
+  }
+]
