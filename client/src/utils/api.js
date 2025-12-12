@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { DEMO_MODE } from '../config/demo';
+import { demoApi } from './demoApi';
 
 // Create axios instance with proper configuration
 const api = axios.create({
@@ -47,4 +49,19 @@ api.interceptors.response.use(
   }
 );
 
-export default api;
+// Demo API wrapper
+const demoApiWrapper = {
+  get: (url) => {
+    if (url.includes('/api/dashboard')) return demoApi.getDashboard();
+    if (url.includes('/api/analytics')) return demoApi.getAnalytics();
+    if (url.includes('/api/predict')) return demoApi.getPredictions();
+    return Promise.reject(new Error('Demo API endpoint not implemented'));
+  },
+  post: (url, data) => {
+    if (url.includes('/api/generate-test')) return demoApi.generateTest(data);
+    if (url.includes('/api/submit-test')) return demoApi.submitTest(data.testId, data.answers);
+    return Promise.reject(new Error('Demo API endpoint not implemented'));
+  }
+};
+
+export default DEMO_MODE ? demoApiWrapper : api;

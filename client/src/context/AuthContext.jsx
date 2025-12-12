@@ -1,5 +1,6 @@
 import { createContext, useState, useContext, useEffect } from 'react';
 import api from '../utils/api';
+import { DEMO_MODE, demoAuth } from '../config/demo';
 
 const AuthContext = createContext(null);
 
@@ -18,8 +19,13 @@ export const AuthProvider = ({ children }) => {
 
   const fetchUser = async () => {
     try {
-      const response = await api.get('/api/auth/me');
-      setUser(response.data);
+      if (DEMO_MODE) {
+        const user = await demoAuth.getUser();
+        setUser(user);
+      } else {
+        const response = await api.get('/api/auth/me');
+        setUser(response.data);
+      }
     } catch (error) {
       console.error('Fetch user error:', error);
       localStorage.removeItem('token');
@@ -30,19 +36,31 @@ export const AuthProvider = ({ children }) => {
   };
 
   const login = async (email, password) => {
-    const response = await api.post('/api/auth/login', { email, password });
-    const { token, user } = response.data;
-    localStorage.setItem('token', token);
-    setUser(user);
-    return user;
+    if (DEMO_MODE) {
+      const { token, user } = await demoAuth.login(email, password);
+      setUser(user);
+      return user;
+    } else {
+      const response = await api.post('/api/auth/login', { email, password });
+      const { token, user } = response.data;
+      localStorage.setItem('token', token);
+      setUser(user);
+      return user;
+    }
   };
 
   const register = async (name, email, password) => {
-    const response = await api.post('/api/auth/register', { name, email, password });
-    const { token, user } = response.data;
-    localStorage.setItem('token', token);
-    setUser(user);
-    return user;
+    if (DEMO_MODE) {
+      const { token, user } = await demoAuth.register(name, email, password);
+      setUser(user);
+      return user;
+    } else {
+      const response = await api.post('/api/auth/register', { name, email, password });
+      const { token, user } = response.data;
+      localStorage.setItem('token', token);
+      setUser(user);
+      return user;
+    }
   };
 
   const logout = () => {

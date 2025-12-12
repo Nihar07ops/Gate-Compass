@@ -26,6 +26,7 @@ import {
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
+import DemoBanner from '../components/DemoBanner';
 
 const Login = () => {
   const [email, setEmail] = useState('');
@@ -55,6 +56,7 @@ const Login = () => {
       sx={{
         minHeight: '100vh',
         display: 'flex',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -94,6 +96,10 @@ const Login = () => {
           <Icon sx={{ fontSize: 60, color: '#ffffff' }} />
         </motion.div>
       ))}
+
+      <Box sx={{ position: 'absolute', top: 20, left: 20, right: 20, zIndex: 2 }}>
+        <DemoBanner />
+      </Box>
 
       <Container maxWidth="sm" sx={{ position: 'relative', zIndex: 1 }}>
         <motion.div

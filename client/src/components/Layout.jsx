@@ -33,48 +33,49 @@ import {
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
+import DemoBanner from './DemoBanner';
 
 const drawerWidth = 240;
 
 const menuItems = [
-  { 
-    text: 'Dashboard', 
-    icon: <DashboardIcon />, 
+  {
+    text: 'Dashboard',
+    icon: <DashboardIcon />,
     path: '/dashboard',
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     color: '#667eea'
   },
-  { 
-    text: 'Historical Trends', 
-    icon: <TrendingUp />, 
+  {
+    text: 'Historical Trends',
+    icon: <TrendingUp />,
     path: '/dashboard/trends',
     gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     color: '#f093fb'
   },
-  { 
-    text: 'AI Predictions', 
-    icon: <Psychology />, 
+  {
+    text: 'AI Predictions',
+    icon: <Psychology />,
     path: '/dashboard/predictions',
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     color: '#4facfe'
   },
-  { 
-    text: 'Mock Tests', 
-    icon: <Quiz />, 
+  {
+    text: 'Mock Tests',
+    icon: <Quiz />,
     path: '/dashboard/mock-test',
     gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
     color: '#43e97b'
   },
-  { 
-    text: 'Analytics', 
-    icon: <Analytics />, 
+  {
+    text: 'Analytics',
+    icon: <Analytics />,
     path: '/dashboard/analytics',
     gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     color: '#fa709a'
   },
-  { 
-    text: 'Resources', 
-    icon: <MenuBook />, 
+  {
+    text: 'Resources',
+    icon: <MenuBook />,
     path: '/dashboard/resources',
     gradient: 'linear-gradient(135deg, #30cfd0 0%, #330867 100%)',
     color: '#30cfd0'
@@ -100,7 +101,7 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
     <Box
       sx={{
         height: '100%',
-        background: darkMode 
+        background: darkMode
           ? 'linear-gradient(180deg, #1a1f3a 0%, #0a0e27 100%)'
           : 'linear-gradient(180deg, #ffffff 0%, #f5f7fa 100%)',
         position: 'relative',
@@ -200,8 +201,8 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
                         },
                       },
                       '&:hover': {
-                        background: darkMode 
-                          ? 'rgba(102, 126, 234, 0.1)' 
+                        background: darkMode
+                          ? 'rgba(102, 126, 234, 0.1)'
                           : 'rgba(102, 126, 234, 0.05)',
                       },
                       transition: 'all 0.3s ease',
@@ -228,7 +229,7 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
                     >
                       {item.icon}
                     </ListItemIcon>
-                    <ListItemText 
+                    <ListItemText
                       primary={item.text}
                       primaryTypographyProps={{
                         fontWeight: isActive ? 600 : 500,
@@ -248,9 +249,9 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
   return (
     <Box sx={{ display: 'flex', minHeight: '100vh' }}>
       {/* Enhanced AppBar */}
-      <AppBar 
-        position="fixed" 
-        sx={{ 
+      <AppBar
+        position="fixed"
+        sx={{
           zIndex: (theme) => theme.zIndex.drawer + 1,
           background: darkMode
             ? 'rgba(26, 31, 58, 0.95)'
@@ -267,19 +268,19 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
             color="inherit"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ 
-              mr: 2, 
+            sx={{
+              mr: 2,
               display: { sm: 'none' },
               color: darkMode ? 'white' : 'inherit',
             }}
           >
             <MenuIcon />
           </IconButton>
-          <Typography 
-            variant="h6" 
-            noWrap 
-            component="div" 
-            sx={{ 
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{
               flexGrow: 1,
               fontWeight: 600,
               background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -290,18 +291,18 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
           >
             GATE CSE Preparation Platform
           </Typography>
-          
+
           {/* Theme Toggle */}
-          <IconButton 
+          <IconButton
             onClick={toggleDarkMode}
             sx={{
               mr: 1,
-              background: darkMode 
-                ? 'rgba(102, 126, 234, 0.1)' 
+              background: darkMode
+                ? 'rgba(102, 126, 234, 0.1)'
                 : 'rgba(102, 126, 234, 0.05)',
               '&:hover': {
-                background: darkMode 
-                  ? 'rgba(102, 126, 234, 0.2)' 
+                background: darkMode
+                  ? 'rgba(102, 126, 234, 0.2)'
                   : 'rgba(102, 126, 234, 0.1)',
               },
             }}
@@ -311,9 +312,9 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
 
           {/* User Menu */}
           <IconButton onClick={handleMenuOpen}>
-            <Avatar 
-              sx={{ 
-                width: 36, 
+            <Avatar
+              sx={{
+                width: 36,
                 height: 36,
                 background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                 fontWeight: 600,
@@ -322,9 +323,9 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
               {user?.name?.[0]}
             </Avatar>
           </IconButton>
-          <Menu 
-            anchorEl={anchorEl} 
-            open={Boolean(anchorEl)} 
+          <Menu
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
             onClose={handleMenuClose}
             PaperProps={{
               sx: {
@@ -346,7 +347,7 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
               </Box>
             </MenuItem>
             <Divider sx={{ my: 1 }} />
-            <MenuItem 
+            <MenuItem
               onClick={handleLogout}
               sx={{
                 color: '#f5576c',
@@ -370,8 +371,8 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
         onClose={handleDrawerToggle}
         sx={{
           display: { xs: 'block', sm: 'none' },
-          '& .MuiDrawer-paper': { 
-            boxSizing: 'border-box', 
+          '& .MuiDrawer-paper': {
+            boxSizing: 'border-box',
             width: drawerWidth,
             border: 'none',
           },
@@ -387,8 +388,8 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
           display: { xs: 'none', sm: 'block' },
           width: drawerWidth,
           flexShrink: 0,
-          '& .MuiDrawer-paper': { 
-            width: drawerWidth, 
+          '& .MuiDrawer-paper': {
+            width: drawerWidth,
             boxSizing: 'border-box',
             border: 'none',
             boxShadow: darkMode
@@ -401,11 +402,11 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
       </Drawer>
 
       {/* Main Content Area with Background */}
-      <Box 
-        component="main" 
-        sx={{ 
-          flexGrow: 1, 
-          p: 3, 
+      <Box
+        component="main"
+        sx={{
+          flexGrow: 1,
+          p: 3,
           mt: 8,
           minHeight: '100vh',
           background: darkMode
@@ -432,6 +433,7 @@ const Layout = ({ darkMode, toggleDarkMode }) => {
           }}
         />
         <Box sx={{ position: 'relative', zIndex: 1 }}>
+          <DemoBanner />
           <Outlet />
         </Box>
       </Box>

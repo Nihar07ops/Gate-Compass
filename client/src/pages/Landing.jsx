@@ -10,6 +10,7 @@ import {
   ArrowForward,
   Star,
 } from '@mui/icons-material';
+import DemoBanner from '../components/DemoBanner';
 
 const Landing = () => {
   const [gateOpening, setGateOpening] = useState(false);
@@ -68,6 +69,10 @@ const Landing = () => {
         overflow: 'hidden',
       }}
     >
+      {/* Demo Banner */}
+      <Box sx={{ position: 'absolute', top: 20, left: 20, right: 20, zIndex: 10 }}>
+        <DemoBanner />
+      </Box>
       {/* Animated Background Elements */}
       <Box
         sx={{
@@ -233,6 +238,57 @@ const Landing = () => {
                   </Typography>
                 </motion.div>
 
+                {/* Demo Information */}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.8, duration: 0.6 }}
+                >
+                  <Box
+                    sx={{
+                      mb: 4,
+                      p: 3,
+                      background: 'rgba(255, 255, 255, 0.1)',
+                      backdropFilter: 'blur(10px)',
+                      borderRadius: 3,
+                      border: '1px solid rgba(255, 255, 255, 0.2)',
+                    }}
+                  >
+                    <Typography
+                      variant="h6"
+                      sx={{
+                        color: '#ffffff',
+                        fontWeight: 600,
+                        mb: 1,
+                        textAlign: 'center',
+                      }}
+                    >
+                      🚀 Live Demo Available
+                    </Typography>
+                    <Typography
+                      variant="body1"
+                      sx={{
+                        color: 'rgba(255, 255, 255, 0.9)',
+                        textAlign: 'center',
+                        mb: 2,
+                      }}
+                    >
+                      Experience the complete GATE preparation platform with mock tests,
+                      historical trends, AI predictions, and 25+ standard textbooks.
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      sx={{
+                        color: 'rgba(255, 255, 255, 0.8)',
+                        textAlign: 'center',
+                        fontStyle: 'italic',
+                      }}
+                    >
+                      Login with any email/password to explore all features
+                    </Typography>
+                  </Box>
+                </motion.div>
+
                 {/* Feature Icons */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -300,7 +356,7 @@ const Landing = () => {
                     type: 'spring',
                     stiffness: 200,
                   }}
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
                   }}
                   whileTap={{ scale: 0.98 }}
@@ -334,7 +390,7 @@ const Landing = () => {
                         zIndex: 0,
                       }}
                     />
-                    
+
                     <Button
                       variant="contained"
                       endIcon={<ArrowForward sx={{ fontSize: '1rem' }} />}
@@ -496,8 +552,8 @@ const Landing = () => {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 0.8 }}
-              style={{ 
-                position: 'relative', 
+              style={{
+                position: 'relative',
                 zIndex: 1,
                 maxWidth: '90%',
                 textAlign: 'center',
