@@ -129,16 +129,16 @@ const HistoricalTrends = () => {
     const fetchTrendsData = async () => {
       try {
         setLoading(true);
-        
+
         // Fetch from ML service API
         const response = await fetch('http://localhost:8000/historical-trends/gate-cse');
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const apiData = await response.json();
-        
+
         // Process the API data
         const processedData = {
           ...apiData,
@@ -147,7 +147,7 @@ const HistoricalTrends = () => {
           trendingUp: apiData.statistics.trendingUp,
           yearlyData: apiData.statistics.yearlyData
         };
-        
+
         setTrendsData(processedData);
         setError(null);
       } catch (err) {
@@ -157,10 +157,10 @@ const HistoricalTrends = () => {
           ...gateHistoricalData,
           totalMarks: Object.values(gateHistoricalData.subjects).reduce((sum, subject) => sum + subject.avgMarks, 0),
           highestScoring: Object.entries(gateHistoricalData.subjects)
-            .sort(([,a], [,b]) => b.avgMarks - a.avgMarks)
+            .sort(([, a], [, b]) => b.avgMarks - a.avgMarks)
             .slice(0, 5),
           trendingUp: Object.entries(gateHistoricalData.subjects)
-            .filter(([,subject]) => subject.trend === 'increasing')
+            .filter(([, subject]) => subject.trend === 'increasing')
             .length,
           yearlyData: gateHistoricalData.years.map(year => {
             const yearIndex = gateHistoricalData.years.indexOf(year);
@@ -169,11 +169,12 @@ const HistoricalTrends = () => {
               totalMarks: Object.values(gateHistoricalData.subjects)
                 .reduce((sum, subject) => sum + subject.marks[yearIndex], 0)
             };
-          })
+          }),
+          enhanced: false // Flag to indicate this is local fallback data
         };
-        
+
         setTrendsData(processedData);
-        setError('Using cached data - API temporarily unavailable');
+        setError(null); // Use fallback data without showing error
       } finally {
         setLoading(false);
       }
@@ -246,15 +247,23 @@ const HistoricalTrends = () => {
               GATE CSE Historical Trends
             </Typography>
             <Typography variant="subtitle1" color="text.secondary">
-              Mark distribution analysis from 2019-2024 • Data source: 
-              <Button 
-                size="small" 
+              Mark distribution analysis from 2019-2024 • Data source:
+              <Button
+                size="small"
                 endIcon={<OpenInNew />}
                 onClick={() => window.open('https://gatecse.in/mark-distribution-in-gate-cse/', '_blank')}
                 sx={{ ml: 1 }}
               >
                 gatecse.in
               </Button>
+              {!trendsData?.enhanced && (
+                <Chip
+                  label="Local Data"
+                  size="small"
+                  color="info"
+                  sx={{ ml: 2 }}
+                />
+              )}
             </Typography>
           </Box>
           <IconButton onClick={() => window.location.reload()}>
@@ -287,9 +296,9 @@ const HistoricalTrends = () => {
                         </Typography>
                       </Box>
                       <Box display="flex" alignItems="center">
-                        <LinearProgress 
-                          variant="determinate" 
-                          value={(data.avgMarks / 15) * 100} 
+                        <LinearProgress
+                          variant="determinate"
+                          value={(data.avgMarks / 15) * 100}
                           sx={{ width: 100, mr: 2 }}
                         />
                         <Typography variant="h6" fontWeight="bold" color="primary">
@@ -319,17 +328,17 @@ const HistoricalTrends = () => {
                   ].map((item, index) => (
                     <Box key={item.name} display="flex" justifyContent="space-between" alignItems="center" py={1}>
                       <Box display="flex" alignItems="center">
-                        <Chip 
-                          label={item.name} 
+                        <Chip
+                          label={item.name}
                           color={item.color}
                           size="small"
                           sx={{ minWidth: 80 }}
                         />
                       </Box>
                       <Box display="flex" alignItems="center">
-                        <LinearProgress 
-                          variant="determinate" 
-                          value={(item.value / Object.keys(trendsData.subjects).length) * 100} 
+                        <LinearProgress
+                          variant="determinate"
+                          value={(item.value / Object.keys(trendsData.subjects).length) * 100}
                           sx={{ width: 100, mr: 2 }}
                         />
                         <Typography variant="h6" fontWeight="bold">
@@ -361,18 +370,18 @@ const HistoricalTrends = () => {
                         </Typography>
                         {getTrendIcon(subjectData.trend)}
                       </Box>
-                      
+
                       <Box mb={2}>
                         <Typography variant="body2" color="text.secondary" gutterBottom>
                           Average Marks: {subjectData.avgMarks}
                         </Typography>
-                        <LinearProgress 
-                          variant="determinate" 
-                          value={(subjectData.avgMarks / 15) * 100} 
+                        <LinearProgress
+                          variant="determinate"
+                          value={(subjectData.avgMarks / 15) * 100}
                           sx={{ mb: 1 }}
                         />
-                        <Chip 
-                          label={subjectData.importance} 
+                        <Chip
+                          label={subjectData.importance}
                           color={getImportanceColor(subjectData.importance)}
                           size="small"
                         />
@@ -385,17 +394,17 @@ const HistoricalTrends = () => {
                       </Typography>
                       <Box display="flex" flexWrap="wrap" gap={0.5}>
                         {subjectData.topics.slice(0, 3).map((topic, index) => (
-                          <Chip 
+                          <Chip
                             key={index}
-                            label={topic} 
-                            size="small" 
+                            label={topic}
+                            size="small"
                             variant="outlined"
                           />
                         ))}
                         {subjectData.topics.length > 3 && (
-                          <Chip 
-                            label={`+${subjectData.topics.length - 3} more`} 
-                            size="small" 
+                          <Chip
+                            label={`+${subjectData.topics.length - 3} more`}
+                            size="small"
                             variant="outlined"
                             color="primary"
                           />
