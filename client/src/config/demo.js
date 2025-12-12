@@ -1,10 +1,19 @@
 // Demo configuration for GitHub Pages deployment
 // Enable demo mode in production OR when backend is not available
-export const DEMO_MODE = process.env.NODE_ENV === 'production' ||
-    process.env.VITE_DEMO_MODE === 'true' ||
-    window.location.hostname.includes('github.io') ||
-    window.location.search.includes('demo=true') ||
-    localStorage.getItem('forceDemo') === 'true';
+const isDemoMode = () => {
+    try {
+        return process.env.NODE_ENV === 'production' ||
+            process.env.VITE_DEMO_MODE === 'true' ||
+            (typeof window !== 'undefined' && window.location.hostname.includes('github.io')) ||
+            (typeof window !== 'undefined' && window.location.search.includes('demo=true')) ||
+            (typeof localStorage !== 'undefined' && localStorage.getItem('forceDemo') === 'true');
+    } catch (error) {
+        console.log('Demo mode detection error:', error);
+        return false;
+    }
+};
+
+export const DEMO_MODE = isDemoMode();
 
 export const DEMO_CONFIG = {
     // Demo user credentials

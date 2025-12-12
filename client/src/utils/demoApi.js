@@ -6,8 +6,11 @@ const mockDelay = (ms = 800) => new Promise(resolve => setTimeout(resolve, ms));
 export const demoApi = {
     // Dashboard data
     getDashboard: async () => {
+        console.log('Demo API: getDashboard called');
         await mockDelay();
-        return { data: DEMO_CONFIG.mockResponses.dashboard };
+        const data = DEMO_CONFIG.mockResponses.dashboard;
+        console.log('Demo API: returning dashboard data:', data);
+        return { data };
     },
 
     // Analytics data

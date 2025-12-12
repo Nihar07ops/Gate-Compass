@@ -73,4 +73,41 @@ const demoApiWrapper = {
   }
 };
 
-export default DEMO_MODE ? demoApiWrapper : api;
+// Debug logging
+console.log('Demo mode status:', DEMO_MODE);
+console.log('Environment:', process.env.NODE_ENV);
+
+// Create a hybrid API that can fallback to demo mode
+const hybridApi = {
+  get: async (url) => {
+    if (DEMO_MODE) {
+      console.log('Using demo API for GET:', url);
+      return demoApiWrapper.get(url);
+    }
+
+    try {
+      console.log('Trying real API for GET:', url);
+      return await api.get(url);
+    } catch (error) {
+      console.log('Real API failed, falling back to demo for GET:', url);
+      return demoApiWrapper.get(url);
+    }
+  },
+
+  post: async (url, data) => {
+    if (DEMO_MODE) {
+      console.log('Using demo API for POST:', url);
+      return demoApiWrapper.post(url, data);
+    }
+
+    try {
+      console.log('Trying real API for POST:', url);
+      return await api.post(url, data);
+    } catch (error) {
+      console.log('Real API failed, falling back to demo for POST:', url);
+      return demoApiWrapper.post(url, data);
+    }
+  }
+};
+
+export default hybridApi;
