@@ -18,10 +18,7 @@ import {
   TrendingUp,
   TrendingDown,
   TrendingFlat,
-  Assessment,
   Timeline,
-  School,
-  EmojiEvents,
   Refresh,
   OpenInNew,
 } from '@mui/icons-material';
@@ -265,80 +262,7 @@ const HistoricalTrends = () => {
           </IconButton>
         </Box>
 
-        {/* Summary Cards */}
-        <Grid container spacing={3} mb={4}>
-          <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
-                  <Box>
-                    <Typography color="text.secondary" gutterBottom>
-                      Total Subjects
-                    </Typography>
-                    <Typography variant="h4">
-                      {Object.keys(trendsData.subjects).length}
-                    </Typography>
-                  </Box>
-                  <School color="primary" sx={{ fontSize: 40 }} />
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-          
-          <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
-                  <Box>
-                    <Typography color="text.secondary" gutterBottom>
-                      Average Total Marks
-                    </Typography>
-                    <Typography variant="h4">
-                      {trendsData.totalMarks.toFixed(0)}
-                    </Typography>
-                  </Box>
-                  <Assessment color="primary" sx={{ fontSize: 40 }} />
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
 
-          <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
-                  <Box>
-                    <Typography color="text.secondary" gutterBottom>
-                      Trending Up
-                    </Typography>
-                    <Typography variant="h4">
-                      {trendsData.trendingUp}
-                    </Typography>
-                  </Box>
-                  <TrendingUp color="success" sx={{ fontSize: 40 }} />
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-
-          <Grid item xs={12} md={3}>
-            <Card>
-              <CardContent>
-                <Box display="flex" alignItems="center" justifyContent="space-between">
-                  <Box>
-                    <Typography color="text.secondary" gutterBottom>
-                      Years Analyzed
-                    </Typography>
-                    <Typography variant="h4">
-                      {trendsData.years.length}
-                    </Typography>
-                  </Box>
-                  <EmojiEvents color="primary" sx={{ fontSize: 40 }} />
-                </Box>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
 
         {/* Yearly Trends Table */}
         <Card sx={{ mb: 4 }}>
