@@ -141,193 +141,44 @@ app.get('/api/dashboard', authMiddleware, async (req, res) => {
   }
 });
 
-// Enhanced Trends - Year-wise and Topic-wise Analysis
+// Trends
 app.get('/api/trends', authMiddleware, async (req, res) => {
-  try {
-    const { subject, startYear = 2015, endYear = 2024 } = req.query;
-    
-    // Get data from ML service
-    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
-    let url = `${mlServiceUrl}/trends/overview?start_year=${startYear}&end_year=${endYear}`;
-    
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('ML service unavailable');
-    }
-    
-    const mlData = await response.json();
-    
-    // Get local data for immediate response
-    const allQuestions = inMemoryDb.getQuestions(1000);
-    const yearWiseData = {};
-    const subjectWiseData = {};
-    
-    // Process questions by year and subject
-    allQuestions.forEach(q => {
-      const year = q.year || 2023;
-      const subj = q.subject || 'Unknown';
-      
-      if (!yearWiseData[year]) {
-        yearWiseData[year] = { total: 0, subjects: {}, topics: {} };
-      }
-      if (!subjectWiseData[subj]) {
-        subjectWiseData[subj] = { total: 0, years: {}, topics: {} };
-      }
-      
-      yearWiseData[year].total++;
-      yearWiseData[year].subjects[subj] = (yearWiseData[year].subjects[subj] || 0) + 1;
-      yearWiseData[year].topics[q.topic] = (yearWiseData[year].topics[q.topic] || 0) + 1;
-      
-      subjectWiseData[subj].total++;
-      subjectWiseData[subj].years[year] = (subjectWiseData[subj].years[year] || 0) + 1;
-      subjectWiseData[subj].topics[q.topic] = (subjectWiseData[subj].topics[q.topic] || 0) + 1;
-    });
-    
-    res.json({
-      ...mlData,
-      localData: {
-        yearWiseBreakdown: yearWiseData,
-        subjectWiseBreakdown: subjectWiseData,
-        totalQuestions: allQuestions.length
-      }
-    });
-  } catch (error) {
-    console.error('Trends API error:', error);
-    
-    // Fallback to local data if ML service fails
-    const allQuestions = inMemoryDb.getQuestions(1000);
-    const topicCount = {};
-    const yearCount = {};
-    const subjectCount = {};
-    
-    allQuestions.forEach(q => {
-      topicCount[q.topic] = (topicCount[q.topic] || 0) + 1;
-      yearCount[q.year] = (yearCount[q.year] || 0) + 1;
-      subjectCount[q.subject] = (subjectCount[q.subject] || 0) + 1;
-    });
-    
-    const topicFrequency = Object.entries(topicCount)
-      .map(([topic, count]) => ({ topic, count }))
-      .sort((a, b) => b.count - a.count);
-    
-    const years = Object.keys(yearCount).sort();
-    const subjects = Object.keys(subjectCount);
-    
-    res.json({
-      topicFrequency,
-      years,
-      subjects,
-      yearCount,
-      subjectCount,
-      totalQuestions: allQuestions.length,
-      fallback: true
-    });
-  }
+  const allQuestions = inMemoryDb.getQuestions(1000);
+  const topicCount = {};
+  const yearCount = {};
+  
+  allQuestions.forEach(q => {
+    topicCount[q.topic] = (topicCount[q.topic] || 0) + 1;
+    yearCount[q.year] = (yearCount[q.year] || 0) + 1;
+  });
+  
+  const topicFrequency = Object.entries(topicCount)
+    .map(([topic, count]) => ({ topic, count }))
+    .sort((a, b) => b.count - a.count);
+  
+  const years = Object.keys(yearCount).sort();
+  const difficultyTrend = years.map(() => Math.random() * 2 + 2.5);
+  
+  res.json({
+    topicFrequency,
+    years,
+    difficultyTrend,
+    totalQuestions: allQuestions.length
+  });
 });
 
-// Subject-specific trends
-app.get('/api/trends/subject/:subject', authMiddleware, async (req, res) => {
-  try {
-    const { subject } = req.params;
-    const { startYear = 2015, endYear = 2024 } = req.query;
-    
-    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
-    const url = `${mlServiceUrl}/trends/subject/${encodeURIComponent(subject)}?start_year=${startYear}&end_year=${endYear}`;
-    
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('Subject data not found');
-    }
-    
-    const data = await response.json();
-    res.json(data);
-  } catch (error) {
-    console.error('Subject trends error:', error);
-    res.status(500).json({ error: 'Failed to fetch subject trends' });
-  }
-});
-
-// Year-wise analysis
-app.get('/api/trends/yearwise', authMiddleware, async (req, res) => {
-  try {
-    const { startYear = 2015, endYear = 2024 } = req.query;
-    
-    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
-    const url = `${mlServiceUrl}/trends/yearwise?start_year=${startYear}&end_year=${endYear}`;
-    
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('ML service unavailable');
-    }
-    
-    const data = await response.json();
-    res.json(data);
-  } catch (error) {
-    console.error('Year-wise trends error:', error);
-    res.status(500).json({ error: 'Failed to fetch year-wise trends' });
-  }
-});
-
-// Enhanced Predictions with ML
+// Predictions
 app.get('/api/predict', authMiddleware, async (req, res) => {
-  try {
-    const { subject, year } = req.query;
-    
-    const mlServiceUrl = process.env.ML_SERVICE_URL || 'http://localhost:8000';
-    let url = `${mlServiceUrl}/predictions/topics`;
-    
-    const params = new URLSearchParams();
-    if (subject) params.append('subject', subject);
-    if (year) params.append('year', year);
-    
-    if (params.toString()) {
-      url += '?' + params.toString();
-    }
-    
-    const response = await fetch(url);
-    if (!response.ok) {
-      throw new Error('ML service unavailable');
-    }
-    
-    const data = await response.json();
-    
-    // Format for frontend compatibility
-    const topicImportance = data.predictions.map(pred => ({
-      topic: pred.topic,
-      score: Math.round(pred.importanceScore * 10), // Scale to 0-100
-      confidence: pred.confidence,
-      frequency: pred.frequency,
-      totalMarks: pred.totalMarks,
-      averageDifficulty: pred.averageDifficulty
-    }));
-    
-    const highPriorityTopics = topicImportance
-      .filter(t => t.score >= 70)
-      .slice(0, 5)
-      .map(t => t.topic);
-    
-    res.json({
-      topicImportance,
-      highPriorityTopics,
-      filters: data.filters,
-      enhanced: true
-    });
-  } catch (error) {
-    console.error('Predictions error:', error);
-    
-    // Fallback predictions
-    res.json({
-      topicImportance: [
-        { topic: 'Algorithms', score: 90 },
-        { topic: 'Data Structures', score: 85 },
-        { topic: 'Operating Systems', score: 75 },
-        { topic: 'DBMS', score: 80 },
-        { topic: 'Networks', score: 70 }
-      ],
-      highPriorityTopics: ['Algorithms', 'Data Structures', 'DBMS'],
-      fallback: true
-    });
-  }
+  res.json({
+    topicImportance: [
+      { topic: 'Algorithms', score: 90 },
+      { topic: 'Data Structures', score: 85 },
+      { topic: 'Operating Systems', score: 75 },
+      { topic: 'DBMS', score: 80 },
+      { topic: 'Networks', score: 70 }
+    ],
+    highPriorityTopics: ['Algorithms', 'Data Structures', 'DBMS']
+  });
 });
 
 // Generate test

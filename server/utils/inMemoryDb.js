@@ -11,12 +11,11 @@ const tests = new Map();
 const questions = new Map();
 const trends = new Map();
 
-// Load questions from JSON file - Use Comprehensive GATE Database
+// Load questions from JSON file - Use GATE Professional Bank
 let sampleQuestions = [];
 try {
-  // Try to load the new comprehensive database first
-  const comprehensivePath = path.join(__dirname, '../../ml_service/data/comprehensive_gate_questions.json');
-  const questionsData = JSON.parse(fs.readFileSync(comprehensivePath, 'utf-8'));
+  const gateProfessionalPath = path.join(__dirname, '../../ml_service/data/gate_professional_bank.json');
+  const questionsData = JSON.parse(fs.readFileSync(gateProfessionalPath, 'utf-8'));
   sampleQuestions = questionsData.map(q => ({
     _id: q.id,
     text: q.text,
@@ -28,61 +27,32 @@ try {
     difficulty: q.difficulty,
     questionType: q.questionType,
     year: q.year,
-    marks: q.marks,
-    numerical_value: q.numerical_value
+    marks: q.marks
   }));
-  console.log(`✅ Loaded ${sampleQuestions.length} comprehensive GATE questions (2015-2024)`);
+  console.log(`✅ Loaded ${sampleQuestions.length} comprehensive GATE questions`);
   
-  // Count by section and year
+  // Count by section
   const sections = {};
-  const years = {};
-  const subjects = {};
-  
   sampleQuestions.forEach(q => {
     sections[q.section] = (sections[q.section] || 0) + 1;
-    years[q.year] = (years[q.year] || 0) + 1;
-    subjects[q.subject] = (subjects[q.subject] || 0) + 1;
   });
-  
   console.log(`📊 Sections: ${Object.entries(sections).map(([s, c]) => `${s}(${c})`).join(', ')}`);
-  console.log(`📅 Years: ${Object.keys(years).sort().join(', ')} (${Object.keys(years).length} years)`);
-  console.log(`📚 Subjects: ${Object.keys(subjects).length} subjects covered`);
 } catch (error) {
-  console.log('⚠️  Comprehensive database not found, trying GATE Professional Bank...');
-  try {
-    const gateProfessionalPath = path.join(__dirname, '../../ml_service/data/gate_professional_bank.json');
-    const questionsData = JSON.parse(fs.readFileSync(gateProfessionalPath, 'utf-8'));
-    sampleQuestions = questionsData.map(q => ({
-      _id: q.id,
-      text: q.text,
-      options: q.options,
-      correctAnswer: q.correctAnswer,
-      topic: q.topic,
-      subject: q.subject,
-      section: q.section,
-      difficulty: q.difficulty,
-      questionType: q.questionType,
-      year: q.year,
-      marks: q.marks
-    }));
-    console.log(`✅ Loaded ${sampleQuestions.length} GATE professional questions`);
-  } catch (fallbackError) {
-    console.log('⚠️  Using fallback questions');
-    sampleQuestions = [
-      {
-        _id: '1',
-        text: 'What is the time complexity of binary search?',
-        options: ['O(n)', 'O(log n)', 'O(n^2)', 'O(1)'],
-        correctAnswer: 'O(log n)',
-        topic: 'Algorithms',
-        subject: 'Data Structures and Algorithms',
-        difficulty: 'easy',
-        questionType: 'MCQ',
-        year: 2023,
-        marks: 1
-      }
-    ];
-  }
+  console.log('⚠️  Using fallback questions');
+  sampleQuestions = [
+    {
+      _id: '1',
+      text: 'What is the time complexity of binary search?',
+      options: ['O(n)', 'O(log n)', 'O(n^2)', 'O(1)'],
+      correctAnswer: 'O(log n)',
+      topic: 'Algorithms',
+      subject: 'Data Structures and Algorithms',
+      difficulty: 'easy',
+      questionType: 'MCQ',
+      year: 2023,
+      marks: 1
+    }
+  ];
 }
 
 sampleQuestions.forEach(q => questions.set(q._id, q));

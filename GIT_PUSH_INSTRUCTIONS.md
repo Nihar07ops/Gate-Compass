@@ -46,11 +46,11 @@ git push -u origin main
 
 ## What's Included in This Commit
 
-### 📊 Enhanced Features (659 Questions)
-- **Comprehensive Question Database**: 2015-2024 GATE patterns
-- **Advanced Trend Analysis**: Year-wise and topic-wise insights
-- **ML-Powered Predictions**: Confidence scoring and importance ranking
-- **Interactive Visualizations**: Real-time filtering and charts
+### 📊 Core Features
+- **GATE Question Database**: Professional-level questions
+- **Historical Trend Analysis**: Basic trend insights
+- **ML-Powered Predictions**: Topic importance ranking
+- **Interactive Visualizations**: Charts and analytics
 
 ### 🛠️ Technical Components
 - **Frontend**: React 18 + Material-UI + Enhanced Trends page

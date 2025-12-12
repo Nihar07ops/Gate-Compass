@@ -52,13 +52,6 @@ const menuItems = [
     color: '#f093fb'
   },
   { 
-    text: 'Enhanced Trends', 
-    icon: <Analytics />, 
-    path: '/dashboard/enhanced-trends',
-    gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
-    color: '#667eea'
-  },
-  { 
     text: 'AI Predictions', 
     icon: <Psychology />, 
     path: '/dashboard/predictions',

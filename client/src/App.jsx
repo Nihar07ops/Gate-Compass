@@ -5,7 +5,6 @@ import { useState, useMemo } from 'react';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import HistoricalTrends from './pages/HistoricalTrends';
-import EnhancedTrends from './pages/EnhancedTrends';
 import PredictiveAnalysis from './pages/PredictiveAnalysis';
 import MockTest from './pages/MockTest';
 import Analytics from './pages/Analytics';
@@ -117,7 +116,6 @@ function App() {
             >
               <Route index element={<Dashboard />} />
               <Route path="trends" element={<HistoricalTrends />} />
-              <Route path="enhanced-trends" element={<EnhancedTrends />} />
               <Route path="predictions" element={<PredictiveAnalysis />} />
               <Route path="mock-test" element={<MockTest />} />
               <Route path="analytics" element={<Analytics />} />
