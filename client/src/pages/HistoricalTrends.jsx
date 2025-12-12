@@ -26,20 +26,7 @@ import {
   OpenInNew,
 } from '@mui/icons-material';
 import { motion } from 'framer-motion';
-import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip as RechartsTooltip,
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  PieChart,
-  Pie,
-  Cell,
-} from 'recharts';
+
 
 const HistoricalTrends = () => {
   const [loading, setLoading] = useState(true);
@@ -138,7 +125,7 @@ const HistoricalTrends = () => {
     }
   };
 
-  const colors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe', '#00f2fe', '#43e97b', '#38f9d7'];
+
 
   useEffect(() => {
     // Fetch historical trends data from API
@@ -353,29 +340,31 @@ const HistoricalTrends = () => {
           </Grid>
         </Grid>
 
-        {/* Yearly Trends Chart */}
+        {/* Yearly Trends Table */}
         <Card sx={{ mb: 4 }}>
           <CardContent>
             <Typography variant="h6" gutterBottom>
               Total Marks Distribution Over Years
             </Typography>
-            <Box height={300}>
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={trendsData.yearlyData}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="year" />
-                  <YAxis />
-                  <RechartsTooltip />
-                  <Line 
-                    type="monotone" 
-                    dataKey="totalMarks" 
-                    stroke="#667eea" 
-                    strokeWidth={3}
-                    dot={{ fill: '#667eea', strokeWidth: 2, r: 6 }}
-                  />
-                </LineChart>
-              </ResponsiveContainer>
-            </Box>
+            <Grid container spacing={2}>
+              {trendsData.yearlyData.map((yearData, index) => (
+                <Grid item xs={6} sm={4} md={2} key={yearData.year}>
+                  <Card variant="outlined">
+                    <CardContent sx={{ textAlign: 'center', py: 2 }}>
+                      <Typography variant="h6" color="primary">
+                        {yearData.year}
+                      </Typography>
+                      <Typography variant="h4" fontWeight="bold">
+                        {yearData.totalMarks}
+                      </Typography>
+                      <Typography variant="caption" color="text.secondary">
+                        Total Marks
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
           </CardContent>
         </Card>
 
@@ -388,22 +377,29 @@ const HistoricalTrends = () => {
                 <Typography variant="h6" gutterBottom>
                   Top Scoring Subjects (Average Marks)
                 </Typography>
-                <Box height={300}>
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={trendsData.highestScoring.map(([name, data]) => ({
-                      name: name.length > 20 ? name.substring(0, 20) + '...' : name,
-                      marks: data.avgMarks,
-                      fullName: name
-                    }))}>
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" angle={-45} textAnchor="end" height={100} />
-                      <YAxis />
-                      <RechartsTooltip 
-                        labelFormatter={(label, payload) => payload[0]?.payload?.fullName || label}
-                      />
-                      <Bar dataKey="marks" fill="#667eea" />
-                    </BarChart>
-                  </ResponsiveContainer>
+                <Box>
+                  {trendsData.highestScoring.map(([name, data], index) => (
+                    <Box key={name} display="flex" justifyContent="space-between" alignItems="center" py={1}>
+                      <Box display="flex" alignItems="center">
+                        <Typography variant="body2" sx={{ minWidth: 24, fontWeight: 'bold', color: 'primary.main' }}>
+                          #{index + 1}
+                        </Typography>
+                        <Typography variant="body1" sx={{ ml: 2 }}>
+                          {name}
+                        </Typography>
+                      </Box>
+                      <Box display="flex" alignItems="center">
+                        <LinearProgress 
+                          variant="determinate" 
+                          value={(data.avgMarks / 15) * 100} 
+                          sx={{ width: 100, mr: 2 }}
+                        />
+                        <Typography variant="h6" fontWeight="bold" color="primary">
+                          {data.avgMarks}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  ))}
                 </Box>
               </CardContent>
             </Card>
@@ -416,29 +412,34 @@ const HistoricalTrends = () => {
                 <Typography variant="h6" gutterBottom>
                   Subject Importance Distribution
                 </Typography>
-                <Box height={300}>
-                  <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                      <Pie
-                        data={[
-                          { name: 'Very High', value: Object.values(trendsData.subjects).filter(s => s.importance === 'Very High').length },
-                          { name: 'High', value: Object.values(trendsData.subjects).filter(s => s.importance === 'High').length },
-                          { name: 'Medium', value: Object.values(trendsData.subjects).filter(s => s.importance === 'Medium').length },
-                          { name: 'Low', value: Object.values(trendsData.subjects).filter(s => s.importance === 'Low').length },
-                        ]}
-                        cx="50%"
-                        cy="50%"
-                        outerRadius={80}
-                        dataKey="value"
-                        label={({ name, value }) => `${name}: ${value}`}
-                      >
-                        {colors.map((color, index) => (
-                          <Cell key={`cell-${index}`} fill={color} />
-                        ))}
-                      </Pie>
-                      <RechartsTooltip />
-                    </PieChart>
-                  </ResponsiveContainer>
+                <Box>
+                  {[
+                    { name: 'Very High', value: Object.values(trendsData.subjects).filter(s => s.importance === 'Very High').length, color: 'error' },
+                    { name: 'High', value: Object.values(trendsData.subjects).filter(s => s.importance === 'High').length, color: 'warning' },
+                    { name: 'Medium', value: Object.values(trendsData.subjects).filter(s => s.importance === 'Medium').length, color: 'info' },
+                    { name: 'Low', value: Object.values(trendsData.subjects).filter(s => s.importance === 'Low').length, color: 'default' },
+                  ].map((item, index) => (
+                    <Box key={item.name} display="flex" justifyContent="space-between" alignItems="center" py={1}>
+                      <Box display="flex" alignItems="center">
+                        <Chip 
+                          label={item.name} 
+                          color={item.color}
+                          size="small"
+                          sx={{ minWidth: 80 }}
+                        />
+                      </Box>
+                      <Box display="flex" alignItems="center">
+                        <LinearProgress 
+                          variant="determinate" 
+                          value={(item.value / Object.keys(trendsData.subjects).length) * 100} 
+                          sx={{ width: 100, mr: 2 }}
+                        />
+                        <Typography variant="h6" fontWeight="bold">
+                          {item.value}
+                        </Typography>
+                      </Box>
+                    </Box>
+                  ))}
                 </Box>
               </CardContent>
             </Card>
