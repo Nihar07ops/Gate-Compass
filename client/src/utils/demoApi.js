@@ -153,5 +153,44 @@ export const demoApi = {
                 ]
             }
         };
+    },
+
+    // Authentication endpoints for API wrapper
+    login: async (data) => {
+        await mockDelay(1000);
+        if (data.email && data.password) {
+            const token = 'demo-token-' + Date.now();
+            localStorage.setItem('token', token);
+            return {
+                data: {
+                    token,
+                    user: DEMO_CONFIG.demoUser
+                }
+            };
+        } else {
+            throw new Error('Please enter email and password');
+        }
+    },
+
+    register: async (data) => {
+        await mockDelay(1000);
+        const token = 'demo-token-' + Date.now();
+        localStorage.setItem('token', token);
+        return {
+            data: {
+                token,
+                user: { ...DEMO_CONFIG.demoUser, name: data.name, email: data.email }
+            }
+        };
+    },
+
+    getUser: async () => {
+        await mockDelay(500);
+        const token = localStorage.getItem('token');
+        if (token) {
+            return { data: DEMO_CONFIG.demoUser };
+        } else {
+            throw new Error('No token found');
+        }
     }
 };

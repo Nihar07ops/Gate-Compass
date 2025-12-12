@@ -41,11 +41,19 @@ export const AuthProvider = ({ children }) => {
       setUser(user);
       return user;
     } else {
-      const response = await api.post('/api/auth/login', { email, password });
-      const { token, user } = response.data;
-      localStorage.setItem('token', token);
-      setUser(user);
-      return user;
+      try {
+        const response = await api.post('/api/auth/login', { email, password });
+        const { token, user } = response.data;
+        localStorage.setItem('token', token);
+        setUser(user);
+        return user;
+      } catch (error) {
+        // If backend is not available, fall back to demo mode
+        console.log('Backend not available, switching to demo mode');
+        const { token, user } = await demoAuth.login(email, password);
+        setUser(user);
+        return user;
+      }
     }
   };
 
@@ -55,11 +63,19 @@ export const AuthProvider = ({ children }) => {
       setUser(user);
       return user;
     } else {
-      const response = await api.post('/api/auth/register', { name, email, password });
-      const { token, user } = response.data;
-      localStorage.setItem('token', token);
-      setUser(user);
-      return user;
+      try {
+        const response = await api.post('/api/auth/register', { name, email, password });
+        const { token, user } = response.data;
+        localStorage.setItem('token', token);
+        setUser(user);
+        return user;
+      } catch (error) {
+        // If backend is not available, fall back to demo mode
+        console.log('Backend not available, switching to demo mode');
+        const { token, user } = await demoAuth.register(name, email, password);
+        setUser(user);
+        return user;
+      }
     }
   };
 

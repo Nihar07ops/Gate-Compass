@@ -52,12 +52,21 @@ api.interceptors.response.use(
 // Demo API wrapper
 const demoApiWrapper = {
   get: (url) => {
+    if (url.includes('/api/auth/me')) {
+      return demoApi.getUser ? demoApi.getUser() : Promise.resolve({ data: null });
+    }
     if (url.includes('/api/dashboard')) return demoApi.getDashboard();
     if (url.includes('/api/analytics')) return demoApi.getAnalytics();
     if (url.includes('/api/predict')) return demoApi.getPredictions();
     return Promise.reject(new Error('Demo API endpoint not implemented'));
   },
   post: (url, data) => {
+    if (url.includes('/api/auth/login')) {
+      return demoApi.login ? demoApi.login(data) : Promise.reject(new Error('Demo login not available'));
+    }
+    if (url.includes('/api/auth/register')) {
+      return demoApi.register ? demoApi.register(data) : Promise.reject(new Error('Demo register not available'));
+    }
     if (url.includes('/api/generate-test')) return demoApi.generateTest(data);
     if (url.includes('/api/submit-test')) return demoApi.submitTest(data.testId, data.answers);
     return Promise.reject(new Error('Demo API endpoint not implemented'));
