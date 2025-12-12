@@ -184,7 +184,17 @@ GET  /api/mock-tests              # Mock tests
 
 ## 🚀 **Production Deployment**
 
-### **Option 1: Vercel + Railway (Recommended)**
+### **Option 1: GitHub Pages (Frontend Only)**
+```bash
+# Automatic deployment via GitHub Actions
+git push origin master
+
+# Manual deployment
+./deploy-github.sh  # Linux/Mac
+deploy-github.bat   # Windows
+```
+
+### **Option 2: Vercel + Railway (Full Stack)**
 ```bash
 # Frontend (Vercel)
 cd client && npm run build && vercel --prod
@@ -193,13 +203,13 @@ cd client && npm run build && vercel --prod
 railway up
 ```
 
-### **Option 2: Docker**
+### **Option 3: Docker**
 ```bash
 docker-compose up --build
 ```
 
-### **Option 3: Manual Deployment**
-See [MVP_DEPLOYMENT_GUIDE.md](MVP_DEPLOYMENT_GUIDE.md) for detailed instructions.
+### **Option 4: Manual Deployment**
+See [docs/deployment/MVP_DEPLOYMENT_GUIDE.md](docs/deployment/MVP_DEPLOYMENT_GUIDE.md) for detailed instructions.
 
 ---
 
