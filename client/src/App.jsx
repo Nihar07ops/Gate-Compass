@@ -67,14 +67,14 @@ function App() {
           MuiCard: {
             styleOverrides: {
               root: {
-                boxShadow: darkMode 
-                  ? '0 8px 32px rgba(0, 0, 0, 0.4)' 
+                boxShadow: darkMode
+                  ? '0 8px 32px rgba(0, 0, 0, 0.4)'
                   : '0 8px 32px rgba(0, 0, 0, 0.1)',
                 transition: 'transform 0.3s ease, box-shadow 0.3s ease',
                 '&:hover': {
                   transform: 'translateY(-4px)',
-                  boxShadow: darkMode 
-                    ? '0 12px 48px rgba(0, 0, 0, 0.6)' 
+                  boxShadow: darkMode
+                    ? '0 12px 48px rgba(0, 0, 0, 0.6)'
                     : '0 12px 48px rgba(0, 0, 0, 0.15)',
                 },
               },
@@ -121,7 +121,7 @@ function App() {
               <Route path="analytics" element={<Analytics />} />
               <Route path="resources" element={<Resources />} />
             </Route>
-            <Route path="*" element={<Navigate to="/dashboard" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </Router>
       </AuthProvider>

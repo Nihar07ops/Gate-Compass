@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, Link as RouterLink } from 'react-router-dom';
+import { useNavigate, Link as RouterLink, useLocation } from 'react-router-dom';
 import {
   Container,
   Paper,
@@ -13,11 +13,11 @@ import {
   IconButton,
   Chip,
 } from '@mui/material';
-import { 
-  Email, 
-  Lock, 
-  Visibility, 
-  VisibilityOff, 
+import {
+  Email,
+  Lock,
+  Visibility,
+  VisibilityOff,
   School,
   EmojiEvents,
   TrendingUp,
@@ -34,13 +34,16 @@ const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
     try {
       await login(email, password);
-      navigate('/');
+      // Redirect to the page they were trying to access, or dashboard by default
+      const from = location.state?.from?.pathname || '/dashboard';
+      navigate(from, { replace: true });
     } catch (err) {
       console.error('Login error:', err);
       setError(err.response?.data?.message || err.message || 'Login failed. Please try again.');
@@ -98,10 +101,10 @@ const Login = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
-          <Paper 
-            elevation={20} 
-            sx={{ 
-              p: 4, 
+          <Paper
+            elevation={20}
+            sx={{
+              p: 4,
               borderRadius: 4,
               backgroundColor: '#000000ff',
               position: 'relative',
@@ -119,11 +122,11 @@ const Login = () => {
           >
             <Box textAlign="center" mb={3}>
               <motion.div
-                animate={{ 
+                animate={{
                   rotate: [0, 5, -5, 0],
                   scale: [1, 1.05, 1],
                 }}
-                transition={{ 
+                transition={{
                   duration: 3,
                   repeat: Infinity,
                   ease: 'easeInOut',
@@ -131,11 +134,11 @@ const Login = () => {
               >
                 <School sx={{ fontSize: 70, color: '#667eea', mb: 1 }} />
               </motion.div>
-              <Typography 
-                variant="h3" 
-                fontWeight={800} 
-                gutterBottom 
-                sx={{ 
+              <Typography
+                variant="h3"
+                fontWeight={800}
+                gutterBottom
+                sx={{
                   background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
@@ -148,15 +151,15 @@ const Login = () => {
               <Typography variant="h6" sx={{ color: '#764ba2', fontWeight: 600, mb: 2 }}>
                 Welcome Back!
               </Typography>
-              
+
               {/* Feature chips */}
               <Box display="flex" gap={1} justifyContent="center" flexWrap="wrap" mb={2}>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Chip 
+                  <Chip
                     icon={<EmojiEvents sx={{ color: '#667eea !important' }} />}
-                    label="Mock Tests" 
+                    label="Mock Tests"
                     size="small"
-                    sx={{ 
+                    sx={{
                       background: 'linear-gradient(135deg, #667eea15 0%, #764ba215 100%)',
                       border: '1px solid #667eea30',
                       fontWeight: 600,
@@ -164,11 +167,11 @@ const Login = () => {
                   />
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Chip 
+                  <Chip
                     icon={<AutoGraph sx={{ color: '#764ba2 !important' }} />}
-                    label="AI Predictions" 
+                    label="AI Predictions"
                     size="small"
-                    sx={{ 
+                    sx={{
                       background: 'linear-gradient(135deg, #667eea15 0%, #764ba215 100%)',
                       border: '1px solid #764ba230',
                       fontWeight: 600,
@@ -176,11 +179,11 @@ const Login = () => {
                   />
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <Chip 
+                  <Chip
                     icon={<TrendingUp sx={{ color: '#667eea !important' }} />}
-                    label="Analytics" 
+                    label="Analytics"
                     size="small"
-                    sx={{ 
+                    sx={{
                       background: 'linear-gradient(135deg, #667eea15 0%, #764ba215 100%)',
                       border: '1px solid #667eea30',
                       fontWeight: 600,
@@ -234,7 +237,7 @@ const Login = () => {
                   }}
                 />
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -277,7 +280,7 @@ const Login = () => {
                   }}
                 />
               </motion.div>
-              
+
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -290,8 +293,8 @@ const Login = () => {
                   fullWidth
                   variant="contained"
                   size="large"
-                  sx={{ 
-                    mt: 3, 
+                  sx={{
+                    mt: 3,
                     mb: 2,
                     py: 1.5,
                     background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
@@ -307,14 +310,14 @@ const Login = () => {
                   Login to Dashboard
                 </Button>
               </motion.div>
-              
+
               <Box textAlign="center">
                 <Typography variant="body2" sx={{ color: '#667eea', fontWeight: 500 }}>
                   Don't have an account?{' '}
-                  <Link 
-                    component={RouterLink} 
+                  <Link
+                    component={RouterLink}
                     to="/register"
-                    sx={{ 
+                    sx={{
                       fontWeight: 700,
                       color: '#764ba2',
                       textDecoration: 'none',
